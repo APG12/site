@@ -68,7 +68,7 @@ var fraz = {
     w:1
     },
    adresvopr:{
-    slova: ["каких","где","строителей"],
+    slova: ["каких","где","строителей", "что"],
     sound: ['sounds/это в центре.mp3'],
     question:['sounds/а где ты живеш.mp3'],
     chain: [],
@@ -132,9 +132,9 @@ var fraz = {
     da:{
     slova: ["да", "задавай", "конечно"],
     sound: ['sounds/а скока тебе лет.mp3','sounds/слушай а какой размер.mp3','sounds/а какая пипка.mp3','sounds/а ты пукаешь при близких.mp3','sounds/ты со скольки затвор.mp3'],
-    w:1
+    w:
+       1
     }
-       
    };  
   
   
@@ -180,12 +180,7 @@ annyang.addCallback('result', function(phrases) {
                                 
                                audio = new Audio(fraz[maxflag].sound[Math.floor(Math.random()*fraz[maxflag].sound.length)]);
                                audio.play();
-                               if (fraz[maxflag].question){
-                                audio.addEventListener("ended", function() {
-                                audio = new Audio(fraz[maxflag].question);
-                                audio.play();
-                                });
-                               }
+                               
                                for (var key in fraz){
                                  fraz[key].w =1;
                                }
