@@ -162,7 +162,7 @@ annyang.start();
 annyang.addCallback('result', function(phrases) {
                 for (var i=0; i<phrases.length;i++)
                     {
-                        var words = phrases[i].split(" ");
+                        var words = phrases[i].split(" ").toLowerCase();
                      for (var j=0; j<words.length;j++)
                       {
    console.log(words[j]);
