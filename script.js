@@ -160,7 +160,7 @@ annyang.start();
 annyang.addCallback('result', function(phrases) {
   console.log(phrases);       
                 for (var i=0; i<phrases.length;i++)
-         console.log(phrases[i]);
+         console.log(phrases[i] + "зашел, длинна" + phrases.length);
                     {
                         var words = phrases[i].split(" ");
                      console.log(words);
