@@ -170,7 +170,7 @@ annyang.addCallback('result', function(phrases) {
                             var slova = fraz[key].slova;
                             for(var m=0; m< slova.length;m++)
                                 {   //console.log(wordso[i].words[j].value);
-                                    if (slova[m]==words[j].value)
+                                    if (slova[m]==words[j])
                                         {
                                              fraz[key].w += 0.01/slova[m].length;
                                              console.log(key + " = " +fraz[key].w + "; max = " + maxflag + " "+  max);          
