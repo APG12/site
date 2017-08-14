@@ -159,6 +159,59 @@ annyang.start();
 
 annyang.addCallback('result', function(phrases) {
   console.log(phrases);       
+                for (var i=0; i<phrases.length;i++)
+         console.log(phrases[i]);
+                    {
+                        var words = phrases[i].split(" ");
+                     for (var j=0; j<words.length;j++)
+                      {
+   console.log(words[j].value);
+                        for (var key in fraz) {
+                            var slova = fraz[key].slova;
+                            for(var m=0; m< slova.length;m++)
+                                {   //console.log(wordso[i].words[j].value);
+                                    if (slova[m]==words[j].value)
+                                        {
+                                             fraz[key].w += 0.01/slova[m].length;
+                                             console.log(key + " = " +fraz[key].w + "; max = " + maxflag + " "+  max);          
+                               if (fraz[key].w > max){
+                                max = fraz[key].w
+                                maxflag = key;
+                               }
+                                        }               
+                                 }
+                           
+                    }
 
+                               }                         
+                              
+
+                }
+                                console.log(maxflag);
+                                if (fraz[maxflag].chain)
+                                {
+                                for (var i=0; i<fraz[maxflag].chain.length; i++)
+                                 {
+                                    if (fraz[fraz[maxflag].chain]){
+                                    fraz[fraz[maxflag].chain].w += 0.1;}
+                                 }
+
+                                }
+                               audio = new Audio(fraz[maxflag].sound[Math.floor(Math.random()*fraz[maxflag].sound.length)]);
+                               audio.play();
+                               if (fraz[maxflag].question){
+                                audio.addEventListener("ended", function() {
+                                audio = new Audio(fraz[maxflag].question);
+                                audio.play();
+                                });
+                               }
+                               for (var key in fraz){
+                                 fraz[key].w =1;
+                               }
+                               fraz[maxflag].w = 0.95;
+
+                               max = 1;
+                               maxflag = pickRandomProperty(fraz);
+                               audio = zaglushki[Math.floor(Math.random()*zaglushki.length)];
             });
                     }
