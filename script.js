@@ -162,7 +162,7 @@ annyang.start();
 annyang.addCallback('result', function(phrases) {
                 for (var i=0; i<phrases.length;i++)
                     {
-                        var words = phrases[i].split(" ").toLowerCase();
+                        var words = phrases[i].split(" ");
                      for (var j=0; j<words.length;j++)
                       {
    console.log(words[j]);
@@ -170,7 +170,7 @@ annyang.addCallback('result', function(phrases) {
                             var slova = fraz[key].slova;
                             for(var m=0; m< slova.length;m++)
                                 {   //console.log(wordso[i].words[j].value);
-                                    if (slova[m]==words[j])
+                                    if (slova[m]==words[j].toLowerCase())
                                         {
                                              fraz[key].w += 0.01/slova[m].length;
                                              console.log(key + " = " +fraz[key].w + "; max = " + maxflag + " "+  max + "слово: " + words[j]);          
