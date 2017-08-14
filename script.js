@@ -178,10 +178,11 @@ annyang.addCallback('result', function(phrases) {
                 }
                                 console.log(maxflag);
                                 if (fraz[maxflag].chain)
-                                {
+                                { console.log("чейн не пустой");
                                 for (var i=0; i<fraz[maxflag].chain.length; i++)
-                                 {
+                                 { console.log("перебирает чейны");
                                     if (fraz[fraz[maxflag].chain]){
+                                     console.log("нашел потомка чейна");
                                     fraz[fraz[maxflag].chain].w += 0.1;
                                     console.log(fraz[maxflag].chain + " " + fraz[fraz[maxflag].chain].w);
 
