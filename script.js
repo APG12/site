@@ -213,5 +213,5 @@ annyang.addCallback('result', function(phrases) {
                                max = 1;
                                maxflag = pickRandomProperty(fraz);
                                audio = zaglushki[Math.floor(Math.random()*zaglushki.length)];
-            }
+            });
                     }
