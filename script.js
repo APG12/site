@@ -133,7 +133,7 @@ var fraz = {
     slova: ["да", "задавай", "конечно"],
     sound: ['sounds/а скока тебе лет.mp3','sounds/слушай а какой размер.mp3','sounds/а какая пипка.mp3','sounds/а ты пукаешь при близких.mp3','sounds/ты со скольки затвор.mp3'],
     w:1
-    },
+    }
        
    };  
   
@@ -183,6 +183,7 @@ annyang.addCallback('result', function(phrases) {
                                  {
                                     if (fraz[fraz[maxflag].chain]){
                                     fraz[fraz[maxflag].chain].w += 0.1;
+                                   console.log(fraz[fraz[maxflag].chain] + " " + fraz[fraz[maxflag].chain].w);
                                  }
 
                                 }
