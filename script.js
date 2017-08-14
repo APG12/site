@@ -163,6 +163,7 @@ annyang.addCallback('result', function(phrases) {
          console.log(phrases[i]);
                     {
                         var words = phrases[i].split(" ");
+                     console.log(words);
                      for (var j=0; j<words.length;j++)
                       {
    console.log(words[j].value);
