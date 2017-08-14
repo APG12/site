@@ -161,7 +161,7 @@ annyang.addCallback('result', function(phrases) {
                                 {   //console.log(wordso[i].words[j].value);
                                     if (slova[m]==words[j].toLowerCase())
                                         {
-                                             fraz[key].w += 0.01/slova[m].length;
+                                             fraz[key].w += 0.01/slova.length;
                                              console.log(key + " = " +fraz[key].w + "; max = " + maxflag + " "+  max + "слово: " + words[j]);          
                                if (fraz[key].w > max){
                                 max = fraz[key].w
