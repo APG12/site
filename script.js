@@ -1,7 +1,7 @@
 window.onload = function () {
 
  var audio = new Audio('sounds/чо ты обзываеш.mp3');
-
+audio.play();
 
 
 var zaglushki =['sounds/чо ты обзываеш.mp3','sounds/я тебя хочу.mp3'];
