@@ -158,7 +158,9 @@ annyang.start();
 
 
 annyang.addCallback('result', function(phrases) {
-        for (var i=0; i<phrases.length;i++)
+  console.log(phrases[0]);       
+ for (var i=0; i<phrases.length;i++)
+         console.log(phrases[i]);
                     {
                         var words = phrases[i].split(" ");
                      for (var j=0; j<words.length;j++)
