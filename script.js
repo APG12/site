@@ -182,7 +182,8 @@ annyang.addCallback('result', function(phrases) {
                                 for (var i=0; i<fraz[maxflag].chain.length; i++)
                                  {
                                     if (fraz[fraz[maxflag].chain]){
-                                    fraz[fraz[maxflag].chain].w += 0.1;}
+                                    fraz[fraz[maxflag].chain].w += 0.1;
+                                    console.log(fraz[fraz[maxflag]]};
                                  }
 
                                 }
