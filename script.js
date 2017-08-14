@@ -162,12 +162,10 @@ annyang.start();
 annyang.addCallback('result', function(phrases) {
                 for (var i=0; i<phrases.length;i++)
                     {
-                       console.log(phrases[i]);
                         var words = phrases[i].split(" ");
-                     console.log(words);
                      for (var j=0; j<words.length;j++)
                       {
-   console.log(words[j].value);
+   console.log(words[j]);
                         for (var key in fraz) {
                             var slova = fraz[key].slova;
                             for(var m=0; m< slova.length;m++)
