@@ -1,6 +1,6 @@
 window.onload = function () {
 
-	annyang.debug();
+annyang.debug();
 annyang.setLanguage("ru");
 annyang.start();
 annyang.addCallback('soundstart', function() {
@@ -12,7 +12,7 @@ annyang.addCallback('result', function() {
 });
 
 annyang.addCallback('result', function(phrases) {
-  console.log("I think the user said: ", phrases[0]);
+  console.log("I think the user said: ", phrases[0].words[0]);
   console.log("But then again, it could be any of the following: ", phrases);
 });
 }
