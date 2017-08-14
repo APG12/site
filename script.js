@@ -177,7 +177,19 @@ annyang.addCallback('result', function(phrases) {
 
                 }
                                 console.log(maxflag);
-                                if (fraz[maxflag].hasOwnProperty("chain"))
+                                
+                               audio = new Audio(fraz[maxflag].sound[Math.floor(Math.random()*fraz[maxflag].sound.length)]);
+                               audio.play();
+                               if (fraz[maxflag].question){
+                                audio.addEventListener("ended", function() {
+                                audio = new Audio(fraz[maxflag].question);
+                                audio.play();
+                                });
+                               }
+                               for (var key in fraz){
+                                 fraz[key].w =1;
+                               }
+                              if (fraz[maxflag].hasOwnProperty("chain"))
                                 { console.log("чейн не пустой");
                                 for (var i=0; i<fraz[maxflag].chain.length; i++)
                                  { console.log("перебирает чейны");
@@ -190,17 +202,6 @@ annyang.addCallback('result', function(phrases) {
                                  }
 
                                 }
-                               audio = new Audio(fraz[maxflag].sound[Math.floor(Math.random()*fraz[maxflag].sound.length)]);
-                               audio.play();
-                               if (fraz[maxflag].question){
-                                audio.addEventListener("ended", function() {
-                                audio = new Audio(fraz[maxflag].question);
-                                audio.play();
-                                });
-                               }
-                               for (var key in fraz){
-                                 fraz[key].w =1;
-                               }
                                fraz[maxflag].w = 0.95;
 
                                max = 1;
