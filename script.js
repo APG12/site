@@ -177,7 +177,7 @@ annyang.addCallback('result', function(phrases) {
 
                 }
                                 console.log(maxflag);
-                                if (fraz[maxflag].chain.length>0)
+                                if (fraz[maxflag].hasOwnProperty("chain")>0)
                                 { console.log("чейн не пустой");
                                 for (var i=0; i<fraz[maxflag].chain.length; i++)
                                  { console.log("перебирает чейны");
