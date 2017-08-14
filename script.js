@@ -1,6 +1,6 @@
 window.onload = function () {
 
- var audio = new Audio('sounds/чо ты обзываеш.mp3');
+ var audio = new Audio('sounds/а во скока.mp3');
 audio.play();
 
 
