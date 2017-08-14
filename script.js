@@ -158,7 +158,7 @@ annyang.start();
 
 
 annyang.addCallback('result', function(phrases) {
-  console.log(phrases);       
+  console.log(phrases + "зашел, длинна" + phrases.length);       
                 for (var i=0; i<phrases.length;i++)
          console.log(phrases[i] + "зашел, длинна" + phrases.length);
                     {
