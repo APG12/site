@@ -158,7 +158,7 @@ annyang.start();
 
 
 annyang.addCallback('result', function(phrases) {
-  console.log(phrases[0]);       
+  console.log(phrases);       
  for (var i=0; i<phrases.length;i++)
          console.log(phrases[i]);
                     {
@@ -214,5 +214,3 @@ annyang.addCallback('result', function(phrases) {
                                maxflag = pickRandomProperty(fraz);
                                audio = zaglushki[Math.floor(Math.random()*zaglushki.length)];
             }
-});
-}
