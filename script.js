@@ -149,6 +149,8 @@ var fraz = {
    };  
   
   
+    var max = 1;
+    var maxflag = "ktoti";
   
   
   
