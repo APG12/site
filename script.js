@@ -217,10 +217,10 @@ window.onload = function() {
     });
     annyang.addCallback('soundstart', function() {
         console.log('sound detected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-        WhenMaslenokIsSilent(0);
+        WhenMaslenokIsSilent(0,0);
     });
     annyang.addCallback('result', function(phrases) {
-        WhenMaslenokIsSilent(0);
+        WhenMaslenokIsSilent(0,0);
 
         if (mainflag == 0) {
             mainflag = 1;
