@@ -224,10 +224,10 @@ annyang.addCallback('soundstart', function() {
                                 }
                                  audio.play();        
                                   audio.addEventListener("ended", function(){
-                                  if(fraz[maxflag].hasOwnProperty("question")){ 
-                                   WhenMaslenokIsSilent(1,fraz[maxflag].question); console.log("вопрос" + question);}
+                                  if(fraz[maxflagb].hasOwnProperty("question")){ 
+                                   WhenMaslenokIsSilent(1,fraz[maxflagb].question);}
                                    else
-                                   {WhenMaslenokIsSilent(1,1);console.log("просто алё" + fraz[maxflag].hasOwnProperty("question") + " " + maxflag);}
+                                   {WhenMaslenokIsSilent(1,1);}
                                   });                              
                                 
                                
