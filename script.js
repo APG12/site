@@ -188,7 +188,7 @@ annyang.addCallback('result', function(phrases) {
     "</div></div>";
       $(leftData).prependTo('#phone').fadeIn('slow', function(){
       
-   var rightData = "<div class='message right' style='display:none;'><div class='message-text'>" + maxflag +
+   var rightData = "<div class='message right' style='display:none;'><div class='message-text'>" + bufmsg +
     "</div></div>";
       $(rightData).prependTo('#phone').fadeIn('slow');
       });
