@@ -1,5 +1,6 @@
 window.onload = function () {
 var timersilence;
+ var time = 4000;
  var zaglushki =['sounds/алё.mp3','sounds/я тебя хочу.mp3'];
  function WhenMaslenokIsSilent(arg){
   if (arg==1){
@@ -8,7 +9,7 @@ var timersilence;
                        audiosil.play()
   WhenMaslenokIsSilent(1);
   console.log("вызван АЛЕЕЕЕЕ");
-                   },4000);}
+                   },time);}
   else if (arg==0)
   {
    console.log("АЛЕЕЕЕ отменен сука че она орет");
@@ -216,7 +217,7 @@ annyang.addCallback('result', function(phrases) {
                                  console.log("ended");
                                  }); 
                                 }
-                                     
+                                time += 4000;     
                                 audio.play();        
                               
                                 
