@@ -151,7 +151,7 @@ annyang.start();
 
 annyang.addCallback('result', function(phrases) {
          
-                $(".message-left").append("<div class='message-text'>" + phrases[0] +
+                $(".left").append("<div class='message-text'>" + phrases[0] +
     +"</div>");
                 for (var i=0; i<phrases.length;i++)
                     {
@@ -184,7 +184,8 @@ annyang.addCallback('result', function(phrases) {
                                 
                                audio = new Audio(fraz[maxflag].sound[Math.floor(Math.random()*fraz[maxflag].sound.length)]);
                                audio.play();
-                               
+                                $(".right").append("<div class='message-text'>" + audio +
+    +"</div>");
                                for (var key in fraz){
                                  fraz[key].w =1;
                                }
