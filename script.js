@@ -3,7 +3,7 @@ window.onload = function () {
  var zaglushki =['sounds/алё.mp3','sounds/я тебя хочу.mp3'];
  function WhenMaslenokIsSilent(arg){
   if (arg==1){
- var timersilence = setInterval(function(){
+ var timersilence = setTimeout(function(){
                      var audiosil = new Audio(zaglushki[0]);
                        audiosil.play()
   WhenMaslenokIsSilent(1);
@@ -12,7 +12,7 @@ window.onload = function () {
   else if (arg==0)
   {
    console.log("АЛЕЕЕЕ отменен сука че она орет");
-     clearInterval(timersilence);
+     clearTimeout(timersilence);
   }
 }
 WhenMaslenokIsSilent(1);
