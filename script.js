@@ -227,7 +227,7 @@ annyang.addCallback('soundstart', function() {
                                   if(fraz[maxflag].hasOwnProperty("question")){ 
                                    WhenMaslenokIsSilent(1,fraz[maxflag].question); console.log("вопрос" + question);}
                                    else
-                                   {WhenMaslenokIsSilent(1,1);console.log("просто алё");}
+                                   {WhenMaslenokIsSilent(1,1);console.log("просто алё" + fraz[maxflag].hasOwnProperty("question"));}
                                   });                              
                                 
                                
