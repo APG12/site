@@ -150,6 +150,9 @@ annyang.start();
 
 
 annyang.addCallback('result', function(phrases) {
+         
+                $(".message-left").append("<div class='message-text'>" + phrases[0] +
+    +"</div>");
                 for (var i=0; i<phrases.length;i++)
                     {
                         var words = phrases[i].split(" ");
