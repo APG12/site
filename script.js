@@ -237,7 +237,7 @@ annyang.addCallback('result', function(phrases) {
                                  }); 
                                 }
                                  audio.play();        
-                                 timer.add(9000);                              
+                                  audio.addEventListener("ended", function(){timer.add(5000);});                              
                                 
                                
   var bufmsg = maxflag;
