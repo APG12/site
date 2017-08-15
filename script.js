@@ -157,7 +157,7 @@ var fraz = {
     var max = 1;
     var maxflag = "ktoti";
   
-  
+  var mainflag=0;
 annyang.debug();
 annyang.setLanguage("ru");
 annyang.start({ continuous: false });
@@ -166,7 +166,8 @@ annyang.addCallback('soundstart', function() {
   WhenMaslenokIsSilent(0);
 });
  annyang.addCallback('result', function(phrases) {
-                 
+if(mainflag==0){
+ mainflag=1;
                 for (var i=0; i<phrases.length;i++)
                     {
                         var words = phrases[i].split(" ");
@@ -224,6 +225,7 @@ annyang.addCallback('soundstart', function() {
                                 }
                                  audio.play();        
                                   audio.addEventListener("ended", function(){
+                                   mainflag=0;
                                   if(fraz[maxflagb].hasOwnProperty("question")){ 
                                    WhenMaslenokIsSilent(1,fraz[maxflagb].question);}
                                    else
@@ -265,7 +267,9 @@ annyang.addCallback('soundstart', function() {
                                maxflag = pickRandomProperty(fraz);
                                audio = zaglushki[Math.floor(Math.random()*zaglushki.length)];
             });
-                    }
+ 
+ }
+ }
 
 
 function pickRandomProperty(obj) {
