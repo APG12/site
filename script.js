@@ -1,10 +1,11 @@
+var zaglushki =['sounds/алё.mp3','sounds/я тебя хочу.mp3'];
+
 window.onload = function () {
 
  var audio = new Audio('sounds/а во скока.mp3');
 audio.play();
 
 
-var zaglushki =['sounds/алё.mp3','sounds/я тебя хочу.mp3'];
 
 var fraz = {
  mat:{
