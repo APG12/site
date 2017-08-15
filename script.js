@@ -33,7 +33,7 @@ Timer.prototype.add = function(time) {
     audiosil.play();
    }, 5000);}
   else if (arg == 0){
-   timer.clearTimeout();
+   clearTimeout(timer);
   }  
  };
  
