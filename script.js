@@ -8,9 +8,11 @@ window.onload = function () {
                      var audiosil = new Audio(zaglushki[0]);
                        audiosil.play()
   WhenMaslenokIsSilent(1);
+  console.log("вызван АЛЕЕЕЕЕ");
                    },3000);}
   else
   {
+   console.log("АЛЕЕЕЕ отменен сука че она орет");
      clearInterval(timersilence);
   }
 }
