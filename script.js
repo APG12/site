@@ -106,7 +106,7 @@ var fraz = {
     },
     nichegosebe:{
     slova: ["как", "дела", "а", "у", "тебя",  "делишки", "рассказывай"],
-    sound: [['sounds/та ничо так.mp3','sounds/нормально.mp3'],['sounds/та ничо так.mp3'],['sounds/нормально.mp3']]
+    sound: [['sounds/та ничо так.mp3','sounds/нормально.mp3'],['sounds/та ничо так.mp3'],['sounds/нормально.mp3']],
     w:1
     },
     kakzovut:{
