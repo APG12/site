@@ -10,7 +10,7 @@ window.onload = function () {
   WhenMaslenokIsSilent(1);
   console.log("вызван АЛЕЕЕЕЕ");
                    },3000);}
-  else
+  else if (arg==0)
   {
    console.log("АЛЕЕЕЕ отменен сука че она орет");
      clearInterval(timersilence);
