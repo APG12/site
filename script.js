@@ -2,11 +2,16 @@ window.onload = function () {
  
  var zaglushki =['sounds/алё.mp3','sounds/я тебя хочу.mp3'];
 
- function WhenMaslenokIsSilent(){
+ function WhenMaslenokIsSilent(arg){
+  if (arg==1){
  var timersilence = setInterval(function(){
                      var audiosil = new Audio(zaglushki[0]);
                        audiosil.play()   
-                   },3000);
+                   },3000);}
+  else
+  {
+     clearInterval(timersilence);
+  }
 }
 
 
@@ -152,10 +157,9 @@ annyang.setLanguage("ru");
 annyang.start();       
 WhenMaslenokIsSilent();
 annyang.addCallback('result', function(phrases) {
-              
+                 
 
-                 clearInterval(timersilence);
-
+                WhenMaslenokIsSilent(0);
                 for (var i=0; i<phrases.length;i++)
                     {
                         var words = phrases[i].split(" ");
@@ -213,7 +217,7 @@ annyang.addCallback('result', function(phrases) {
                                 }
                                      
                                 audio.play();        
-                               WhenMaslenokIsSilent();
+                               WhenMaslenokIsSilent(1);
                                 
                                
   var bufmsg = maxflag;
