@@ -156,8 +156,11 @@ var fraz = {
   
 annyang.debug();
 annyang.setLanguage("ru");
-annyang.start();       
-annyang.addCallback('result', function(phrases) {
+annyang.start();
+annyang.addCallback('soundstart', function() {
+  WhenMaslenokIsSilent(0);
+});
+ annyang.addCallback('result', function(phrases) {
                  
                 for (var i=0; i<phrases.length;i++)
                     {
@@ -214,7 +217,6 @@ annyang.addCallback('result', function(phrases) {
                                  console.log("ended");
                                  }); 
                                 }
-                                 WhenMaslenokIsSilent(0);
                                  audio.play();        
                                   audio.addEventListener("ended", function(){WhenMaslenokIsSilent(1)});                              
                                 
