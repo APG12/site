@@ -1,6 +1,15 @@
 window.onload = function () {
+ 
+ var zaglushki =['sounds/алё.mp3','sounds/я тебя хочу.mp3'];
 
- var audio = new Audio('sounds/а во скока.mp3');
+ function WhenMaslenokIsSilent(){
+ var timersilence = setInterval(function(){
+                     var audiosil = new Audio(zaglushki[0]);
+                       audiosil.play()   
+                   },3000);
+}
+
+
 audio.play();
 
 
@@ -257,11 +266,3 @@ function pickRandomProperty(obj) {
     return result;
 }
 
-function WhenMaslenokIsSilent(){
- var zaglushki =['sounds/алё.mp3','sounds/я тебя хочу.mp3'];
-
- var timersilence = setInterval(function(){
-                     var audiosil = new Audio(zaglushki[0]);
-                       audiosil.play()   
-                   },3000);
-}
