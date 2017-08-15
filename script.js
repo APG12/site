@@ -39,7 +39,7 @@ var fraz = {
     },
     etokto:{
     slova: ["это", "кто", "ну", "это", "ты"],
-    sound: ['sounds/ну это я.mp3','sounds/ты чо не узнал чтоль.mp3'],['sounds/ты чо не узнал чтоль.mp3'],'sounds/это кристина не узнал.mp3'],
+    sound: ['sounds/ну это я.mp3','sounds/ты чо не узнал чтоль.mp3'],['sounds/ты чо не узнал чтоль.mp3'],['sounds/это кристина не узнал.mp3'],
     chain: ["nuktoetoti","ktoti"],
     w:1
     },
