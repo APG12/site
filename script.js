@@ -35,7 +35,7 @@ Timer.prototype.add = function(time) {
     WhenMaslenokIsSilent();
    }, 5000);
   
- }; 
+ };
  
 WhenMaslenokIsSilent(1);
 
