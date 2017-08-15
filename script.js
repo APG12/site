@@ -151,10 +151,7 @@ annyang.start();
 
 annyang.addCallback('result', function(phrases) {
 
-                  var leftData = "<div class='message left' style='display:none;'><div class='message-text'>" + phrases[0] +
-    "</div></div>";
-      $(leftData).appendTo('#phone').fadeIn('slow');
-                
+                 
                 for (var i=0; i<phrases.length;i++)
                     {
                         var words = phrases[i].split(" ");
@@ -186,9 +183,15 @@ annyang.addCallback('result', function(phrases) {
                                 
                                audio = new Audio(fraz[maxflag].sound[Math.floor(Math.random()*fraz[maxflag].sound.length)]);
                                audio.play();
+  var leftData = "<div class='message left' style='display:none;'><div class='message-text'>" + phrases[0] +
+    "</div></div>";
+      $(leftData).prependTo('#phone').fadeIn('slow', function(){
+      
    var rightData = "<div class='message right' style='display:none;'><div class='message-text'>" + maxflag +
     "</div></div>";
-      $(rightData).appendTo('#phone').fadeIn('slow');
+      $(rightData).prependTo('#phone').fadeIn('slow');
+      });
+                
                 
                                 
                                for (var key in fraz){
