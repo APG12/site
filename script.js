@@ -6,7 +6,8 @@ var zaglushki = ['sounds/алё.mp3','sounds/алео.mp3'];
    if(arg == 1){
     timer = setTimeout(function() { // init timer with 5 seconds
     if (soun!=1){
-    var audiosil = new Audio(soun);}
+    var audiosil = new Audio(soun);
+    console.log(soun);}
      else{
      var audiosil = new Audio(zaglushki[Math.floor(Math.random()*zaglushki.length)]);}
     audiosil.play();
@@ -16,7 +17,7 @@ var zaglushki = ['sounds/алё.mp3','sounds/алео.mp3'];
   }  
  };
  
-WhenMaslenokIsSilent(1);
+WhenMaslenokIsSilent(1,1);
 
 
 var fraz = {
