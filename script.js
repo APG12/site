@@ -185,27 +185,26 @@ annyang.addCallback('result', function(phrases) {
                                 var sonu = Math.floor(Math.random()*fraz[maxflag].sound.length);
                                 if (Array.isArray(fraz[maxflag].sound[sonu])){                              
                                  audio = new Audio(fraz[maxflag].sound[sonu][0]);
-                                 
-                               audio.addEventListener("ended", function(){
-                               audio.currentTime = 0;
-                              ai++;
-                              audio = new Audio(fraz[maxflagb].sound[sonu][ai]);
-                                audio.play();
-                                 console.log("ended");
-                              }); }
+                                 audio.addEventListener("ended", function(){
+                                  audio.currentTime = 0;
+                                  ai++;
+                                  audio = new Audio(fraz[maxflagb].sound[sonu][ai]);
+                                  audio.play();
+                                  console.log("ended");
+                                 }); 
                                 }
                                 else
                                 {
                                  audio = new Audio(fraz[maxflag].sound[sonu][0]
-                                
-                               audio.addEventListener("ended", function(){
-                               audio.currentTime = 0;
-                              ai++;
-                              audio = new Audio(fraz[maxflagb].sound[ai]);
-                                audio.play();
+                                 audio.addEventListener("ended", function(){
+                                 audio.currentTime = 0;
+                                 ai++;
+                                 audio = new Audio(fraz[maxflagb].sound[ai]);
+                                 audio.play();
                                  console.log("ended");
-                              }); }
-                                                   }
+                                 }); 
+                                }
+                                     
                                 audio.play();        
                                
                                 
