@@ -1,5 +1,5 @@
 window.onload = function () {
-var zaglushki = ['sound/алё.mp3','sound/алео.mp3'];
+var zaglushki = ['sounds/алё.mp3','sounds/алео.mp3'];
  function Timer(callback, time) {
     this.setTimeout(callback, time);
 }
