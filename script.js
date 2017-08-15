@@ -26,17 +26,15 @@ Timer.prototype.add = function(time) {
        this.setTimeout(this.callback, time);
    }
 }
-
+ var timer;
  function WhenMaslenokIsSilent(arg){
-  if (arg){timer.add(arg);}
-  else{
-var timer = new Timer(function() { // init timer with 5 seconds
+ 
+    timer = new Timer(function() { // init timer with 5 seconds
     var audiosil = new Audio(zaglushki[Math.floor(Math.random()*zaglushki.length)]);
-                       audiosil.play();
-WhenMaslenokIsSilent();
-
-}, 5000);
-  }
+    audiosil.play();
+    WhenMaslenokIsSilent();
+   }, 5000);
+  
  }; 
  
 WhenMaslenokIsSilent(1);
@@ -239,8 +237,8 @@ annyang.addCallback('result', function(phrases) {
                                  console.log("ended");
                                  }); 
                                 }
-WhenMaslenokIsSilent(4000);                                 audio.play();        
-                              
+                                 audio.play();        
+                                 timer.add(4000);                              
                                 
                                
   var bufmsg = maxflag;
