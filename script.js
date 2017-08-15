@@ -2,10 +2,13 @@ window.onload = function () {
 var zaglushki = ['sounds/алё.mp3','sounds/алео.mp3'];
 
  var timer;
- function WhenMaslenokIsSilent(arg){
+ function WhenMaslenokIsSilent(arg, soun){
    if(arg == 1){
     timer = setTimeout(function() { // init timer with 5 seconds
-    var audiosil = new Audio(zaglushki[Math.floor(Math.random()*zaglushki.length)]);
+    if (soun){
+    var audiosil = new Audio(soun);}
+     else{
+     var audiosil = new Audio(zaglushki[Math.floor(Math.random()*zaglushki.length)]);}
     audiosil.play();
    }, 5000);}
   else if (arg == 0){
@@ -39,6 +42,7 @@ var fraz = {
     slova: ["лет","возраст"],
     sound:  ['sounds/мне 22.mp3'],
     chain: [],
+    question: ['sounds/чо застеснялся.mp3'],
     w:1
      },
    kakdela:{
@@ -218,7 +222,12 @@ annyang.addCallback('soundstart', function() {
                                  }); 
                                 }
                                  audio.play();        
-                                  audio.addEventListener("ended", function(){WhenMaslenokIsSilent(1)});                              
+                                  audio.addEventListener("ended", function(){
+                                  if(fraz[maxflag].question){ 
+                                   WhenMaslenokIsSilent(1,fraz[maxflag].question);}
+                                   else
+                                   {WhenMaslenokIsSilent(1);}
+                                  });                              
                                 
                                
   var bufmsg = maxflag;
