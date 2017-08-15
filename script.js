@@ -183,6 +183,7 @@ annyang.addCallback('result', function(phrases) {
                                 
                                audio = new Audio(fraz[maxflag].sound[Math.floor(Math.random()*fraz[maxflag].sound.length)]);
                                audio.play();
+  var bufmsg = maxflag;
   var leftData = "<div class='message left' style='display:none;'><div class='message-text'>" + phrases[0] +
     "</div></div>";
       $(leftData).prependTo('#phone').fadeIn('slow', function(){
