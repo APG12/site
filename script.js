@@ -11,11 +11,6 @@ var timersilence;
   WhenMaslenokIsSilent(1);
   console.log("вызван АЛЕЕЕЕЕ");
                    },time);}
-  else if (arg==0)
-  {
-   console.log("АЛЕЕЕЕ отменен сука че она орет");
-     clearTimeout(timersilence);
-  }
 }
 WhenMaslenokIsSilent(1);
 
@@ -162,7 +157,6 @@ annyang.setLanguage("ru");
 annyang.start();       
 annyang.addCallback('result', function(phrases) {
                  
- WhenMaslenokIsSilent(0);
                 for (var i=0; i<phrases.length;i++)
                     {
                         var words = phrases[i].split(" ");
