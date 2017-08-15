@@ -183,10 +183,9 @@ annyang.addCallback('result', function(phrases) {
                                 var ai =0;
                                 var maxflagb = maxflag;
                                 var sonu = Math.floor(Math.random()*fraz[maxflag].sound.length);
-                                audio = new Audio(fraz[maxflag].sound[sonu][0]);
-                               console.log(fraz[maxflag].sound.length + " записей звуковых, выбрана " + fraz[maxflag].sound[sonu][0] );
-                                audio.play();        
-                               if (fraz[maxflag].sound[sonu].length >1){
+                                if (Array.isArray(fraz[maxflag].sound[sonu])){                              
+                                 audio = new Audio(fraz[maxflag].sound[sonu][0]);
+                                 
                                audio.addEventListener("ended", function(){
                                audio.currentTime = 0;
                               ai++;
@@ -194,6 +193,22 @@ annyang.addCallback('result', function(phrases) {
                                 audio.play();
                                  console.log("ended");
                               }); }
+                                }
+                                else
+                                {
+                                 audio = new Audio(fraz[maxflag].sound[sonu][0]
+                                
+                               audio.addEventListener("ended", function(){
+                               audio.currentTime = 0;
+                              ai++;
+                              audio = new Audio(fraz[maxflagb].sound[ai]);
+                                audio.play();
+                                 console.log("ended");
+                              }); }
+                                                   }
+                                audio.play();        
+                               
+                                
                                
   var bufmsg = maxflag;
   var leftData = "<div class='message left' style='display:none;'><div class='message-text'>" + phrases[0] +
