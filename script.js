@@ -184,7 +184,7 @@ annyang.addCallback('result', function(phrases) {
                                 var maxflagb = maxflag;
                                 var sonu = Math.floor(Math.random()*fraz[maxflag].sound.length);
                                 audio = new Audio(fraz[maxflag].sound[sonu][0]);
-                               console.log(fraz[maxflag].sound.length + " записей звуковых, выбрана " + sonu);
+                               console.log(fraz[maxflag].sound.length + " записей звуковых, выбрана " + sonu );
                                 audio.play();        
                                if (fraz[maxflag].sound[sonu].length >1){
                                audio.addEventListener("ended", function(){
