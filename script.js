@@ -195,7 +195,7 @@ annyang.addCallback('result', function(phrases) {
                                 }
                                 else
                                 {
-                                 audio = new Audio(fraz[maxflag].sound[sonu][0]
+                                 audio = new Audio(fraz[maxflag].sound[sonu][0]);
                                  audio.addEventListener("ended", function(){
                                  audio.currentTime = 0;
                                  ai++;
