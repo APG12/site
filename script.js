@@ -181,15 +181,17 @@ annyang.addCallback('result', function(phrases) {
                 }
                                 console.log(maxflag);
                                 var ai =0;
+                                var maxflagb = maxflag;
                                 audio = new Audio(fraz[maxflag].sound[ai]);
-                                audio.play();                              
+                                audio.play();        
+                               if (fraz[maxflag].sound.length >1){
                                audio.addEventListener("ended", function(){
                                audio.currentTime = 0;
                               ai++;
-                              audio = new Audio(fraz[maxflag].sound[ai]);
+                              audio = new Audio(fraz[maxflagb].sound[ai]);
                                 audio.play();
                                  console.log("ended");
-}); 
+                              }); }
                                
   var bufmsg = maxflag;
   var leftData = "<div class='message left' style='display:none;'><div class='message-text'>" + phrases[0] +
