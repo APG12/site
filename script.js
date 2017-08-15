@@ -180,14 +180,17 @@ annyang.addCallback('result', function(phrases) {
 
                 }
                                 console.log(maxflag);
-                                for (var i=0; i<fraz[maxflag].sound.length; i++){
-                               audio = new Audio(fraz[maxflag].sound[i]);
-                                audio.addEventListener("ended", function(){
+                                var ai =0;
+                                audio = new Audio(fraz[maxflag].sound[ai]);
+                                audio.play();                              
+                               audio.addEventListener("ended", function(){
                                audio.currentTime = 0;
-                               audio.play();
+                              ai++;
+                              audio = new Audio(fraz[maxflag].sound[ai]);
+                                audio.play();
                                  console.log("ended");
 }); 
-                               }
+                               
   var bufmsg = maxflag;
   var leftData = "<div class='message left' style='display:none;'><div class='message-text'>" + phrases[0] +
     "</div></div>";
