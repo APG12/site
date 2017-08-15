@@ -7,6 +7,7 @@ var timersilence;
  timersilence = setTimeout(function(){
                      var audiosil = new Audio(zaglushki[0]);
                        audiosil.play()
+  time = 4000;
   WhenMaslenokIsSilent(1);
   console.log("вызван АЛЕЕЕЕЕ");
                    },time);}
