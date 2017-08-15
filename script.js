@@ -4,7 +4,7 @@ window.onload = function () {
 audio.play();
 
 
-var zaglushki =['sounds/чо ты обзываеш.mp3','sounds/я тебя хочу.mp3'];
+var zaglushki =['sounds/алё.mp3','sounds/я тебя хочу.mp3'];
 
 var fraz = {
  mat:{
@@ -53,7 +53,7 @@ var fraz = {
     slova: ["кто", "ты", "не", "узнаю", "тебя", "ну", "говори"],
     sound: [['sounds/а угадай.mp3'],['sounds/ну подумай.mp3'],['sounds/ну догадайся кто ето.mp3']],
     chain: ["neho4ugadat"],
-    w:0.98
+    w:0.99
     },
     neho4ugadat:{
     slova: ["не", "хочу", "гадать", "кто", "это", "загадок", "скажи", "ты"],
@@ -142,16 +142,21 @@ var fraz = {
     var max = 1;
     var maxflag = "ktoti";
   
-  
+     var timersilence = setTimeout(function(){
+                   var audiosil = new Audio(zaglushki[0]);
+                     audiosil.play()   
+                 },3000);
   
 annyang.debug();
 annyang.setLanguage("ru");
-annyang.start();
+annyang.start         
 
 
 annyang.addCallback('result', function(phrases) {
+              
 
-                 
+                 clearTimeout(timersilence);
+
                 for (var i=0; i<phrases.length;i++)
                     {
                         var words = phrases[i].split(" ");
@@ -171,7 +176,7 @@ annyang.addCallback('result', function(phrases) {
                                 maxflag = key;
                                }
                                         }               
-                                 }
+                                 }javascript:void(0)
                            
                     }
 
@@ -233,7 +238,7 @@ annyang.addCallback('result', function(phrases) {
                                  { console.log("перебирает чейны");
                                     if (fraz[fraz[maxflag].chain]){
                                      console.log("нашел потомка чейна");
-                                    fraz[fraz[maxflag].chain].w += 0.1;
+                                    fraz[fraz[maxflag].chain].w += 0.2;
                                     console.log(fraz[maxflag].chain + " " + fraz[fraz[maxflag].chain].w);
 
                                     }
