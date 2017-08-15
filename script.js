@@ -158,6 +158,7 @@ annyang.debug();
 annyang.setLanguage("ru");
 annyang.start({ continuous: false });
 annyang.addCallback('soundstart', function() {
+  console.log('sound detected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
   WhenMaslenokIsSilent(0);
 });
  annyang.addCallback('result', function(phrases) {
