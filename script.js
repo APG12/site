@@ -266,10 +266,11 @@ if(mainflag==0){
                                max = 1;
                                maxflag = pickRandomProperty(fraz);
                                audio = zaglushki[Math.floor(Math.random()*zaglushki.length)];
-            });
+} 
+});
  
  }
- }
+ 
 
 
 function pickRandomProperty(obj) {
