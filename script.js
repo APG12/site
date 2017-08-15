@@ -155,7 +155,6 @@ annyang.start
 annyang.addCallback('result', function(phrases) {
               
 
-                 clearInterval(timersilence);
 
                 for (var i=0; i<phrases.length;i++)
                     {
