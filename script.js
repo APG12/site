@@ -142,7 +142,7 @@ var fraz = {
     var max = 1;
     var maxflag = "ktoti";
   
-     var timersilence = setTimeout(function(){
+     var timersilence = setInterval(function(){
                    var audiosil = new Audio(zaglushki[0]);
                      audiosil.play()   
                  },3000);
@@ -155,7 +155,7 @@ annyang.start
 annyang.addCallback('result', function(phrases) {
               
 
-                 clearTimeout(timersilence);
+                 clearInterval(timersilence);
 
                 for (var i=0; i<phrases.length;i++)
                     {
