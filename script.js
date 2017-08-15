@@ -259,6 +259,7 @@ function pickRandomProperty(obj) {
     return result;
 }
 
+var zaglushki =['sounds/алё.mp3','sounds/я тебя хочу.mp3'];
 function WhenMaslenokIsSilent(){
  var timersilence = setInterval(function(){
                      var audiosil = new Audio(zaglushki[0]);
