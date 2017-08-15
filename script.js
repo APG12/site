@@ -68,7 +68,7 @@ var fraz = {
     w:1
     },
    adresvopr:{
-    slova: ["каких","где","строителей", "что"],
+    slova: ["где","строителей"],
     sound: ['sounds/это в центре.mp3'],
     question:['sounds/а где ты живеш.mp3'],
     chain: [],
