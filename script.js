@@ -5,7 +5,7 @@ var zaglushki = ['sounds/алё.mp3','sounds/алео.mp3'];
  function WhenMaslenokIsSilent(arg, soun){
    if(arg == 1){
     timer = setTimeout(function() { // init timer with 5 seconds
-    if (soun){
+    if (soun!=1){
     var audiosil = new Audio(soun);}
      else{
      var audiosil = new Audio(zaglushki[Math.floor(Math.random()*zaglushki.length)]);}
@@ -223,10 +223,10 @@ annyang.addCallback('soundstart', function() {
                                 }
                                  audio.play();        
                                   audio.addEventListener("ended", function(){
-                                  if(fraz[maxflag].question){ 
+                                  if(fraz[maxflag].hasOwnProperty("question")){ 
                                    WhenMaslenokIsSilent(1,fraz[maxflag].question);}
                                    else
-                                   {WhenMaslenokIsSilent(1);}
+                                   {WhenMaslenokIsSilent(1,1);}
                                   });                              
                                 
                                
