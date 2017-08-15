@@ -8,7 +8,7 @@ window.onload = function () {
                        audiosil.play()
   WhenMaslenokIsSilent(1);
   console.log("вызван АЛЕЕЕЕЕ");
-                   },3000);}
+                   },10000);}
   else if (arg==0)
   {
    console.log("АЛЕЕЕЕ отменен сука че она орет");
