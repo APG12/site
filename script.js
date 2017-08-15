@@ -32,11 +32,11 @@ Timer.prototype.add = function(time) {
   else{
 var timer = new Timer(function() { // init timer with 5 seconds
     var audiosil = new Audio(zaglushki[Math.floor(Math.random()*zaglushki.length)]);
-                       audiosil.play()
-WhenMaslenokIsSilent()
-}
-}, 5000);
+                       audiosil.play();
+WhenMaslenokIsSilent();
 
+}, 5000);
+  }
  }; 
  
 WhenMaslenokIsSilent(1);
