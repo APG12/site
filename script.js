@@ -156,7 +156,7 @@ var fraz = {
   
 annyang.debug();
 annyang.setLanguage("ru");
-annyang.start();
+annyang.start({ continuous: false });
 annyang.addCallback('soundstart', function() {
   WhenMaslenokIsSilent(0);
 });
