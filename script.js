@@ -184,6 +184,7 @@ annyang.addCallback('result', function(phrases) {
                                 var maxflagb = maxflag;
                                 var sonu = Math.floor(Math.random()*fraz[maxflag].sound.length);
                                 if (Array.isArray(fraz[maxflag].sound[sonu][0])){                              
+                                 console.log("признал массивом");
                                  audio = new Audio(fraz[maxflag].sound[sonu][0]);
                                  audio.addEventListener("ended", function(){
                                   audio.currentTime = 0;
@@ -195,6 +196,8 @@ annyang.addCallback('result', function(phrases) {
                                 }
                                 else
                                 {
+                                 console.log("признал строкой");
+                                 
                                  audio = new Audio(fraz[maxflag].sound[ai]);
                                  audio.addEventListener("ended", function(){
                                  audio.currentTime = 0;
