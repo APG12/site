@@ -1,8 +1,6 @@
 window.onload = function () {
-  WhenMaslenokIsSilent(1);
- 
- var zaglushki =['sounds/алё.mp3','sounds/я тебя хочу.mp3'];
 
+ var zaglushki =['sounds/алё.mp3','sounds/я тебя хочу.mp3'];
  function WhenMaslenokIsSilent(arg){
   if (arg==1){
  var timersilence = setInterval(function(){
@@ -17,6 +15,7 @@ window.onload = function () {
      clearInterval(timersilence);
   }
 }
+WhenMaslenokIsSilent(1);
 
 
 var fraz = {
