@@ -218,7 +218,7 @@ annyang.addCallback('result', function(phrases) {
                                  console.log("ended");
                                  }); 
                                 }
-                                time += 4000;     
+                                time = 5000;     
                                 audio.play();        
                               
                                 
