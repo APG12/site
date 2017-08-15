@@ -4,7 +4,7 @@ var zaglushki = ['sounds/алё.mp3','sounds/алео.mp3'];
  var timer;
  function WhenMaslenokIsSilent(arg){
    if(arg == 1){
-    timer = new Timer(function() { // init timer with 5 seconds
+    timer = setTimeout(function() { // init timer with 5 seconds
     var audiosil = new Audio(zaglushki[Math.floor(Math.random()*zaglushki.length)]);
     audiosil.play();
    }, 5000);}
