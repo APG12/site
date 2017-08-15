@@ -146,11 +146,7 @@ var fraz = {
 annyang.debug();
 annyang.setLanguage("ru");
 annyang.start();       
-
-var timersilence = setInterval(function(){
-                     var audiosil = new Audio(zaglushki[0]);
-                       audiosil.play()   
-                   },3000);
+WhenMaslenokIsSilent();
 annyang.addCallback('result', function(phrases) {
               
 
@@ -213,7 +209,7 @@ annyang.addCallback('result', function(phrases) {
                                 }
                                      
                                 audio.play();        
-                               
+                               WhenMaslenokIsSilent();
                                 
                                
   var bufmsg = maxflag;
@@ -260,4 +256,11 @@ function pickRandomProperty(obj) {
         if (Math.random() < 1/++count)
            result = prop;
     return result;
+}
+
+function WhenMaslenokIsSilent(){
+ var timersilence = setInterval(function(){
+                     var audiosil = new Audio(zaglushki[0]);
+                       audiosil.play()   
+                   },3000);
 }
