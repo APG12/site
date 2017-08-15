@@ -225,9 +225,9 @@ annyang.addCallback('soundstart', function() {
                                  audio.play();        
                                   audio.addEventListener("ended", function(){
                                   if(fraz[maxflag].hasOwnProperty("question")){ 
-                                   WhenMaslenokIsSilent(1,fraz[maxflag].question);}
+                                   WhenMaslenokIsSilent(1,fraz[maxflag].question); console.log("вопрос" + question);}
                                    else
-                                   {WhenMaslenokIsSilent(1,1);}
+                                   {WhenMaslenokIsSilent(1,1);console.log("просто алё");}
                                   });                              
                                 
                                
