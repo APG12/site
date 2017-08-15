@@ -1,30 +1,6 @@
 window.onload = function () {
 var zaglushki = ['sounds/алё.mp3','sounds/алео.mp3'];
- function Timer(callback, time) {
-    this.setTimeout(callback, time);
-}
 
-Timer.prototype.setTimeout = function(callback, time) {
-    var self = this;
-    if(this.timer) {
-        clearTimeout(this.timer);
-    }
-    this.finished = false;
-    this.callback = callback;
-    this.time = time;
-    this.timer = setTimeout(function() {
-         self.finished = true;
-        callback();
-    }, time);
-    this.start = Date.now();
-}
-
-Timer.prototype.add = function(time) {
-   if(!this.finished) {
-       // add time to time left
-       this.setTimeout(this.callback, time);
-   }
-}
  var timer;
  function WhenMaslenokIsSilent(arg){
    if(arg == 1){
