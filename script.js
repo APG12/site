@@ -1,5 +1,5 @@
 window.onload = function () {
- 
+var zaglushki = ['sound/алё.mp3','sound/алео.mp3'];
  function Timer(callback, time) {
     this.setTimeout(callback, time);
 }
@@ -29,7 +29,7 @@ Timer.prototype.add = function(time) {
 
  function WhenMaslenokIsSilent(arg){
 var timer = new Timer(function() { // init timer with 5 seconds
-    var audiosil = new Audio(zaglushki[0]);
+    var audiosil = new Audio(zaglushki[Math.floor(Math.random()*zaglushki.length)]);
                        audiosil.play()
 WhenMaslenokIsSilent()
 
