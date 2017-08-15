@@ -21,7 +21,7 @@ var fraz = {
     },
   alo:{
     slova: ["але","говорите", "ало","алло","алле","слушаю","привет"],
-    sound:  [[['sounds/привет.mp3'],['sounds/соси небритую жопу.mp3']],['sounds/я тебя хочу.mp3']],
+    sound:  [['sounds/привет.mp3'],['sounds/соси небритую жопу.mp3']],
     chain: [],
     w:1.1
      },
@@ -183,7 +183,7 @@ annyang.addCallback('result', function(phrases) {
                                 var ai =0;
                                 var maxflagb = maxflag;
                                 var sonu = Math.floor(Math.random()*fraz[maxflag].sound.length);
-                                if (Array.isArray(fraz[maxflag].sound[sonu][0])){                              
+                                if (Array.isArray(fraz[maxflag].sound[sonu])){                              
                                  console.log("признал массивом");
                                  audio = new Audio(fraz[maxflag].sound[sonu][0]);
                                  audio.addEventListener("ended", function(){
