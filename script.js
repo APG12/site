@@ -158,7 +158,6 @@ var fraz = {
 annyang.debug();
 annyang.setLanguage("ru");
 annyang.start();       
-WhenMaslenokIsSilent(1);
 annyang.addCallback('result', function(phrases) {
                  
  WhenMaslenokIsSilent(0);
