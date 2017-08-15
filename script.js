@@ -5,6 +5,7 @@ window.onload = function() {
 
     function WhenMaslenokIsSilent(arg, soun) {
         if (arg == 1) {
+            console.log("таймер установлен");
             timer = setTimeout(function() { // init timer with 5 seconds
                 if (soun != 1) {
                     var audiosil = new Audio(soun);
@@ -15,6 +16,7 @@ window.onload = function() {
                 audiosil.play();
             }, 5000);
         } else if (arg == 0) {
+            console.log("таймер сброшен");
             clearTimeout(timer);
         }
     };
