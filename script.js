@@ -1,17 +1,42 @@
 window.onload = function () {
-var timersilence;
- var time = 4000;
- var zaglushki =['sounds/алё.mp3','sounds/я тебя хочу.mp3'];
- function WhenMaslenokIsSilent(arg){
-  if (arg==1){
- timersilence = setTimeout(function(){
-                     var audiosil = new Audio(zaglushki[0]);
-                       audiosil.play()
-  time = 4000;
-  WhenMaslenokIsSilent(1);
-  console.log("вызван АЛЕЕЕЕЕ");
-                   },time);}
+ 
+ function Timer(callback, time) {
+    this.setTimeout(callback, time);
 }
+
+Timer.prototype.setTimeout = function(callback, time) {
+    var self = this;
+    if(this.timer) {
+        clearTimeout(this.timer);
+    }
+    this.finished = false;
+    this.callback = callback;
+    this.time = time;
+    this.timer = setTimeout(function() {
+         self.finished = true;
+        callback();
+    }, time);
+    this.start = Date.now();
+}
+
+Timer.prototype.add = function(time) {
+   if(!this.finished) {
+       // add time to time left
+       time = this.time - (Date.now() - this.start) + time;
+       this.setTimeout(this.callback, time);
+   }
+}
+
+ function WhenMaslenokIsSilent(arg){
+var timer = new Timer(function() { // init timer with 5 seconds
+    var audiosil = new Audio(zaglushki[0]);
+                       audiosil.play()
+WhenMaslenokIsSilent()
+
+}, 5000);
+
+ }; 
+ 
 WhenMaslenokIsSilent(1);
 
 
@@ -176,7 +201,7 @@ annyang.addCallback('result', function(phrases) {
                                 maxflag = key;
                                }
                                         }               
-                                 }javascript:void(0)
+                                 }
                            
                     }
 
@@ -212,8 +237,7 @@ annyang.addCallback('result', function(phrases) {
                                  console.log("ended");
                                  }); 
                                 }
-                                time = 5000;     
-                                audio.play();        
+timer.add(4000);                                 audio.play();        
                               
                                 
                                
