@@ -1,14 +1,14 @@
 window.onload = function () {
-
+var timersilence;
  var zaglushki =['sounds/алё.mp3','sounds/я тебя хочу.mp3'];
  function WhenMaslenokIsSilent(arg){
   if (arg==1){
- var timersilence = setTimeout(function(){
+ timersilence = setTimeout(function(){
                      var audiosil = new Audio(zaglushki[0]);
                        audiosil.play()
   WhenMaslenokIsSilent(1);
   console.log("вызван АЛЕЕЕЕЕ");
-                   },10000);}
+                   },4000);}
   else if (arg==0)
   {
    console.log("АЛЕЕЕЕ отменен сука че она орет");
