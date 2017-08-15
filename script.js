@@ -45,7 +45,7 @@ var fraz = {
     },
     nuktoetoti:{
     slova: ["ну", "кто", "это","ты", "такая", "не" ,"знаю", "таких", "что" ,"за" ,"кристина"],
-    sound: ['sounds/а угадай.mp3','sounds/всымсле в прошлый раз.mp3','sounds/мы учились вместе.mp3','sounds/я помню мы хорошо провел.mp3'],
+    sound: [['sounds/а угадай.mp3'],['sounds/всымсле в прошлый раз.mp3'],['sounds/мы учились вместе.mp3'],['sounds/я помню мы хорошо провел.mp3']],
     chain: ["neho4ugadat"],
     w:0.99
     },
@@ -182,13 +182,15 @@ annyang.addCallback('result', function(phrases) {
                                 console.log(maxflag);
                                 var ai =0;
                                 var maxflagb = maxflag;
-                                audio = new Audio(fraz[maxflag].sound[ai]);
+                                var sonu = Math.floor(Math.random()*fraz[maxflag].sound.length);
+                                audio = new Audio(fraz[maxflag].sound[sonu][0]);
+
                                 audio.play();        
-                               if (fraz[maxflag].sound.length >1){
+                               if (fraz[maxflag].sound[sonu].length >1){
                                audio.addEventListener("ended", function(){
                                audio.currentTime = 0;
                               ai++;
-                              audio = new Audio(fraz[maxflagb].sound[ai]);
+                              audio = new Audio(fraz[maxflagb].sound[sonu][ai]);
                                 audio.play();
                                  console.log("ended");
                               }); }
