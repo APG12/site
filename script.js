@@ -6,7 +6,8 @@ window.onload = function () {
   if (arg==1){
  var timersilence = setInterval(function(){
                      var audiosil = new Audio(zaglushki[0]);
-                       audiosil.play()   
+                       audiosil.play()
+  WhenMaslenokIsSilent(1);
                    },3000);}
   else
   {
@@ -155,11 +156,10 @@ var fraz = {
 annyang.debug();
 annyang.setLanguage("ru");
 annyang.start();       
-WhenMaslenokIsSilent();
+WhenMaslenokIsSilent(1);
 annyang.addCallback('result', function(phrases) {
                  
-
-                WhenMaslenokIsSilent(0);
+ WhenMaslenokIsSilent(0);
                 for (var i=0; i<phrases.length;i++)
                     {
                         var words = phrases[i].split(" ");
@@ -217,7 +217,7 @@ annyang.addCallback('result', function(phrases) {
                                 }
                                      
                                 audio.play();        
-                               WhenMaslenokIsSilent(1);
+                              
                                 
                                
   var bufmsg = maxflag;
