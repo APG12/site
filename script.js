@@ -22,7 +22,6 @@ Timer.prototype.setTimeout = function(callback, time) {
 Timer.prototype.add = function(time) {
    if(!this.finished) {
        // add time to time left
-       time = this.time - (Date.now() - this.start) + time;
        this.setTimeout(this.callback, time);
    }
 }
