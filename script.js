@@ -1,6 +1,5 @@
-  WhenMaslenokIsSilent(1);
-
 window.onload = function () {
+  WhenMaslenokIsSilent(1);
  
  var zaglushki =['sounds/алё.mp3','sounds/я тебя хочу.mp3'];
 
