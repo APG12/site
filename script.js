@@ -145,12 +145,16 @@ var fraz = {
   
 annyang.debug();
 annyang.setLanguage("ru");
-annyang.start         
+annyang.start();       
 
-
+var timersilence = setInterval(function(){
+                     var audiosil = new Audio(zaglushki[0]);
+                       audiosil.play()   
+                   },3000);
 annyang.addCallback('result', function(phrases) {
               
 
+                 clearInterval(timersilence);
 
                 for (var i=0; i<phrases.length;i++)
                     {
