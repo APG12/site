@@ -21,7 +21,7 @@ var fraz = {
     },
   alo:{
     slova: ["але","говорите", "ало","алло","алле","слушаю","привет"],
-    sound:  ['sounds/привет.mp3'],
+    sound:  ['sounds/привет.mp3','sounds/соси небритую жопу.mp3'],
     chain: [],
     w:1.1
      },
@@ -180,9 +180,14 @@ annyang.addCallback('result', function(phrases) {
 
                 }
                                 console.log(maxflag);
-                                
-                               audio = new Audio(fraz[maxflag].sound[Math.floor(Math.random()*fraz[maxflag].sound.length)]);
+                                for (var i=0; i<fraz[maxflag].sound.length; i++){
+                               audio = new Audio(fraz[maxflag].sound[i]);
+                                audio.addEventListener("ended", function(){
+                               audio.currentTime = 0;
                                audio.play();
+                                 console.log("ended");
+}); 
+                               }
   var bufmsg = maxflag;
   var leftData = "<div class='message left' style='display:none;'><div class='message-text'>" + phrases[0] +
     "</div></div>";
