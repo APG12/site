@@ -49,7 +49,7 @@ window.onload = function() {
  var msg = new SpeechSynthesisUtterance()
 msg.voice = voices[10]; // use the index from the list above to pick your voice
 
-msg.text =  words;
+msg.text =  words[words.length-1];
 msg.lang = 'ru-RU';
 
 
