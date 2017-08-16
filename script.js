@@ -79,12 +79,15 @@ window.onload = function() {
     });
     annyang.addCallback('soundstart', function() {
         console.log('sound detected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-        flagpiz = 1;
         WhenMaslenokIsSilent(0, 0);
+        flagpiz = 0;
     });
     annyang.addCallback('result', function(phrases) {
         WhenMaslenokIsSilent(0, 0);
-        flagpiz = 0;
+        if (flagpiz ==0){
+        flagpiz = 1;}
+        else if (flagpiz == 1){
+        flagpiz = 0;}
         if (mainflag == 0) {
             mainflag = 1;
             for (var i = 0; i < phrases.length; i++) {
@@ -162,6 +165,11 @@ window.onload = function() {
             for (var key in fraz) {
                 fraz[key].w = fraz[key].bw;
             }
+            
+            
+            fraz[maxflag].bw = 0.95;
+            fraz[maxflag].w = 0.95;
+            
             if (fraz[maxflag].hasOwnProperty("chain")) {
                 console.log("чейн не пустой");
                 for (var i = 0; i < fraz[maxflag].chain.length; i++) {
@@ -175,8 +183,6 @@ window.onload = function() {
                 }
 
             }
-            fraz[maxflag].bw = 0.95;
-            fraz[maxflag].w = 0.95;
 
             max = 1;
             maxflag = pickRandomProperty(fraz);
