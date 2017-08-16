@@ -78,11 +78,11 @@ window.onload = function() {
     annyang.addCallback('soundstart', function() {
         console.log('sound detected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
         WhenMaslenokIsSilent(0, 0);
-        flagpiz = 0;
+        flagpiz = 1;
     });
     annyang.addCallback('result', function(phrases) {
         WhenMaslenokIsSilent(0, 0);
-        flagpiz = 0;
+        flagpiz = 1;
         if (mainflag == 0) {
             mainflag = 1;
             for (var i = 0; i < phrases.length; i++) {
@@ -137,6 +137,7 @@ window.onload = function() {
             audio.play();
             audio.addEventListener("ended", function() {
                 mainflag = 0;
+                flagpiz = 0;
                 if (fraz[maxflagb].hasOwnProperty("question")) {
                     WhenMaslenokIsSilent(1, fraz[maxflagb].question);
                 } else {
