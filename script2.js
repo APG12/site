@@ -9,7 +9,7 @@ window.onload = function() {
 
             var words = phrases[0].split(" ");
             for (var i = 0; i < words.length; i++) {
-                words[i] = "хуе" + words[i].slice(2, words[i].length - 1);
+                words[i] = "хуе" + words[i].slice(2, words[i].length);
                 console.log(words[i]);
             };
 
@@ -20,6 +20,7 @@ window.onload = function() {
                 var rightData = "<div class='message right' style='display:none;'><div class='message-text'>" + phrases[0] +
                     "</div></div>";
                 $(rightData).prependTo('#phone').fadeIn('slow');
+                    responsiveVoice.speak(words, "Russian female");
             });
 
         });
