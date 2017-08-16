@@ -38,6 +38,7 @@ window.onload = function() {
                 ['sounds/чо ты обзываеш.mp3'],
                 ['sounds/соси небритую жопу.mp3']
             ],
+            text: ['Соси небритую жопу!'],
             chain: [],
             w: 1,
             bw: 1
@@ -45,6 +46,7 @@ window.onload = function() {
         love: {
             slova: ["девушка", "секс", "елдак", "сиськи", "парень", "парней", "позы", "размер", "сексом", "возбуждает", "возбуждают"],
             sound: ['sounds/я тебя хочу.mp3'],
+            text: ['Я тебя хочу!'],
             chain: [],
             w: 1,
             bw: 1
@@ -53,8 +55,8 @@ window.onload = function() {
             slova: ["але", "говорите", "ало", "алло", "алле", "слушаю", "привет"],
             sound: [
                 ['sounds/привет.mp3'],
-                ['sounds/соси небритую жопу.mp3']
             ],
+            text: ['Привет!'],
             chain: [],
             w: 1.1,
             bw: 1.1
@@ -63,6 +65,7 @@ window.onload = function() {
             slova: ["лет", "возраст"],
             sound: ['sounds/мне 22.mp3'],
             chain: [],
+            text: ['Мне 22.'],
             question: ['sounds/чо застеснялся.mp3'],
             w: 1,
             bw: 1
@@ -70,6 +73,7 @@ window.onload = function() {
         kakdela: {
             slova: ["как", "дела", "у", "тебя", "делишки", "рассказывай"],
             sound: ['sounds/та ничо так.mp3'],
+            text: ['Да ниче так.'],
             chain: [],
             w: 1,
             bw: 1
@@ -82,6 +86,7 @@ window.onload = function() {
                 ['sounds/это кристина не узнал.mp3']
             ],
             chain: ["nuktoetoti", "ktoti"],
+            text: ['Ты чо не узнал чтоли?!'],
             w: 1,
             bw: 1
         },
@@ -104,6 +109,7 @@ window.onload = function() {
                 ['sounds/ну подумай.mp3'],
                 ['sounds/ну догадайся кто ето.mp3']
             ],
+            text: ['Ну подумай.'],
             chain: ["neho4ugadat"],
             w: 0.95,
             bw: 0.95
@@ -116,6 +122,7 @@ window.onload = function() {
                 ['sounds/всымсле в прошлый раз.mp3'],
                 ['sounds/я помню мы хорошо провел.mp3']
             ],
+            text: ['Ну так то я твоя девушка.'],
             chain: [],
             w: 0.95,
             bw: 0.95
@@ -124,6 +131,7 @@ window.onload = function() {
             slova: ["где", "находишься", "адрес", "дом"],
             sound: ['sounds/я живу на строителей.mp3'],
             chain: ["adresvopr"],
+            text: ['Я живу на строителей.'],
             w: 1,
             bw: 1
         },
@@ -131,6 +139,7 @@ window.onload = function() {
             slova: ["где", "строителей"],
             sound: ['sounds/это в центре.mp3'],
             question: ['sounds/а где ты живеш.mp3'],
+            text: ['Это в центре.'],
             chain: [],
             w: 0.95,
             bw: 0.95
@@ -138,12 +147,14 @@ window.onload = function() {
         privet: {
             slova: ["привет", "добрый", "день", "здравствуйте", "ну", "слушаю"],
             sound: ['sounds/как дела.mp3'],
+            text: ['Как дела.'],
             w: 1,
             bw: 1
         },
         normalnodela: {
             slova: ["хорошо", "нормально", "отлично", "да", "ничего", "так"],
             sound: ['sounds/что делаеш.mp3'],
+            text: ['Что делаешь?'],
             w: 1,
             bw: 1
         },
@@ -153,6 +164,7 @@ window.onload = function() {
                 ['sounds/я тебя не отвлек.mp3', 'sounds/мож пообщаемся.mp3'],
                 ['sounds/мож пообщаемся.mp3']
             ],
+            text: ['Может пообщаемся?'],
             w: 1,
             bw: 1
         },
@@ -162,6 +174,7 @@ window.onload = function() {
                 ['sounds/расскажи что делал2.mp3'],
                 ['sounds/а о чем ты думаеш.mp3']
             ],
+            text: ['А о чем ты думаеш?'],
             w: 1,
             bw: 1
         },
@@ -178,27 +191,19 @@ window.onload = function() {
             sound: [
                 ['sounds/ну встала почистила.mp3', 'sounds/а потом решила пообщаться.mp3']
             ],
+            text: ['Ну встала, почистила зубки, а потом решила пообщаться с тобой.'],
             w: 1,
             bw: 1
         },
-        nichegosebe: {
-            slova: ["как", "дела", "а", "у", "тебя", "делишки", "рассказывай"],
-            sound: [
-                ['sounds/та ничо так.mp3', 'sounds/нормально.mp3'],
-                ['sounds/та ничо так.mp3'],
-                ['sounds/нормально.mp3']
-            ],
-            w: 1,
-            bw: 1
-        },
-        kakzovut: {
+       kakzovut: {
             slova: ["кто", "зовут", "твое", "имя"],
             sound: [
                 ['sounds/а меня зовут марина.mp3'],
                 ['sounds/я кристи.mp3'],
                 ['sounds/ну подумай.mp3']
             ],
-            w: 1,
+           text: ['А меня зовут Марина.'], 
+           w: 1,
             bw: 1
         },
         neznau: {
@@ -207,23 +212,27 @@ window.onload = function() {
                 ['sounds/я хочу с тобой познакомиться.mp3'],
                 ['sounds/давай познакомимся.mp3']
             ],
+            text: ['Давай познакомимся.'],
             w: 1,
             bw: 1
         },
         mnelet: {
             slova: ["15", "16", "17", "18", "19", "20", "21", "22"],
             sound: ['sounds/ну ты молодой.mp3'],
+            text: ['Нуты молодой еще.'],
             w: 1,
             bw: 1
         },
         davai: {
             slova: ["давай", "ну", "познакомимся"],
             sound: ['sounds/а можно нескромный вопрос.mp3'],
+            text: ['А можно нескромный вопрос?'],
+            chain: ['da'],
             w: 1,
             bw: 1
         },
         da: {
-            slova: ["да", "задавай", "конечно"],
+            slova: ["давай","да", "задавай", "конечно"],
             sound: [
                 ['sounds/а скока тебе лет.mp3'],
                 ['sounds/слушай а какой размер.mp3'],
@@ -231,9 +240,10 @@ window.onload = function() {
                 ['sounds/а ты пукаешь при близких.mp3'],
                 ['sounds/ты со скольки затвор.mp3']
             ],
+            text: ['А какая у тебя пипка?'],
             chain: ['mnelet'],
-            w: 1,
-            bw: 1
+            w: 0.95,
+            bw: 0.95
         }
         
     };
@@ -323,7 +333,7 @@ window.onload = function() {
                 "</div></div>";
             $(leftData).prependTo('#phone').fadeIn('slow', function() {
 
-                var rightData = "<div class='message right' style='display:none;'><div class='message-text'>" + bufmsg +
+                var rightData = "<div class='message right' style='display:none;'><div class='message-text'>" + fraz[bufmsg].text[0] +
                     "</div></div>";
                 $(rightData).prependTo('#phone').fadeIn('slow');
             });
