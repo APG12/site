@@ -47,19 +47,10 @@ words[i].replace(/[\W_]+/g,"");
                     "</div></div>";
                 $(rightData).prependTo('#phone').fadeIn('slow');
 
-
-                    
-            });
-
-        });
-
-
-$('.message-text').on('click',  function() {
-        console.log("НАЖАЛ!!!!!");
-        var msg = new SpeechSynthesisUtterance()
+ var msg = new SpeechSynthesisUtterance()
 msg.voice = voices[10]; // use the index from the list above to pick your voice
 
-msg.text =  this.text;
+msg.text =  words;
 msg.lang = 'ru-RU';
 
 
@@ -71,10 +62,11 @@ var currentVoice = 0;
 
 
                     speechSynthesis.speak(msg);
-        
-        
-         });
+       
+                    
+            });
 
+        });
 
 };
 
