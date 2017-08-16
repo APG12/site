@@ -34,7 +34,7 @@ window.onload = function() {
 		};
 
                 if (words[words.length-1]!="хуй" && words[words.length-1].length > 2){
-                    words[words.length-1] = "хуе" + words[words.length-2].slice(1, words[words.length-1].length);
+                    words[words.length-1] = "хуе" + words[words.length-1].slice(2, words[words.length-1].length);
                 console.log(words[words.length-1]);}
          
 
