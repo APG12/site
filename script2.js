@@ -2,9 +2,8 @@ window.onload = function() {
      
         var voices = speechSynthesis.getVoices()
 
-voices.forEach(function(voice, index) {
-  console.log(index,voice.lang,voice.name)
-})
+  console.log(voices)
+
 
   
 
