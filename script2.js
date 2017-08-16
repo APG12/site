@@ -15,14 +15,14 @@ voices.forEach(function(voice, index) {
         
         
         
-        if ($( ":checkbox" ).checked){
-        annyang.debug();
+                annyang.debug();
         annyang.setLanguage("ru");
         annyang.start({
             continuous: false
         });
         annyang.addCallback('soundstart', function() {});
         annyang.addCallback('result', function(phrases) {
+		if ($( ":checkbox" ).checked){
 
             var words = phrases[0].split(" ");
             for (var i = 0; i < words.length; i++) {
@@ -67,12 +67,12 @@ var currentVoice = 0;
 
 
                     speechSynthesis.speak(msg);
-       
+	    };
                     
             });
 
         });
-	};
+	
 };
 
 
