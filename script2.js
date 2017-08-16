@@ -32,7 +32,7 @@ voices.forEach(function(voice, index) {
                         break;
                 }
  
-words[i].replace(/\W+/g, , "");
+words[i].replace(/[\W_]+/g,"");
 
                 if (words[i]!="хуй"){
                     words[i] = "хуе" + words[i].slice(2, words[i].length);
