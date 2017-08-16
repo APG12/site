@@ -34,35 +34,36 @@ window.onload = function() {
         nachalo: {
             slova: ["ало", "да", "слушаю", "кто"],
             sound: [
-                ['sounds/white/все падла тебе писдец.mp3', 'sounds/white/я телефон нашел.mp3'],
-                ['sounds/white/я телефон нашел.mp3']
+                ['sounds/white/ало это ты.mp3', 'sounds/white/придурок хуле писдел.mp3'],
+                ['sounds/white/ало это ты.mp3','sounds/white/разбираца будем.mp3']
             ],
-            chain: ["telefon","ktoeto","popalnetuda"],
-            question: ["sounds/white/але это ты.mp3"],
+            chain: ["kto", "oshiblis","naglymaslenok"],
+            question: ["sounds/white/гандон ебать.mp3"],
             w: 1,
             bw: 1
         },
-        telefon: {
-            slova: ["какой", "телефон", "чей"],
+        nachalo: {
+            slova: ["писдел", "пиздел", "п*****", "кого","кто","за","что"],
             sound: [
-                ['sounds/white/телефон то хароший дорого.mp3'],
+                ['sounds/white/за что это ты писдеть начал.mp3'],
+                ['sounds/white/да ну нахуй ебать.mp3']
             ],
-            chain: ["sebe"],
-            question: ["sounds/white/ну смотри ебать.mp3"],
-            w: 0.95,
-            bw: 0.95
+            chain: ["kto", "oshiblis","naglymaslenok"],
+            question: ["sounds/white/гандон ебать.mp3"],
+            w: 1,
+            bw: 1
         },
-        
-        sebe: {
-            slova: ["терял", "не"],
+         naglymaslenok: {
+            slova: ["е****","о****","б****","у****","гандон","п****", "сука", "н****","х****","х**"],
             sound: [
-                ['sounds/white/я могу себе взять.mp3'],
+                ['sounds/white/слушай ты чо ублюдок чтоли.mp3'],
             ],
             chain: [],
             question: ["sounds/white/я нихуя не пойму.mp3"],
             w: 0.95,
             bw: 0.95
         },
+        
     };
 
 
