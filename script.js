@@ -16,13 +16,15 @@ window.onload = function() {
                 }
                 audiosil.play();
             }, 5000);
-        } else if (arg == 0) {
+        } }
+        if (arg2==1)
+        {if (arg == 0) {
             console.log("таймер сброшен");
             clearTimeout(timer);
         }}
     };
 
-    WhenMaslenokIsSilent(1, 1);
+    WhenMaslenokIsSilent(1, 1, 0);
 
 
     var fraz = {
