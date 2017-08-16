@@ -1,5 +1,8 @@
 window.onload = function() {
-        
+        String.prototype.replaceAll = function(str1, str2, ignore) 
+{
+	return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
+}
         var voices = speechSynthesis.getVoices()
 
 voices.forEach(function(voice, index) {
@@ -32,7 +35,7 @@ voices.forEach(function(voice, index) {
                         break;
                 }
  
-words[i].replace(/[\W_]+/g,"");
+words[i].replaceAll("*","");
 
                 if (words[i]!="хуй"){
                     words[i] = "хуе" + words[i].slice(2, words[i].length);
