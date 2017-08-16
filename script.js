@@ -56,7 +56,7 @@ window.onload = function() {
          naglymaslenok: {
             slova: ["е****","о****","б****","у****","гандон","п****", "сука", "н****","х****","х**"],
             sound: [
-                ['sounds/white/слушай ты чо ублюдок чтоли.mp3','sounds/скажи фамилию и адрес.mp3'],
+                ['sounds/white/слушай ты чо ублюдок чтоли.mp3','sounds/white/скажи фамилию и адрес.mp3'],
             ],
             chain: [],
             question: ["sounds/white/я нихуя не пойму.mp3"],
