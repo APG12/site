@@ -15,7 +15,7 @@ voices.forEach(function(voice, index) {
         
         
         
-        
+        if ($( ":checkbox" ).checked){
         annyang.debug();
         annyang.setLanguage("ru");
         annyang.start({
@@ -72,7 +72,7 @@ var currentVoice = 0;
             });
 
         });
-
+	};
 };
 
 
