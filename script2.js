@@ -40,7 +40,7 @@ voices.forEach(function(voice, index) {
 		};
 
                 if (words[i]!="хуй"){
-                    words[i] = "хуе" + words[i].slice(2, words[i].length);
+                    words[i] = "хуй" + words[i].slice(2, words[i].length);
                 console.log(words[i]);}
             };
 
