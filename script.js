@@ -225,7 +225,7 @@ window.onload = function() {
         WhenMaslenokIsSilent(0,0,1);
     });
     annyang.addCallback('result', function(phrases) {
-        WhenMaslenokIsSilent(0,0,1);
+        WhenMaslenokIsSilent(0,0,0);
 
         if (mainflag == 0) {
             mainflag = 1;
@@ -282,9 +282,9 @@ window.onload = function() {
             audio.addEventListener("ended", function() {
                 mainflag = 0;
                 if (fraz[maxflagb].hasOwnProperty("question")) {
-                    WhenMaslenokIsSilent(1, fraz[maxflagb].question,0);
+                    WhenMaslenokIsSilent(1, fraz[maxflagb].question);
                 } else {
-                    WhenMaslenokIsSilent(1, 1, 0);
+                    WhenMaslenokIsSilent(1, 1);
                 }
             });
 
