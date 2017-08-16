@@ -47,7 +47,7 @@ window.onload = function() {
             sound: [
                 ['sounds/white/телефон то хароший дорого.mp3'],
             ],
-            chain: [],
+            chain: ["sebe"],
             question: ["sounds/white/ну смотри ебать.mp3"],
             w: 0.95,
             bw: 0.95
@@ -58,7 +58,7 @@ window.onload = function() {
             sound: [
                 ['sounds/white/я могу себе взять.mp3'],
             ],
-            chain: ["sebe"],
+            chain: [],
             question: ["sounds/white/я нихуя не пойму.mp3"],
             w: 0.95,
             bw: 0.95
