@@ -37,32 +37,63 @@ window.onload = function() {
                 ['sounds/white/але это ты.mp3', 'sounds/white/придурок хуле писдел.mp3'],
                 ['sounds/white/але это ты.mp3','sounds/white/разбираца будем.mp3']
             ],
-            chain: ["kto", "oshiblis","naglymaslenok"],
+            chain: ["zachto","kto", "oshiblis","naglymaslenok"],
             question: ["sounds/white/гандон ебать.mp3"],
             w: 1,
             bw: 1
         },
         kto: { 
-            slova: ["писдел", "пиздел", "п*****", "кого","кто","за","что"],
+            slova: ["это", "кто", "ты", "зовут","откуда"],
+            sound: [
+                ['sounds/white/белый фамилия.mp3'],                
+            ],
+            chain: ["naglymaslenok"],
+            question: ["sounds/white/гандон ебать.mp3"],
+            w: 0.95,
+            bw: 0.95
+        },
+        zachto: { 
+            slova: ["писдел", "пиздел", "п*****", "кого","за","что"],
             sound: [
                 ['sounds/white/за что это ты писдеть начал.mp3'],
                 ['sounds/white/да ну нахуй ебать.mp3']
             ],
-            chain: ["kto", "oshiblis","naglymaslenok"],
+            chain: ["naglymaslenok"],
             question: ["sounds/white/гандон ебать.mp3"],
-            w: 1,
-            bw: 1
+            w: 0.95,
+            bw: 0.95
+        },
+        oshiblis: { 
+            slova: ["ошиблись", "номером", "номер", "звоните"],
+            sound: [
+                ['sounds/white/я нихуя не пойму.mp3']
+            ],
+            chain: ["naglymaslenok"],
+            question: ["sounds/white/гандон ебать.mp3"],
+            w: 0.95,
+            bw: 0.95
         },
          naglymaslenok: {
             slova: ["е****","о****","б****","у****","гандон","п****", "сука", "н****","х****","х**"],
             sound: [
-                ['sounds/white/слушай ты чо ублюдок чтоли.mp3','sounds/white/скажи фамилию и адрес.mp3'],
+                ['sounds/white/слушай ты чо ублюдок чтоли.mp3','sounds/white/скажи фамилию и адрес.mp3']
             ],
-            chain: [],
+            chain: ["adres","esheboleenaglyi"],
             question: ["sounds/white/я нихуя не пойму.mp3"],
             w: 0.95,
             bw: 0.95
         },
+         esheboleenaglyi: {
+            slova: ["е****","о****","б****","у****","гандон","п****", "сука", "н****","х****","х**"],
+            sound: [
+                ['sounds/white/ага ебать я тебя вычислю.mp3']
+            ],
+            chain: ["adres","esheboleenaglyi"],
+            question: ["sounds/white/я нихуя не пойму.mp3"],
+            w: 0.95,
+            bw: 0.95
+        },
+        
         
     };
 
