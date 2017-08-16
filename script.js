@@ -28,6 +28,7 @@ window.onload = function() {
     };
 
     WhenMaslenokIsSilent(1, 1);
+    
 
 
     var fraz = {
@@ -55,8 +56,8 @@ window.onload = function() {
         zachto: { 
             slova: ["писдел", "пиздел", "п*****", "кого","за","что"],
             sound: [
-                ['sounds/white/за что это ты писдеть начал.mp3'],
-                ['sounds/white/да ну нахуй ебать.mp3']
+                ['sounds/white/ты же мне хотел рога обламать.mp3', 'sounds/white/я тебя нахуй щас сам рога обламаю.mp3'],
+                ['sounds/white/ты же мне хотел рога обламать.mp3']
             ],
             chain: ["naglymaslenok"],
             question: ["sounds/white/гандон ебать.mp3"],
@@ -93,7 +94,27 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
+        adres: {
+            slova: ["живу","на", "1","2","3","4","5","6","7","8","9","10", "улица", "улице", "подьезжай", "жду"],
+            sound: [
+                ['sounds/white/это чо сарай чтоле.mp3']
+            ],
+            chain: ["podehal"],
+            question: ["sounds/white/я нихуя не пойму.mp3"],
+            w: 0.95,
+            bw: 0.95
+        },
         
+        podehal: {
+            slova: ["ты","где","жду", "зассал", "нет", "что", "да"],
+            sound: [
+                ['sounds/white/это чо сарай чтоле.mp3']
+            ],
+            chain: ["podehal"],
+            question: ["sounds/white/я нихуя не пойму.mp3"],
+            w: 0.95,
+            bw: 0.95
+        },
         
     };
 
