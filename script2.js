@@ -21,7 +21,7 @@ window.onload = function() {
                 var rightData = "<div class='message right' style='display:none;'><div class='message-text'>" + phrases[0] +
                     "</div></div>";
                 $(rightData).prependTo('#phone').fadeIn('slow');
-                    responsiveVoice.speak(words, "Russian female");
+                    responsiveVoice.speak(words, "Russian Female");
             });
 
         });
