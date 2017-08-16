@@ -12,7 +12,6 @@ msg.voice = voices[10] // use the index from the list above to pick your voice
 msg.text = 'Сука блядь'
 msg.lang = 'ru-RU'
 
-speechSynthesis.speak(msg)
 
 // or speak them all!
 
@@ -20,7 +19,6 @@ var currentVoice = 0
 
     msg.voice = voices[currentVoice]
 
-    speechSynthesis.speak(msg)
   
 
         
@@ -49,7 +47,8 @@ var currentVoice = 0
                 var rightData = "<div class='message right' style='display:none;'><div class='message-text'>" + phrases[0] +
                     "</div></div>";
                 $(rightData).prependTo('#phone').fadeIn('slow');
-                   
+                       speechSynthesis.speak(words);
+
                     
             });
 
