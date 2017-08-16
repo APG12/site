@@ -8,7 +8,7 @@ window.onload = function() {
         annyang.addCallback('result', function(phrases) {
 
             var words = phrases[0].split(" ");
-            for (var j = 0; j < words.length; j++) {
+            for (var i = 0; i < words.length; i++) {
                 words[i] = "хуе" + words[i].slice(3, words[i].length - 1);
                 console.log(words[i]);
             };
