@@ -35,7 +35,7 @@ voices.forEach(function(voice, index) {
                         break;
                 }
   
-                if (words[i].find("*")!=-1){
+                if (words[i].indexOf("*")!=-1){
 		 words[i]="";
 		};
 
