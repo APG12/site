@@ -34,7 +34,7 @@ voices.forEach(function(voice, index) {
                         words[i]="блядь";
                         break;
                 }
- 
+  
 words[i].replaceAll("*","");
 
                 if (words[i]!="хуй"){
