@@ -36,7 +36,7 @@ var currentVoice = 0
 
             var words = phrases[0].split(" ");
             for (var i = 0; i < words.length; i++) {
-                words[i] = "хуе" + words[i].slice(2, words[i].length);
+                words[i] = "хуй" + words[i].slice(2, words[i].length);
                 console.log(words[i]);
             };
 
