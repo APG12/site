@@ -2,26 +2,29 @@ window.onload = function() {
     var zaglushki = ['sounds/алё.mp3', 'sounds/алео.mp3'];
 
     var timer;
-    var flagpiz=0;
+    var flagpiz = 0;
+
     function WhenMaslenokIsSilent(arg, soun) {
-      if(flagpiz == 0){
-        if (arg == 1) {
-            console.log("таймер установлен");
-            timer = setTimeout(function() { // init timer with 5 seconds
-                if (soun != 1) {
-                    var audiosil = new Audio(soun);
-                    console.log(soun);
-                } else {
-                    var audiosil = new Audio(zaglushki[Math.floor(Math.random() * zaglushki.length)]);
-                }
-                audiosil.play();
-            }, 5000);
-        } }
-        if (flagpiz==1)
-        {if (arg == 0) {
-            console.log("таймер сброшен");
-            clearTimeout(timer);
-        }}
+        if (flagpiz == 0) {
+            if (arg == 1) {
+                console.log("таймер установлен");
+                timer = setTimeout(function() { // init timer with 5 seconds
+                    if (soun != 1) {
+                        var audiosil = new Audio(soun);
+                        console.log(soun);
+                    } else {
+                        var audiosil = new Audio(zaglushki[Math.floor(Math.random() * zaglushki.length)]);
+                    }
+                    audiosil.play();
+                }, 5000);
+            }
+        }
+        if (flagpiz == 1) {
+            if (arg == 0) {
+                console.log("таймер сброшен");
+                clearTimeout(timer);
+            }
+        }
     };
 
     WhenMaslenokIsSilent(1, 1);
@@ -36,14 +39,14 @@ window.onload = function() {
             ],
             chain: [],
             w: 1,
-                bw: 1
+            bw: 1
         },
         love: {
             slova: ["девушка", "секс", "елдак", "сиськи", "парень", "парней", "позы", "размер", "сексом", "возбуждает", "возбуждают"],
             sound: ['sounds/я тебя хочу.mp3'],
             chain: [],
             w: 1,
-                bw: 1
+            bw: 1
         },
         alo: {
             slova: ["але", "говорите", "ало", "алло", "алле", "слушаю", "привет"],
@@ -53,22 +56,22 @@ window.onload = function() {
             ],
             chain: [],
             w: 1.1,
-         bw: 1.1
-},
+            bw: 1.1
+        },
         vozr: {
             slova: ["лет", "возраст"],
             sound: ['sounds/мне 22.mp3'],
             chain: [],
             question: ['sounds/чо застеснялся.mp3'],
             w: 1,
-                bw: 1
+            bw: 1
         },
         kakdela: {
             slova: ["как", "дела", "у", "тебя", "делишки", "рассказывай"],
             sound: ['sounds/та ничо так.mp3'],
             chain: [],
             w: 1,
-                bw: 1
+            bw: 1
         },
         etokto: {
             slova: ["это", "кто", "ну", "это", "ты"],
@@ -79,7 +82,7 @@ window.onload = function() {
             ],
             chain: ["nuktoetoti", "ktoti"],
             w: 1,
-                bw: 1
+            bw: 1
         },
         nuktoetoti: {
             slova: ["ну", "кто", "это", "ты", "такая", "не", "знаю", "таких", "что", "за", "кристина"],
@@ -91,7 +94,7 @@ window.onload = function() {
             ],
             chain: ["neho4ugadat"],
             w: 0.99,
-             bw: 0.99
+            bw: 0.99
         },
         ktoti: {
             slova: ["кто", "ты", "не", "узнаю", "тебя", "ну", "говори"],
@@ -102,7 +105,7 @@ window.onload = function() {
             ],
             chain: ["neho4ugadat"],
             w: 0.99,
-             bw: 0.99
+            bw: 0.99
         },
         neho4ugadat: {
             slova: ["не", "хочу", "гадать", "кто", "это", "загадок", "скажи", "ты"],
@@ -114,14 +117,14 @@ window.onload = function() {
             ],
             chain: [],
             w: 0.97,
-             bw: 0.97
+            bw: 0.97
         },
         adres: {
             slova: ["где", "находишься", "адрес", "дом"],
             sound: ['sounds/я живу на строителей.mp3'],
             chain: ["adresvopr"],
             w: 1,
-                bw: 1
+            bw: 1
         },
         adresvopr: {
             slova: ["где", "строителей"],
@@ -129,19 +132,19 @@ window.onload = function() {
             question: ['sounds/а где ты живеш.mp3'],
             chain: [],
             w: 1,
-                bw: 1
+            bw: 1
         },
         privet: {
             slova: ["привет", "добрый", "день", "здравствуйте", "ну", "слушаю"],
             sound: ['sounds/как дела.mp3'],
             w: 1,
-                bw: 1
+            bw: 1
         },
         normalnodela: {
             slova: ["хорошо", "нормально", "отлично", "да", "ничего", "так"],
             sound: ['sounds/что делаеш.mp3'],
             w: 1,
-                bw: 1
+            bw: 1
         },
         chtodelaesh: {
             slova: ["ничего", "спал", "только", "пришел", "играл", "тренировался"],
@@ -150,7 +153,7 @@ window.onload = function() {
                 ['sounds/мож пообщаемся.mp3']
             ],
             w: 1,
-                bw: 1
+            bw: 1
         },
         davaipoobc4aemsya: {
             slova: ["давай", "пообщаемся", "хорошо", "ну", "я", "не", "против"],
@@ -159,7 +162,7 @@ window.onload = function() {
                 ['sounds/а о чем ты думаеш.mp3']
             ],
             w: 1,
-                bw: 1
+            bw: 1
         },
         rasskajichtodelal: {
             slova: ["ну", "я", "ничего", "не", "делал", "знаю", "думал", "думаю", "кто", "ты", "такая", "мне", "звонит"],
@@ -167,7 +170,7 @@ window.onload = function() {
                 ['sounds/я тебя не отвлек.mp3', 'sounds/мож пообщаемся.mp3']
             ],
             w: 1,
-                bw: 1
+            bw: 1
         },
         atichodelala: {
             slova: ["а", "ты", "что", "делала", "теперь", "расскажи"],
@@ -175,7 +178,7 @@ window.onload = function() {
                 ['sounds/ну встала почистила.mp3', 'sounds/а потом решила пообщаться.mp3']
             ],
             w: 1,
-                bw: 1
+            bw: 1
         },
         nichegosebe: {
             slova: ["как", "дела", "а", "у", "тебя", "делишки", "рассказывай"],
@@ -185,7 +188,7 @@ window.onload = function() {
                 ['sounds/нормально.mp3']
             ],
             w: 1,
-                bw: 1
+            bw: 1
         },
         kakzovut: {
             slova: ["кто", "зовут", "твое", "имя"],
@@ -195,7 +198,7 @@ window.onload = function() {
                 ['sounds/ну подумай.mp3']
             ],
             w: 1,
-                bw: 1
+            bw: 1
         },
         neznau: {
             slova: ["не", "знаю", "таких", "такую", "ни", "какую", "Марину", "Кристину", "Кристи"],
@@ -204,19 +207,19 @@ window.onload = function() {
                 ['sounds/давай познакомимся.mp3']
             ],
             w: 1,
-                bw: 1
+            bw: 1
         },
         mnelet: {
             slova: ["15", "16", "17", "18", "19", "20", "21", "22"],
             sound: ['sounds/ну ты молодой.mp3'],
             w: 1,
-                bw: 1
+            bw: 1
         },
         davai: {
             slova: ["давай", "ну", "познакомимся"],
             sound: ['sounds/а можно нескромный вопрос.mp3'],
             w: 1,
-                bw: 1
+            bw: 1
         },
         da: {
             slova: ["да", "задавай", "конечно"],
@@ -229,7 +232,7 @@ window.onload = function() {
             ],
             chain: ['mnelet'],
             w: 1,
-                bw: 1
+            bw: 1
         }
     };
 
@@ -246,10 +249,10 @@ window.onload = function() {
     annyang.addCallback('soundstart', function() {
         console.log('sound detected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
         flagpiz = 1;
-        WhenMaslenokIsSilent(0,0);
+        WhenMaslenokIsSilent(0, 0);
     });
     annyang.addCallback('result', function(phrases) {
-        WhenMaslenokIsSilent(0,0);
+        WhenMaslenokIsSilent(0, 0);
         flagpiz = 0;
         if (mainflag == 0) {
             mainflag = 1;
