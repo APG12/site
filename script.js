@@ -69,7 +69,7 @@ window.onload = function() {
 
 
     var max = 1;
-    var maxflag = "ktoti";
+    var maxflag = "alo";
 
     var mainflag = 0;
     annyang.debug();
