@@ -169,10 +169,10 @@ window.onload = function() {
                 console.log("чейн не пустой");
                 for (var i = 0; i < fraz[maxflag].chain.length; i++) {
                     console.log("перебирает чейны");
-                    if (fraz[fraz[maxflag].chain]) {
+                    if (fraz[fraz[maxflag].chain[i]]) {
                         console.log("нашел потомка чейна");
-                        fraz[fraz[maxflag].chain].w += 0.2;
-                        console.log(fraz[maxflag].chain + " " + fraz[fraz[maxflag].chain].w);
+                        fraz[fraz[maxflag].chain[i]].w += 0.2;
+                        console.log(fraz[maxflag].chain + " " + fraz[fraz[maxflag].chain[i]].w);
 
                     }
                 }
