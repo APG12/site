@@ -39,7 +39,7 @@ words[i].replace(/[\W_]+/g,"");
                 console.log(words[i]);}
             };
 
-            var leftData = "<div class='message left' style='display:none;'><div class='message-text'>" + words +
+            var leftData = "<div class='message left' id='left' style='display:none;'><div class='message-text'>" + words +
                 "</div></div>";
             $(leftData).prependTo('#phone').fadeIn('slow', function() {
 
@@ -56,7 +56,7 @@ words[i].replace(/[\W_]+/g,"");
 
 
 
-$('.left').click(function(event){
+$('#left').click(function(event){
         console.log("НАЖАЛ!!!!!");
         var msg = new SpeechSynthesisUtterance()
 msg.voice = voices[10]; // use the index from the list above to pick your voice
