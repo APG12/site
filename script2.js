@@ -23,8 +23,17 @@ voices.forEach(function(voice, index) {
 
             var words = phrases[0].split(" ");
             for (var i = 0; i < words.length; i++) {
-                words[i] = "хуй" + words[i].slice(2, words[i].length);
-                console.log(words[i]);
+                switch (words[i]){
+                        case "х**": 
+                        words[i]= "хуй",
+                        break;
+                        case "б****":
+                        words[i]="блядь",
+                        break;
+                }
+                if (words[i]!="хуй"){
+                    words[i] = "хуе" + words[i].slice(2, words[i].length);
+                console.log(words[i]);}
             };
 
             var leftData = "<div class='message left' style='display:none;'><div class='message-text'>" + words +
