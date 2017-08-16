@@ -98,6 +98,7 @@ window.onload = function() {
                 ['sounds/мы учились вместе.mp3'],
                 ['sounds/я помню мы хорошо провел.mp3']
             ],
+            text: ['Я помню,мы хорошо провели время!'],
             chain: ["neho4ugadat"],
             w: 0.95,
             bw: 0.95
