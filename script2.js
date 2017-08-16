@@ -22,5 +22,5 @@ window.onload = function() {
                     "</div></div>";
                 $(rightData).prependTo('#phone').fadeIn('slow');
             });
-
+ 
 });
