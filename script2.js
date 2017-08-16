@@ -67,10 +67,10 @@ var currentVoice = 0;
 
 
                     speechSynthesis.speak(msg);
-	    };
+	    
                     
             });
-
+};
         });
 	
 };
