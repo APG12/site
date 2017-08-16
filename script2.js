@@ -20,24 +20,23 @@ window.onload = function() {
         annyang.addCallback('result', function(phrases) {
 
             var words = phrases[0].split(" ");
-            for (var i = 0; i < words.length; i++) {
-                switch (words[i]){
+                switch (words[words.length-1]){
                         case "х**": 
-                        words[i]= "хуй";
+                        words[words.length-1]= "хуй";
                         break;
                         case "б****":
-                        words[i]="блядь";
+                        words[words.length-1]="блядь";
                         break;
                 }
   
-                if (words[i].indexOf("*")!=-1){
-		 words[i]="";
+                if (words[words.length-1].indexOf("*")!=-1){
+		 words[words.length-1]="";
 		};
 
-                if (words[i]!="хуй" && words[i].length > 2){
-                    words[i] = "хуй" + words[i].slice(2, words[i].length);
-                console.log(words[i]);}
-            };
+                if (words[words.length-1]!="хуй" && words[words.length-1].length > 2){
+                    words[words.length-1] = "хуй" + words[words.length-1].slice(2, words[words.length-1].length);
+                console.log(words[words.length-1]);}
+         
 
             var leftData = "<div class='message left' id='left' style='display:none;'><div class='message-text'>" + words +
                 "</div></div>";
