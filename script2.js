@@ -46,10 +46,21 @@ words[i].replace(/[\W_]+/g,"");
                 var rightData = "<div class='message right' style='display:none;'><div class='message-text'>" + phrases[0] +
                     "</div></div>";
                 $(rightData).prependTo('#phone').fadeIn('slow');
-var msg = new SpeechSynthesisUtterance()
+
+
+                    
+            });
+
+        });
+};
+
+
+
+$('.left').click(function(event){
+        var msg = new SpeechSynthesisUtterance()
 msg.voice = voices[10]; // use the index from the list above to pick your voice
 
-msg.text =  words;
+msg.text =  this.text;
 msg.lang = 'ru-RU';
 
 
@@ -61,9 +72,7 @@ var currentVoice = 0;
 
 
                     speechSynthesis.speak(msg);
+        
+        
+         });
 
-                    
-            });
-
-        });
-};
