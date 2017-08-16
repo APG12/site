@@ -1,5 +1,5 @@
 window.onload = function() {
-    var zaglushki = ['sounds/white/ало.mp3'];
+    var zaglushki = ['sounds/алё.mp3', 'sounds/алео.mp3', 'sounds/ну.mp3'];
 
     var timer;
     var flagpiz = 0;
@@ -32,89 +32,209 @@ window.onload = function() {
 
 
     var fraz = {
-        nachalo: {
-            slova: ["ало", "да", "слушаю", "кто"],
+       mat: {
+            slova: ["з*****", "н****", "е****", "п******", "сука", "в****", "у****", "у******", "о****", "б****", "г*****", "е*****"],
             sound: [
-                ['sounds/white/але это ты.mp3', 'sounds/white/придурок хуле писдел.mp3'],
-                ['sounds/white/але это ты.mp3','sounds/white/разбираца будем.mp3']
+                ['sounds/чо ты обзываеш.mp3'],
+                ['sounds/соси небритую жопу.mp3']
             ],
-            chain: ["zachto","kto", "oshiblis","naglymaslenok"],
-            question: ["sounds/white/гандон ебать.mp3"],
+            chain: [],
             w: 1,
             bw: 1
         },
-        kto: { 
-            slova: ["это", "кто", "ты", "зовут","откуда"],
+        love: {
+            slova: ["девушка", "секс", "елдак", "сиськи", "парень", "парней", "позы", "размер", "сексом", "возбуждает", "возбуждают"],
+            sound: ['sounds/я тебя хочу.mp3'],
+            chain: [],
+            w: 1,
+            bw: 1
+        },
+        alo: {
+            slova: ["але", "говорите", "ало", "алло", "алле", "слушаю", "привет"],
             sound: [
-                ['sounds/white/белый фамилия.mp3'],                
+                ['sounds/привет.mp3'],
+                ['sounds/соси небритую жопу.mp3']
             ],
-            chain: ["naglymaslenok"],
-            question: ["sounds/white/гандон ебать.mp3"],
+            chain: [],
+            w: 1.1,
+            bw: 1.1
+        },
+        vozr: {
+            slova: ["лет", "возраст"],
+            sound: ['sounds/мне 22.mp3'],
+            chain: [],
+            question: ['sounds/чо застеснялся.mp3'],
+            w: 1,
+            bw: 1
+        },
+        kakdela: {
+            slova: ["как", "дела", "у", "тебя", "делишки", "рассказывай"],
+            sound: ['sounds/та ничо так.mp3'],
+            chain: [],
+            w: 1,
+            bw: 1
+        },
+        etokto: {
+            slova: ["это", "кто", "ну", "это", "ты"],
+            sound: [
+                ['sounds/ну это я.mp3', 'sounds/ты чо не узнал чтоль.mp3'],
+                ['sounds/ты чо не узнал чтоль.mp3'],
+                ['sounds/это кристина не узнал.mp3']
+            ],
+            chain: ["nuktoetoti", "ktoti"],
+            w: 1,
+            bw: 1
+        },
+        nuktoetoti: {
+            slova: ["ну", "кто", "это", "ты", "такая", "не", "знаю", "таких", "что", "за", "кристина"],
+            sound: [
+                ['sounds/а угадай.mp3'],
+                ['sounds/всымсле в прошлый раз.mp3'],
+                ['sounds/мы учились вместе.mp3'],
+                ['sounds/я помню мы хорошо провел.mp3']
+            ],
+            chain: ["neho4ugadat"],
             w: 0.95,
             bw: 0.95
         },
-        zachto: { 
-            slova: ["писдел", "пиздел", "п*****", "кого","за","что"],
+        ktoti: {
+            slova: ["кто", "ты", "не", "узнаю", "тебя", "ну", "говори"],
             sound: [
-                ['sounds/white/ты же мне хотел рога обламать.mp3', 'sounds/white/я тебя нахуй щас сам рога обламаю.mp3'],
-                ['sounds/white/ты же мне хотел рога обламать.mp3']
+                ['sounds/а угадай.mp3'],
+                ['sounds/ну подумай.mp3'],
+                ['sounds/ну догадайся кто ето.mp3']
             ],
-            chain: ["naglymaslenok"],
-            question: ["sounds/white/гандон ебать.mp3"],
+            chain: ["neho4ugadat"],
             w: 0.95,
             bw: 0.95
         },
-        oshiblis: { 
-            slova: ["ошиблись", "номером", "номер", "звоните"],
+        neho4ugadat: {
+            slova: ["не", "хочу", "гадать", "кто", "это", "загадок", "скажи", "ты"],
             sound: [
-                ['sounds/white/я нихуя не пойму.mp3']
+                ['sounds/так я твоя новая девушка.mp3'],
+                ['sounds/ну так то я твоя девушк.mp3'],
+                ['sounds/всымсле в прошлый раз.mp3'],
+                ['sounds/я помню мы хорошо провел.mp3']
             ],
-            chain: ["naglymaslenok"],
-            question: ["sounds/white/гандон ебать.mp3"],
-            w: 0.95,
-            bw: 0.95
-        },
-         naglymaslenok: {
-            slova: ["е****","о****","б****","у****","гандон","п****", "сука", "н****","х****","х**"],
-            sound: [
-                ['sounds/white/слушай ты чо ублюдок чтоли.mp3','sounds/white/скажи фамилию и адрес.mp3']
-            ],
-            chain: ["adres","esheboleenaglyi"],
-            question: ["sounds/white/я нихуя не пойму.mp3"],
-            w: 0.95,
-            bw: 0.95
-        },
-         esheboleenaglyi: {
-            slova: ["е****","о****","б****","у****","гандон","п****", "сука", "н****","х****","х**"],
-            sound: [
-                ['sounds/white/ага ебать я тебя вычислю.mp3']
-            ],
-            chain: ["adres","esheboleenaglyi"],
-            question: ["sounds/white/я нихуя не пойму.mp3"],
+            chain: [],
             w: 0.95,
             bw: 0.95
         },
         adres: {
-            slova: ["живу","на", "1","2","3","4","5","6","7","8","9","10", "улица", "улице", "подьезжай", "жду"],
-            sound: [
-                ['sounds/white/это чо сарай чтоле.mp3']
-            ],
-            chain: ["podehal"],
-            question: ["sounds/white/я нихуя не пойму.mp3"],
-            w: 0.95,
-            bw: 0.95
+            slova: ["где", "находишься", "адрес", "дом"],
+            sound: ['sounds/я живу на строителей.mp3'],
+            chain: ["adresvopr"],
+            w: 1,
+            bw: 1
         },
-        
-        podehal: {
-            slova: ["ты","где","жду", "зассал", "нет", "что", "да"],
-            sound: [
-                ['sounds/white/это чо сарай чтоле.mp3']
-            ],
-            chain: ["podehal"],
-            question: ["sounds/white/я нихуя не пойму.mp3"],
-            w: 0.95,
-            bw: 0.95
+        adresvopr: {
+            slova: ["где", "строителей"],
+            sound: ['sounds/это в центре.mp3'],
+            question: ['sounds/а где ты живеш.mp3'],
+            chain: [],
+            w: 1,
+            bw: 1
         },
+        privet: {
+            slova: ["привет", "добрый", "день", "здравствуйте", "ну", "слушаю"],
+            sound: ['sounds/как дела.mp3'],
+            w: 1,
+            bw: 1
+        },
+        normalnodela: {
+            slova: ["хорошо", "нормально", "отлично", "да", "ничего", "так"],
+            sound: ['sounds/что делаеш.mp3'],
+            w: 1,
+            bw: 1
+        },
+        chtodelaesh: {
+            slova: ["ничего", "спал", "только", "пришел", "играл", "тренировался"],
+            sound: [
+                ['sounds/я тебя не отвлек.mp3', 'sounds/мож пообщаемся.mp3'],
+                ['sounds/мож пообщаемся.mp3']
+            ],
+            w: 1,
+            bw: 1
+        },
+        davaipoobc4aemsya: {
+            slova: ["давай", "пообщаемся", "хорошо", "ну", "я", "не", "против"],
+            sound: [
+                ['sounds/расскажи что делал2.mp3'],
+                ['sounds/а о чем ты думаеш.mp3']
+            ],
+            w: 1,
+            bw: 1
+        },
+        rasskajichtodelal: {
+            slova: ["ну", "я", "ничего", "не", "делал", "знаю", "думал", "думаю", "кто", "ты", "такая", "мне", "звонит"],
+            sound: [
+                ['sounds/я тебя не отвлек.mp3', 'sounds/мож пообщаемся.mp3']
+            ],
+            w: 1,
+            bw: 1
+        },
+        atichodelala: {
+            slova: ["а", "ты", "что", "делала", "теперь", "расскажи"],
+            sound: [
+                ['sounds/ну встала почистила.mp3', 'sounds/а потом решила пообщаться.mp3']
+            ],
+            w: 1,
+            bw: 1
+        },
+        nichegosebe: {
+            slova: ["как", "дела", "а", "у", "тебя", "делишки", "рассказывай"],
+            sound: [
+                ['sounds/та ничо так.mp3', 'sounds/нормально.mp3'],
+                ['sounds/та ничо так.mp3'],
+                ['sounds/нормально.mp3']
+            ],
+            w: 1,
+            bw: 1
+        },
+        kakzovut: {
+            slova: ["кто", "зовут", "твое", "имя"],
+            sound: [
+                ['sounds/а меня зовут марина.mp3'],
+                ['sounds/я кристи.mp3'],
+                ['sounds/ну подумай.mp3']
+            ],
+            w: 1,
+            bw: 1
+        },
+        neznau: {
+            slova: ["не", "знаю", "таких", "такую", "ни", "какую", "Марину", "Кристину", "Кристи"],
+            sound: [
+                ['sounds/я хочу с тобой познакомиться.mp3'],
+                ['sounds/давай познакомимся.mp3']
+            ],
+            w: 1,
+            bw: 1
+        },
+        mnelet: {
+            slova: ["15", "16", "17", "18", "19", "20", "21", "22"],
+            sound: ['sounds/ну ты молодой.mp3'],
+            w: 1,
+            bw: 1
+        },
+        davai: {
+            slova: ["давай", "ну", "познакомимся"],
+            sound: ['sounds/а можно нескромный вопрос.mp3'],
+            w: 1,
+            bw: 1
+        },
+        da: {
+            slova: ["да", "задавай", "конечно"],
+            sound: [
+                ['sounds/а скока тебе лет.mp3'],
+                ['sounds/слушай а какой размер.mp3'],
+                ['sounds/а какая пипка.mp3'],
+                ['sounds/а ты пукаешь при близких.mp3'],
+                ['sounds/ты со скольки затвор.mp3']
+            ],
+            chain: ['mnelet'],
+            w: 1,
+            bw: 1
+        }
         
     };
 
