@@ -25,10 +25,10 @@ voices.forEach(function(voice, index) {
             for (var i = 0; i < words.length; i++) {
                 switch (words[i]){
                         case "х**": 
-                        words[i]= "хуй",
+                        words[i]= "хуй";
                         break;
                         case "б****":
-                        words[i]="блядь",
+                        words[i]="блядь";
                         break;
                 }
                 if (words[i]!="хуй"){
