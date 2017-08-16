@@ -22,6 +22,7 @@ window.onload = function() {
                     "</div></div>";
                 $(rightData).prependTo('#phone').fadeIn('slow');
                     responsiveVoice.speak(words, "Russian Female");
+                    responsiveVoice.speak("hello world", "UK English Male");
             });
 
         });
