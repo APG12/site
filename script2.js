@@ -54,7 +54,7 @@ words[i].replace(/[\W_]+/g,"");
         });
 
 
-$('.phone').on('click', '#left > *', function() {
+$('.message-text').on('click',  function() {
         console.log("НАЖАЛ!!!!!");
         var msg = new SpeechSynthesisUtterance()
 msg.voice = voices[10]; // use the index from the list above to pick your voice
