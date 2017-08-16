@@ -17,16 +17,12 @@ speechSynthesis.speak(msg)
 // or speak them all!
 
 var currentVoice = 0
-msg.onend = function(e) 
-{
-  currentVoice++
-  if (voices)[currentVoice] 
-  {
+
     msg.voice = voices[currentVoice]
+
     speechSynthesis.speak(msg)
-  }
-}
-speechSynthesis.speak(msg)
+  
+
         
         
         
