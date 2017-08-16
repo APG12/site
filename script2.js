@@ -1,4 +1,37 @@
 window.onload = function() {
+        
+        var voices = speechSynthesis.getVoices()
+
+voices.forEach(function(voice, index) {
+  console.log(index,voice.lang,voice.name)
+})
+
+var msg = new SpeechSynthesisUtterance()
+msg.voice = voices[10] // use the index from the list above to pick your voice
+
+msg.text = 'Сука блядь'
+msg.lang = 'ru-RU'
+
+speechSynthesis.speak(msg)
+
+// or speak them all!
+
+var currentVoice = 0
+msg.onend = function(e) 
+{
+  currentVoice++
+  if (voices)[currentVoice] 
+  {
+    msg.voice = voices[currentVoice]
+    speechSynthesis.speak(msg)
+  }
+}
+speechSynthesis.speak(msg)
+        
+        
+        
+        
+        
         annyang.debug();
         annyang.setLanguage("ru");
         annyang.start({
@@ -20,8 +53,8 @@ window.onload = function() {
                 var rightData = "<div class='message right' style='display:none;'><div class='message-text'>" + phrases[0] +
                     "</div></div>";
                 $(rightData).prependTo('#phone').fadeIn('slow');
-                    responsiveVoice.speak(words, "Russian Female");
-responsiveVoice.speak("hello world", "UK English Male", {volume: 1});
+                   
+                    
             });
 
         });
