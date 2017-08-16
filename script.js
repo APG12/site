@@ -42,7 +42,7 @@ window.onload = function() {
             w: 1,
             bw: 1
         },
-        nachalo: {
+        kto: {
             slova: ["писдел", "пиздел", "п*****", "кого","кто","за","что"],
             sound: [
                 ['sounds/white/за что это ты писдеть начал.mp3'],
