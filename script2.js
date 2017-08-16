@@ -1,8 +1,5 @@
 window.onload = function() {
-        String.prototype.replaceAll = function(str1, str2, ignore) 
-{
-	return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
-}
+     
         var voices = speechSynthesis.getVoices()
 
 voices.forEach(function(voice, index) {
@@ -22,7 +19,6 @@ voices.forEach(function(voice, index) {
         });
         annyang.addCallback('soundstart', function() {});
         annyang.addCallback('result', function(phrases) {
-		if ($( ":checkbox" ).checked){
 
             var words = phrases[0].split(" ");
             for (var i = 0; i < words.length; i++) {
@@ -70,7 +66,7 @@ var currentVoice = 0;
 	    
                     
             });
-};
+
         });
 	
 };
