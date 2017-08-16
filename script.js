@@ -3,7 +3,8 @@ window.onload = function() {
 
     var timer;
 
-    function WhenMaslenokIsSilent(arg, soun) {
+    function WhenMaslenokIsSilent(arg, soun, arg2) {
+      if(arg2 == 0){
         if (arg == 1) {
             console.log("таймер установлен");
             timer = setTimeout(function() { // init timer with 5 seconds
@@ -18,7 +19,7 @@ window.onload = function() {
         } else if (arg == 0) {
             console.log("таймер сброшен");
             clearTimeout(timer);
-        }
+        }}
     };
 
     WhenMaslenokIsSilent(1, 1);
@@ -219,10 +220,10 @@ window.onload = function() {
     });
     annyang.addCallback('soundstart', function() {
         console.log('sound detected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-        WhenMaslenokIsSilent(0,0);
+        WhenMaslenokIsSilent(0,0,1);
     });
     annyang.addCallback('result', function(phrases) {
-        WhenMaslenokIsSilent(0,0);
+        WhenMaslenokIsSilent(0,0,1);
 
         if (mainflag == 0) {
             mainflag = 1;
@@ -279,9 +280,9 @@ window.onload = function() {
             audio.addEventListener("ended", function() {
                 mainflag = 0;
                 if (fraz[maxflagb].hasOwnProperty("question")) {
-                    WhenMaslenokIsSilent(1, fraz[maxflagb].question);
+                    WhenMaslenokIsSilent(1, fraz[maxflagb].question,0);
                 } else {
-                    WhenMaslenokIsSilent(1, 1);
+                    WhenMaslenokIsSilent(1, 1, 0);
                 }
             });
 
