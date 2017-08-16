@@ -132,8 +132,8 @@ window.onload = function() {
             sound: ['sounds/это в центре.mp3'],
             question: ['sounds/а где ты живеш.mp3'],
             chain: [],
-            w: 1,
-            bw: 1
+            w: 0.95,
+            bw: 0.95
         },
         privet: {
             slova: ["привет", "добрый", "день", "здравствуйте", "ну", "слушаю"],
