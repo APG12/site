@@ -1,5 +1,5 @@
 window.onload = function() {
-    var zaglushki = ['sounds/white/ало.mp3', 'sounds/white/здравстуйте.mp3', 'sounds/white/я телефон нашел.mp3'];
+    var zaglushki = ['sounds/white/ало.mp3'];
 
     var timer;
     var flagpiz = 0;
@@ -34,8 +34,8 @@ window.onload = function() {
         nachalo: {
             slova: ["ало", "да", "слушаю", "кто"],
             sound: [
-                ['sounds/white/здравстуйте.mp3', 'sounds/white/я телефон нашел.mp3'],
-                ['sounds/white/ало.mp3', 'sounds/white/я телефон нашел.mp3']
+                ['sounds/white/все падла тебе писдец.mp3', 'sounds/white/я телефон нашел.mp3'],
+                ['sounds/white/я телефон нашел.mp3']
             ],
             chain: ["telefon","ktoeto","popalnetuda"],
             question: ["sounds/white/але это ты.mp3"],
@@ -82,10 +82,7 @@ window.onload = function() {
     });
     annyang.addCallback('result', function(phrases) {
         WhenMaslenokIsSilent(0, 0);
-        if (flagpiz ==0){
-        flagpiz = 1;}
-        else if (flagpiz == 1){
-        flagpiz = 0;}
+        flagpiz = 0;
         if (mainflag == 0) {
             mainflag = 1;
             for (var i = 0; i < phrases.length; i++) {
