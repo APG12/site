@@ -34,8 +34,8 @@ window.onload = function() {
         nachalo: {
             slova: ["ало", "да", "слушаю", "кто"],
             sound: [
-                ['sounds/white/ало это ты.mp3', 'sounds/white/придурок хуле писдел.mp3'],
-                ['sounds/white/ало это ты.mp3','sounds/white/разбираца будем.mp3']
+                ['sounds/white/але это ты.mp3', 'sounds/white/придурок хуле писдел.mp3'],
+                ['sounds/white/але это ты.mp3','sounds/white/разбираца будем.mp3']
             ],
             chain: ["kto", "oshiblis","naglymaslenok"],
             question: ["sounds/white/гандон ебать.mp3"],
