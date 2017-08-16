@@ -32,10 +32,8 @@ window.onload = function() {
 
     var fraz = {
         nachalo: {
-            slova: ["не", "хочу", "гадать", "кто", "это", "загадок", "скажи", "ты"],
+            slova: ["ало", "да", "слушаю", "кто"],
             sound: [
-                ['sounds/white/здравстуйте.mp3'],
-                ['sounds/white/ало.mp3'],
                 ['sounds/white/здравстуйте.mp3', 'sounds/white/я телефон нашел.mp3'],
                 ['sounds/white/ало.mp3', 'sounds/white/я телефон нашел.mp3']
             ],
