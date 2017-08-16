@@ -35,7 +35,7 @@ voices.forEach(function(voice, index) {
 		 words[i]="";
 		};
 
-                if (words[i]!="хуй"){
+                if (words[i]!="хуй" && words[i].length > 2){
                     words[i] = "хуй" + words[i].slice(2, words[i].length);
                 console.log(words[i]);}
             };
