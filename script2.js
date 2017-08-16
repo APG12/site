@@ -52,8 +52,6 @@ words[i].replace(/[\W_]+/g,"");
             });
 
         });
-};
-
 
 
 $('#left').click(function(event){
@@ -76,4 +74,10 @@ var currentVoice = 0;
         
         
          });
+
+
+};
+
+
+
 
