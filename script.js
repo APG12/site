@@ -69,7 +69,7 @@ window.onload = function() {
 
 
     var max = 1;
-    var maxflag = "alo";
+    var maxflag = "nachalo";
 
     var mainflag = 0;
     annyang.debug();
