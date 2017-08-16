@@ -344,6 +344,7 @@ window.onload = function() {
                 }
 
             }
+            fraz[maxflag].bw = 0.95;
             fraz[maxflag].w = 0.95;
 
             max = 1;
