@@ -1,4 +1,5 @@
 window.onload = function() {
+        var responsiveVoice = new ResponsiveVoice();
         annyang.debug();
         annyang.setLanguage("ru");
         annyang.start({
