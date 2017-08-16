@@ -2,9 +2,9 @@ window.onload = function() {
     var zaglushki = ['sounds/алё.mp3', 'sounds/алео.mp3'];
 
     var timer;
-
-    function WhenMaslenokIsSilent(arg, soun, arg2) {
-      if(arg2 == 0){
+    var flagpiz=0;
+    function WhenMaslenokIsSilent(arg, soun) {
+      if(flagpiz == 0){
         if (arg == 1) {
             console.log("таймер установлен");
             timer = setTimeout(function() { // init timer with 5 seconds
@@ -17,14 +17,14 @@ window.onload = function() {
                 audiosil.play();
             }, 5000);
         } }
-        if (arg2==1)
+        if (flagpiz==1)
         {if (arg == 0) {
             console.log("таймер сброшен");
             clearTimeout(timer);
         }}
     };
 
-    WhenMaslenokIsSilent(1, 1, 0);
+    WhenMaslenokIsSilent(1, 1);
 
 
     var fraz = {
@@ -222,11 +222,12 @@ window.onload = function() {
     });
     annyang.addCallback('soundstart', function() {
         console.log('sound detected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-        WhenMaslenokIsSilent(0,0,1);
+        WhenMaslenokIsSilent(0,0);
+        flagpiz = 1;
     });
     annyang.addCallback('result', function(phrases) {
-        WhenMaslenokIsSilent(0,0,0);
-
+        WhenMaslenokIsSilent(0,0);
+        flagpiz = 0;
         if (mainflag == 0) {
             mainflag = 1;
             for (var i = 0; i < phrases.length; i++) {
