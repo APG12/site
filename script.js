@@ -44,6 +44,27 @@ window.onload = function() {
             w: 1,
             bw: 1
         },
+        telefon: {
+            slova: ["какой", "телефон", "чей"],
+            sound: [
+                ['sounds/white/телефон то хароший дорого.mp3'],
+            ],
+            chain: ["sebe"],
+            question: ["sounds/white/ну смотри ебать.mp3"],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        sebe: {
+            slova: ["терял", "не"],
+            sound: [
+                ['sounds/white/я могу себе взять.mp3'],
+            ],
+            chain: ["sebe"],
+            question: ["sounds/white/я нихуя не пойму.mp3"],
+            w: 0.95,
+            bw: 0.95
+        },
     };
 
 
