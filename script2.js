@@ -21,7 +21,13 @@ window.onload = function() {
 
             var words = phrases[0].split(" ");
                 switch (words[words.length-1]){
-                        case "х**": 
+                        case "google": 
+                        words[words.length-1]= "гугл";
+                        break;
+			case "Google": 
+                        words[words.length-1]= "гугл";
+                        break;
+			case "х**": 
                         words[words.length-1]= "хуй";
                         break;
                         case "б****":
