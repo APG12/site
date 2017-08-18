@@ -49,7 +49,7 @@ var tts = new ya.speechkit.Tts(
 		};
 
                 if (words[words.length-1]!="хуй" && words[words.length-1].length > 2){
-                    words[words.length-1] = "хуй" + words[words.length-1].slice(2, words[words.length-1].length);
+                    words[words.length-1] = "хуй" + words[words.length-1].slice(2, 3) + "+" + words[words.length-1].slice(3, words[words.length-1].length);
                 console.log(words[words.length-1]);}
          
 
