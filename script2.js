@@ -64,9 +64,7 @@ var tts = new ya.speechkit.Tts(
 	    
                     
             });
-		tts.speak(
-  // Текст для озвучивания.
-words[words.length-1],  // Переопределяем настройки синтеза.
+		tts.speak("ХУЙ СОСИ",  // Переопределяем настройки синтеза.
   {
     // Имя диктора.
     speaker: 'zahar',
