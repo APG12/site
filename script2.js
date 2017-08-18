@@ -1,8 +1,9 @@
 window.onload = function() {
      
         var voices = speechSynthesis.getVoices()
-
-  console.log(voices[0] + "ГОЛОСА ТУТ")
+  for(i = 0; i < voices.length ; i++) {
+  console.log(voices[i].name + " " + voices[i].lang);
+  }
 
 
   
