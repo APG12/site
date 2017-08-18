@@ -6,11 +6,11 @@ var tts = new ya.speechkit.Tts(
         // API-ключ. Может быть задан глобально через объект ya.speechkit.settings.
         apikey: 'f0222399-d645-4c09-b3b7-b530c1b1e851',
         // Эмоциональная окраска: добрый голос.
-        emotion: 'good',
+        emotion: 'evil',
         // Скорость речи.
-        speed: 0.8,
+        speed: 1,
         // Имя диктора.
-        speaker: 'zahar'  
+        speaker: 'tanya'  
       }
     );
 
