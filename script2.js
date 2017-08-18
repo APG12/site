@@ -1,13 +1,18 @@
 window.onload = function() {
-window.speechSynthesis.onvoiceschanged = function() {
 
-        var voices = speechSynthesis.getVoices()
-	
-  for(i = 0; i < voices.length ; i++) {
-  console.log(voices[i].name + " " + voices[i].lang);
-  }
-}
-
+var tts = new ya.speechkit.Tts(
+      // Настройки синтеза. Список доступных настроек см. в справочнике.
+      {
+        // API-ключ. Может быть задан глобально через объект ya.speechkit.settings.
+        apikey: 'abcd..',
+        // Эмоциональная окраска: добрый голос.
+        emotion: 'good',
+        // Скорость речи.
+        speed: 1.5,
+        // Имя диктора.
+        speaker: 'jane'  
+      }
+    );
 
   
 
@@ -56,24 +61,23 @@ window.speechSynthesis.onvoiceschanged = function() {
                     "</div></div>";
                 $(rightData).prependTo('#phone').fadeIn('slow');
 
- var msg = new SpeechSynthesisUtterance()
-msg.voice = voices[10]; // use the index from the list above to pick your voice
-
-msg.text =  words[words.length-1];
-msg.lang = 'ru-RU';
-
-
-// or speak them all!
-
-var currentVoice = 0;
-
-    msg.voice = voices[currentVoice];
-
-
-                    speechSynthesis.speak(msg);
 	    
                     
             });
+		tts.speak(
+  // Текст для озвучивания.
+words  // Переопределяем настройки синтеза.
+  {
+    // Имя диктора.
+    speaker: 'zahar',
+    // Эмоции в голосе. 
+    emotion: 'neutral',
+    // Функция-обработчик, которая будет вызвана по завершении озвучивания.
+    stopCallback: function () {
+      console.log("Озвучивание текста завершено.");
+    }
+  }
+)
 
         });
 	
