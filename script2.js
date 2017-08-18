@@ -49,8 +49,13 @@ var tts = new ya.speechkit.Tts(
 		};
 
                 if (words[words.length-1]!="хуй" && words[words.length-1].length > 2){
-                    words[words.length-1] = "хуй" + words[words.length-1].slice(2, 3) + "+" + words[words.length-1].slice(3, words[words.length-1].length);
-                console.log(words[words.length-1]);}
+			if (words[words.length-1].length == 4){
+                    words[words.length-1] = "хуй" + "+" + words[words.length-1].slice(3, words[words.length-1].length);
+                console.log(words[words.length-1]);
+			}
+		else{       
+			words[words.length-1] = "хуй" + words[words.length-1].slice(2, 3) + "+" + words[words.length-1].slice(3, words[words.length-1].length);
+}}
          
 
             var leftData = "<div class='message left' id='left' style='display:none;'><div class='message-text'>" + words +
