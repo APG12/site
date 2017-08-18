@@ -2,7 +2,7 @@ window.onload = function() {
      
         var voices = speechSynthesis.getVoices()
 
-  console.log(voices + "ГОЛОСА ТУТ")
+  console.log(voices[0] + "ГОЛОСА ТУТ")
 
 
   
