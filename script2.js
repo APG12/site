@@ -8,9 +8,9 @@ var tts = new ya.speechkit.Tts(
         // Эмоциональная окраска: добрый голос.
         emotion: 'good',
         // Скорость речи.
-        speed: 1.5,
+        speed: 0.8,
         // Имя диктора.
-        speaker: 'jane'  
+        speaker: 'zahar'  
       }
     );
 
@@ -64,18 +64,7 @@ var tts = new ya.speechkit.Tts(
 	    
                     
             });
-		tts.speak("ХУЙ СОСИ",  // Переопределяем настройки синтеза.
-  {
-    // Имя диктора.
-    speaker: 'zahar',
-    // Эмоции в голосе. 
-    emotion: 'neutral',
-    // Функция-обработчик, которая будет вызвана по завершении озвучивания.
-    stopCallback: function () {
-      console.log("Озвучивание текста завершено.");
-    }
-  }
-)
+		tts.speak("ХУЙ СОСИ")
 
         });
 	
