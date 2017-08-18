@@ -1,11 +1,12 @@
 window.onload = function() {
-     
+window.speechSynthesis.onvoiceschanged = function() {
+
         var voices = speechSynthesis.getVoices()
-  console.log(voices[1].name + " " + voices[1].lang + "  " + voices.length);
 	
   for(i = 0; i < voices.length ; i++) {
   console.log(voices[i].name + " " + voices[i].lang);
   }
+}
 
 
   
