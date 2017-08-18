@@ -64,7 +64,7 @@ var tts = new ya.speechkit.Tts(
 	    
                     
             });
-		tts.speak("ХУЙ СОСИ")
+		tts.speak("ХУЙ СОСИ");
 
         });
 	
