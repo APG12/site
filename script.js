@@ -28,11 +28,11 @@ window.onload = function() {
     };
 
     WhenMaslenokIsSilent(1, 1);
-    
+
 
 
     var fraz = {
-       mat: {
+        mat: {
             slova: ["з*****", "н****", "е****", "п******", "сука", "в****", "у****", "у******", "о****", "б****", "г*****", "е*****"],
             sound: [
                 ['sounds/чо ты обзываеш.mp3'],
@@ -48,8 +48,8 @@ window.onload = function() {
             sound: ['sounds/я тебя хочу.mp3'],
             text: ['Я тебя хочу!'],
             chain: [],
-            w: 1,
-            bw: 1
+            w: 0.95,
+            bw: 0.95
         },
         alo: {
             slova: ["але", "говорите", "ало", "алло", "алле", "слушаю", "привет"],
@@ -196,15 +196,15 @@ window.onload = function() {
             w: 1,
             bw: 1
         },
-       kakzovut: {
+        kakzovut: {
             slova: ["кто", "зовут", "твое", "имя"],
             sound: [
                 ['sounds/а меня зовут марина.mp3'],
                 ['sounds/я кристи.mp3'],
                 ['sounds/ну подумай.mp3']
             ],
-           text: ['А меня зовут Марина.'], 
-           w: 1,
+            text: ['А меня зовут Марина.'],
+            w: 1,
             bw: 1
         },
         neznau: {
@@ -233,7 +233,7 @@ window.onload = function() {
             bw: 1
         },
         da: {
-            slova: ["давай","да", "задавай", "конечно"],
+            slova: ["давай", "да", "задавай", "конечно"],
             sound: [
                 ['sounds/а скока тебе лет.mp3'],
                 ['sounds/слушай а какой размер.mp3'],
@@ -246,7 +246,7 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         }
-        
+
     };
 
 
@@ -344,39 +344,35 @@ window.onload = function() {
             for (var key in fraz) {
                 fraz[key].w = fraz[key].bw;
             }
-            
-            
+
+
             fraz[maxflag].bw = 0.95;
             fraz[maxflag].w = 0.95;
-            
+
             if (fraz[maxflag].hasOwnProperty("chain")) {
                 console.log("чейн не пустой");
-                
-             if (Array.isArray(fraz[maxflag].chain[sonu])) {
-               console.log(fraz[maxflag].chain[sonu] + " чейн конкретный под звук - " + fraz[maxflag].sound[sonu]);
-                 for (var i = 0; i < fraz[maxflag].chain[sonu].length; i++) {
-                    console.log("перебирает чейны");
-                    if (fraz[fraz[maxflag].chain[sonu][i]]) {
-                        console.log("нашел потомка чейна");
-                        fraz[fraz[maxflag].chain[sonu][i]].w += 0.2;
-                        console.log(fraz[maxflag].chain[sonu] + " " + fraz[fraz[maxflag].chain[sonu][i]].w);
-
+                if (Array.isArray(fraz[maxflag].chain[sonu])) {
+                    console.log(fraz[maxflag].chain[sonu] + " чейн конкретный под звук - " + fraz[maxflag].sound[sonu]);
+                    for (var i = 0; i < fraz[maxflag].chain[sonu].length; i++) {
+                        console.log("перебирает чейны");
+                        if (fraz[fraz[maxflag].chain[sonu][i]]) {
+                            console.log("нашел потомка чейна");
+                            fraz[fraz[maxflag].chain[sonu][i]].w += 0.2;
+                            console.log(fraz[maxflag].chain[sonu] + " " + fraz[fraz[maxflag].chain[sonu][i]].w);
+                        }
                     }
-               }
-             }
-                 else { 
+                } else {
                     console.log("чейн общий для всех фраз");
-                     
-                for (var i = 0; i < fraz[maxflag].chain.length; i++) {
-                    console.log("перебирает чейны");
-                    if (fraz[fraz[maxflag].chain[i]]) {
-                        console.log("нашел потомка чейна");
-                        fraz[fraz[maxflag].chain[i]].w += 0.2;
-                        console.log(fraz[maxflag].chain + " " + fraz[fraz[maxflag].chain[i]].w);
+                    for (var i = 0; i < fraz[maxflag].chain.length; i++) {
+                        console.log("перебирает чейны");
+                        if (fraz[fraz[maxflag].chain[i]]) {
+                            console.log("нашел потомка чейна");
+                            fraz[fraz[maxflag].chain[i]].w += 0.2;
+                            console.log(fraz[maxflag].chain + " " + fraz[fraz[maxflag].chain[i]].w);
 
+                        }
                     }
                 }
-              }
             }
 
             max = 1;
