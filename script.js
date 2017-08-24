@@ -362,6 +362,7 @@ window.onload = function() {
                         console.log(fraz[maxflag].chain[sonu] + " " + fraz[fraz[maxflag].chain[sonu][i]].w);
 
                     }
+               }
              }
                  else { 
                 for (var i = 0; i < fraz[maxflag].chain.length; i++) {
