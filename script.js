@@ -39,7 +39,10 @@ window.onload = function() {
                 ['sounds/соси небритую жопу.mp3']
             ],
             text: ['Соси небритую жопу!'],
-            chain: ['love'],
+            chain: [
+                ['love'],
+                ['adres']
+            ],
             w: 1,
             bw: 1
         },
