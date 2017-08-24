@@ -77,8 +77,8 @@ window.onload = function() {
             chain: [],
             text: ['Мне 22.'],
             question: ['sounds/чо застеснялся.mp3'],
-            w: 1,
-            bw: 1
+            w: 0.95,
+            bw: 0.95
         },
         kakdela: {
             slova: ["как", "дела", "у", "тебя", "делишки", "рассказывай"],
