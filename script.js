@@ -286,14 +286,20 @@ window.onload = function() {
                     for (var key in fraz) {
                         var slova = fraz[key].slova;
                         for (var m = 0; m < slova.length; m++) { //console.log(wordso[i].words[j].value);
-                            if (slova[m] === words[j].toLowerCase() || slova[m]==='любое слово') {
+                            if (slova[m] === words[j].toLowerCase()) {
                                 fraz[key].w += 0.01 / slova.length;
                                 console.log(key + " = " + fraz[key].w + "; max = " + maxflag + " " + max + "слово: " + words[j]);
                                 if (fraz[key].w > max) {
                                     max = fraz[key].w
                                     maxflag = key;
                                 }
+                                
                             }
+                            
+                                if (fraz[key].w > max && slova[0]==='любое слово') {
+                                    max = fraz[key].w
+                                    maxflag = key;
+                                }
                         }
 
                     }
