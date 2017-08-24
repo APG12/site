@@ -330,10 +330,14 @@ window.onload = function() {
             }
             audio.play();
             audio.addEventListener("ended", function() {
+                console.log("ВЫБИРАЕТ ВОПРОС");
                 mainflag = 0;
                 if (fraz[maxflagb].hasOwnProperty("question")) {
+                    console.log("ВОПРОС КАСТОМНЫЙ");
                     WhenMaslenokIsSilent(1, fraz[maxflagb].question);
                 } else {
+                    console.log("ВОПРОС ЗАГЛУШКА");
+                    
                     WhenMaslenokIsSilent(1, 1);
                 }
             });
