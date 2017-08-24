@@ -351,6 +351,19 @@ window.onload = function() {
             
             if (fraz[maxflag].hasOwnProperty("chain")) {
                 console.log("чейн не пустой");
+                
+             if (Array.isArray(fraz[maxflag].chain[sonu])) {
+               
+                for (var i = 0; i < fraz[maxflag].chain[sonu].length; i++) {
+                    console.log("перебирает чейны");
+                    if (fraz[fraz[maxflag].chain[sonu][i]]) {
+                        console.log("нашел потомка чейна");
+                        fraz[fraz[maxflag].chain[sonu][i]].w += 0.2;
+                        console.log(fraz[maxflag].chain[sonu] + " " + fraz[fraz[maxflag].chain[sonu][i]].w);
+
+                    }
+             }
+                 else { 
                 for (var i = 0; i < fraz[maxflag].chain.length; i++) {
                     console.log("перебирает чейны");
                     if (fraz[fraz[maxflag].chain[i]]) {
@@ -360,7 +373,7 @@ window.onload = function() {
 
                     }
                 }
-
+              }
             }
 
             max = 1;
