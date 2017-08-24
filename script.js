@@ -353,8 +353,8 @@ window.onload = function() {
                 console.log("чейн не пустой");
                 
              if (Array.isArray(fraz[maxflag].chain[sonu])) {
-               
-                for (var i = 0; i < fraz[maxflag].chain[sonu].length; i++) {
+               console.log(fraz[maxflag].chain[sonu] + " чейн конкретный под звук - " + fraz[maxflag].sound[sonu]);
+                 for (var i = 0; i < fraz[maxflag].chain[sonu].length; i++) {
                     console.log("перебирает чейны");
                     if (fraz[fraz[maxflag].chain[sonu][i]]) {
                         console.log("нашел потомка чейна");
@@ -365,6 +365,8 @@ window.onload = function() {
                }
              }
                  else { 
+                    console.log("чейн общий для всех фраз");
+                     
                 for (var i = 0; i < fraz[maxflag].chain.length; i++) {
                     console.log("перебирает чейны");
                     if (fraz[fraz[maxflag].chain[i]]) {
