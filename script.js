@@ -72,7 +72,7 @@ window.onload = function() {
             bw: 1.1
         },
         vozr: {
-            slova: ["любое слово","лет", "возраст"],
+            slova: ["лет", "возраст"],
             sound: ['sounds/мне 22.mp3'],
             chain: [],
             text: ['Мне 22.'],
@@ -139,7 +139,7 @@ window.onload = function() {
             bw: 0.95
         },
         adres: {
-            slova: ["где", "находишься", "адрес", "дом"],
+            slova: ["любое слово"],
             sound: ['sounds/я живу на строителей.mp3'],
             chain: ["adresvopr"],
             text: ['Я живу на строителей.'],
