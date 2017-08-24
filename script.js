@@ -60,12 +60,12 @@ window.onload = function() {
                 ['sounds/привет.mp3'],
             ],
             text: ['Привет!'],
-            chain: [],
+            chain: ['vozr'],
             w: 1.1,
             bw: 1.1
         },
         vozr: {
-            slova: ["лет", "возраст"],
+            slova: ["любое слово","лет", "возраст"],
             sound: ['sounds/мне 22.mp3'],
             chain: [],
             text: ['Мне 22.'],
