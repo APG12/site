@@ -33,6 +33,101 @@ window.onload = function() {
 
     var fraz = {
         
+        aleo: {
+            slova: ["ало", "алео", "алло","да","слушаю"],
+            sound: [
+                ['sounds/добрый день.mp3'],
+                ['sounds/привет.mp3']
+            ],
+            text: ['Привет!'],
+            chain: [
+                ['privet'],
+                ['atikomuzvonish']
+            ],
+            w: 1.1,
+            bw: 1.1
+        },
+        
+        
+        privet: {
+            slova: ["привет"],
+            sound: [
+                ['sounds/как дела.mp3'],
+               ],
+            text: ['Как дела?'],
+            chain: [
+                ['atvoikak'],
+                ['aetokto'],
+                ['atikomuzvonish']
+            ],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
+        atikomuzvonish: {
+            slova: ["кому","звонишь"],
+            sound: [
+                ['sounds/тебе звоню.mp3'],
+               ],
+            text: ['Тебе звоню.'],
+            chain: [
+                ['komutebe']
+            ],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
+        komutebe: {
+            slova: ["кому","звонишь"],
+            sound: [
+                ['sounds/ну тебе.mp3'],
+                ['sounds/да мне нужен ты.mp3'],
+              ],
+            text: ['Ну тебе.'],
+            chain: [
+                ['ktoya']
+            ],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        ktoya: {
+            slova: ["кто","я"],
+            sound: [
+                ['sounds/я хочу с тобой познакомиться.mp3','sounds/ты что не понял.mp3'],
+                ['sounds/я тебя видела в вк'],
+              ],
+            text: ['Ну тебе.'],
+            chain: [
+                ['ktoya'],
+                ['']
+            ],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
+        
+        atvoikak: {
+            slova: ["нормально","ниче","так","хорошо","пойдет"],
+            sound: [
+                ['sounds/что делаеш.mp3'],
+               ],
+            text: ['Что делаешь?'],
+            chain: [
+                ['atvoikak'],
+                ['atikomuzvonish']
+            ],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
+        
+        
+        
         
         
         
