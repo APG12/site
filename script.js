@@ -110,7 +110,6 @@ window.onload = function() {
               ],
             text: ['А меня зовут Марина, очень приятно.'],
             chain: ['skokatebelet','molodoyeshe'],
-            question: ['sounds/а скока тебе лет.mp3'],
             w: 0.95,
             bw: 0.95
         },
@@ -482,7 +481,7 @@ window.onload = function() {
                     console.log(words[j]);
                     for (var key in fraz) {
                         var slova = fraz[key].slova;
-                        for (var m = 0; m < slova.length; m++) { //console.log(wordso[i].words[j].value);
+                        for (var m = 0; m < slova.length; m++) {
                             if (slova[m] === words[j].toLowerCase()) {
                                 fraz[key].w += 0.01 / slova.length;
                                 console.log(key + " = " + fraz[key].w + "; max = " + maxflag + " " + max + "слово: " + words[j]);
