@@ -198,16 +198,44 @@ window.onload = function() {
             bw: 0.95
         },
         
-            davopros: {
-            slova: ["да","давай","хорошо","задавай"],
-            sound: ['sounds/фу неудачник.mp3'],
-            text: ['Фу неудачник, а можно нескромный вопрос?'],
-            chain: ['davopros','netvopros'],
+        
+        netvopros: {
+            slova: ["нет","нельзя"],
+            sound: ['sounds/ну а почему нет то.mp3'],
+            text: ['Ну а почему нет то?'],
+            chain: ['poshelnahuy'],
             w: 0.95,
             bw: 0.95
         },
-  
         
+        davopros: {
+            slova: ["да","давай","хорошо","задавай"],
+            sound: [
+                    ['sounds/у тебя есть девушка.mp3','sounds/тока не врать.mp3'],
+                    ['sounds/слушай а какой размер.mp3']
+                    ['sounds/а ты девственик.mp3']
+                   
+            ],
+            text: ['Спрашивает какую-то хуйню ;)'],
+            chain: [
+                    ['estdevushka','netdevushki'],
+                    ['eldakcho','eldakzachem'],
+                    ['dadevstvennik','netdevstvennik']
+            ],
+            w: 0.95,
+            bw: 0.95
+        },
+         
+          
+        
+         
+        poshelnahuy: {
+            slova: ["любое слово"],
+            sound: ['sounds/да пошел ты мудак обьеб.mp3'],
+            text: ['Да пошел ты нахуй, мудак объебаный.'],
+            w: 0.95,
+            bw: 0.95
+        },
         
         
         
