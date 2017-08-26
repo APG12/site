@@ -40,10 +40,7 @@ window.onload = function() {
                 ['sounds/привет.mp3']
             ],
             text: ['Привет!'],
-            chain: [
-                ['privet'],
-                ['atikomuzvonish']
-            ],
+            chain: ['privet','atikomuzvonish'],
             w: 1.1,
             bw: 1.1
         },
@@ -51,15 +48,9 @@ window.onload = function() {
         
         privet: {
             slova: ["привет"],
-            sound: [
-                ['sounds/как дела.mp3'],
-               ],
+            sound: ['sounds/как дела.mp3'],
             text: ['Как дела?'],
-            chain: [
-                ['atvoikak'],
-                ['aetokto'],
-                ['atikomuzvonish']
-            ],
+            chain: ['atvoikak','aetokto','atikomuzvonish'],
             w: 0.95,
             bw: 0.95
         },
@@ -67,13 +58,9 @@ window.onload = function() {
         
         atikomuzvonish: {
             slova: ["кому","звонишь"],
-            sound: [
-                ['sounds/тебе звоню.mp3'],
-               ],
+            sound: ['sounds/тебе звоню.mp3'],
             text: ['Тебе звоню.'],
-            chain: [
-                ['komutebe']
-            ],
+            chain: ['komutebe'],
             w: 0.95,
             bw: 0.95
         },
@@ -86,9 +73,7 @@ window.onload = function() {
                 ['sounds/да мне нужен ты.mp3'],
               ],
             text: ['Ну тебе.'],
-            chain: [
-                ['ktoya']
-            ],
+            chain: ['ktoya'],
             w: 0.95,
             bw: 0.95
         },
@@ -99,14 +84,131 @@ window.onload = function() {
                 ['sounds/я хочу с тобой познакомиться.mp3','sounds/ты что не понял.mp3'],
                 ['sounds/я тебя видела в вк'],
               ],
-            text: ['Ну тебе.'],
+            text: ['Я хочу с тобой познакомиться, ты что не понял?.'],
             chain: [
-                ['ktoya'],
-                ['']
+                ['davaiznakomitsa','nehochetznakomitsa'],
+                ['vk']
             ],
             w: 0.95,
             bw: 0.95
         },
+        
+        davaiznakomitsa: {
+            slova: ["давай","познакомимся"],
+            sound: ['sounds/мальчик как зовут.mp3'],
+            text:  ['Мальчик как тебя зовут?'],
+            chain: ['amenyazovut'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        amenyazovut: {
+            slova: ["любое слово"],
+            sound: [
+                ['sounds/а меня зовут марина.mp3', 'sounds/очень приятно.mp3'],
+                ['sounds/я кристи.mp3', 'sounds/очень приятно.mp3'],
+              ],
+            text: ['А меня зовут Марина, очень приятно.'],
+            chain: ['skokatebelet','molodoyeshe'],
+            question: ['sounds/а скока тебе лет.mp3'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        skokatebelet: {
+            slova: ["любое слово"],
+            sound: ['sounds/а скока тебе лет.mp3'],
+            text: ['А скока тебе лет?'],
+            chain:['molodoyeshe'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        molodoyeshe: {
+            slova: ["любое слово"],
+            sound: ['sounds/ну ты молодой.mp3'],
+            text: ['Ну ты молодой еще.'],
+            chain: ['atebeskolkolet','uchus','rabotayu'],
+            question: ['sounds/ты учишьяс или работ.mp3'],
+            w: 0.95,
+            bw: 0.95
+        },
+            
+        atebeskolko: {
+            slova: ["тебе","сколько","лет"],
+            sound: ['sounds/не прилично возраст.mp3'],
+            text: ['Не прилично возраст спрашивать у девушки.'],
+            chain: ['nuskoka'],
+            question: ['sounds/мне 22'],
+            w: 0.95,
+            bw: 0.95
+        },
+    
+        nuskoka: {
+            slova: ["ну","сколько","скажи"],
+            sound: ['sounds/мне 22.mp3','sounds/ты учишьяс или работ.mp3'],
+            text: ['Мне 22. Ты учишься или работаешь?'],
+            chain: ['uchus','rabotayu'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        uchus: {
+            slova: ["учусь"],
+            sound: ['sounds/а скока стипуха.mp3'],
+            text: ['А сколько у тебя стипендия?'],
+            chain: ['funeudachnik'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        rabotayu: {
+            slova: ["работаю"],
+            sound: ['sounds/а кем ты робиш.mp3'],
+            text: ['А кем ты работаеш?'],
+            chain: ['kakayazp'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        kakayazp: {
+            slova: ["любое слово"],
+            sound: ['sounds/и какая зарплата.mp3'],
+            text: ['И какая зарплата?'],
+            chain: ['kakayamashina'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        kakayamashina: {
+            slova: ["любое слово"],
+            sound: ['sounds/аа понятно.mp3','sounds/какая у тя машина.mp3'],
+            text: ['А понятно, а какая у тебя машина?'],
+            chain: ['funeudachnik'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+
+        funeudachnik: {
+            slova: ["любое слово"],
+            sound: ['sounds/фу неудачник.mp3','sounds/а можно нескромный вопрос.mp3'],
+            text: ['Фу неудачник, а можно нескромный вопрос?'],
+            chain: ['davopros','netvopros'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+            davopros: {
+            slova: ["да","давай","хорошо","задавай"],
+            sound: ['sounds/фу неудачник.mp3'],
+            text: ['Фу неудачник, а можно нескромный вопрос?'],
+            chain: ['davopros','netvopros'],
+            w: 0.95,
+            bw: 0.95
+        },
+  
+        
         
         
         
