@@ -225,9 +225,68 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-         
-          
+       
+        estdevushka: {
+            slova: ["да","есть"],
+            sound: ['sounds/ну так я она и есть.mp3','sounds/а что тебе во мне нра.mp3'],
+            text: ['Ну так я она и есть. А что тебе во мне нравится?'],
+            chain: ['yatebyanevidel'],
+            w: 0.95,
+            bw: 0.95
+        },
         
+        yatebyanevidel: {
+            slova: ["не","знаю","видел","никогда","незнакомы"],
+            sound: ['sounds/увидишь меня при встрече.mp3','sounds/давай куда нить сходим.mp3'],
+            text: ['Увидишь меня при встрече. Давай куда нить сходим.'],
+            chain: ['kudanitshodim'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        yatebyanevidel: {
+            slova: ["не","знаю","видел","никогда","незнакомы"],
+            sound: ['sounds/увидишь меня при встрече.mp3','sounds/давай куда нить сходим.mp3'],
+            text: ['Увидишь меня при встрече. Давай куда нить сходим.'],
+            chain: ['kudanitshodim'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+       netdevushki: {
+            slova: ["нет","нету","неважно"],
+            sound: [
+                ['sounds/а какие тебе девушки нра.mp3'],
+                ['sounds/ты голубой.mp3']
+            ],
+            text: ['А какие тебе девушки нравятся?.'],
+            chain: [
+                ['netinrav','otakyatakaya'],
+                ['negey']
+            ],
+            w: 0.95,
+            bw: 0.95
+        },
+          
+        netinrav: {
+            slova: ["не","ты","явно"],
+            sound: ['sounds/почему.mp3','sounds/я нормальная.mp3'],
+            text: ['Почему? Я нормальная.'],
+            chain: ['yatebyanevidel'],
+            question: ['sounds/я красивая молодая.mp3'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        otakyatakaya: {
+            slova: ["любое слово"],
+            sound: ['sounds/о так я такая.mp3'],
+            text: ['О так я именно такая.'],
+            chain: ['yatebyanevidel'],
+            question: ['sounds/я красивая молодая.mp3'],
+            w: 0.95,
+            bw: 0.95
+        },
          
         poshelnahuy: {
             slova: ["любое слово"],
