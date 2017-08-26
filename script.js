@@ -288,6 +288,93 @@ window.onload = function() {
             bw: 0.95
         },
          
+        
+        kudanitshodim: {
+            slova: ["любое слово"],
+            sound: [
+                ['sounds/можно в кафе.mp3'],
+                ['sounds/можно в центре.mp3']
+                ],
+            text: ['Можно там-то.'],
+            chain: [
+                ['vcafe'],
+                ['vcentre']
+            ],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        vcafe: {
+            slova: ["любое слово"],
+            sound: ['sounds/ну предложи ты я не оч.mp3'],
+            text: ['Ну предложи ты, я не очень разбираюсь.'],
+            chain: ['etov20m'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
+        vcentre: {
+            slova: ["любое слово"],
+            sound: ['sounds/ну предложи ты мужчина глав.mp3'],
+            text: ['Ну предложи ты, мужчина должен быть главным..'],
+            chain: ['etov20m'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
+        etov20m: {
+            slova: ["любое слово"],
+            sound: ['sounds/аа это в 20 минутах.mp3'],
+            text: ['А это в 20 минутах от меня.'],
+            chain: ['mogucherez30'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
+        mogucherez30: {
+            slova: ["любое слово"],
+            sound: ['sounds/могу через 30 мин.mp3'],
+            text: ['Могу через 30 минут.'],
+            chain: ['dogovorilis'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
+        
+        dogovorilis: {
+            slova: ["любое слово"],
+            sound: ['sounds/договорились.mp3'],
+            text: ['Договорились.'],
+            chain: ['yatepozvonutogda'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+      
+       yatepozvonutogda: {
+            slova: ["любое слово"],
+            sound: ['sounds/я те позвоню тогда.mp3'],
+            text: ['Я тебе позвоню тогда.'],
+            chain: ['kotik'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
+        kotik: {
+            slova: ["любое слово"],
+            sound: ['sounds/котик.mp3'],
+            text: ['Котик <3'],
+            question: ['sounds/да пошел тым мудак обьеб.mp3'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
         poshelnahuy: {
             slova: ["любое слово"],
             sound: ['sounds/да пошел ты мудак обьеб.mp3'],
