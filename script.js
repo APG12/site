@@ -799,7 +799,7 @@ window.onload = function() {
             fraz[maxflag].w = 0.95;
                 
             max = 1;
-            maxflag = pickRandomProperty(frz);
+            maxflag = pickRandomProperty(fraz);
 
 
             if (fraz[maxflag].hasOwnProperty("chain")) {
