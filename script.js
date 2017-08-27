@@ -220,18 +220,27 @@ window.onload = function() {
             chain: [
                     ['estdevushka','netdevushki'],
                     ['eldakcho','eldakzachem'],
-                    ['dadevstvennik','netdevstvennik']
+                    ['dadevstvennik','netdevstvennik', 'devstvennikcho']
             ],
             w: 0.95,
             bw: 0.95
         },
        
         
+        devstvennikcho: {
+            slova: ["че","чего","вопрос","вопросы"],
+            sound: ['sounds/что так испугался то.mp3','sounds/ты со скольки затвор.mp3'],
+            text: ['Ты со скольки затвор передергиваешь?'],
+            chain: ['zatvornedrochu','zatvorvozrast'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
         dadevstvennik: {
             slova: ["да","девственник","дественник"],
             sound: ['sounds/ты со скольки затвор.mp3'],
             text: ['Ты со скольки затвор передергиваешь?'],
-            chain: ['zatvornedrochu','zatvorvozrast','zatvorcho'],
+            chain: ['zatvornedrochu','zatvorvozrast'],
             w: 0.95,
             bw: 0.95
         },
@@ -256,7 +265,6 @@ window.onload = function() {
             bw: 0.95
         },
         
-           
         estdevushka: {
             slova: ["да","есть"],
             sound: ['sounds/ну так я она и есть.mp3','sounds/а что тебе во мне нра.mp3'],
