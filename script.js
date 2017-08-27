@@ -226,6 +226,37 @@ window.onload = function() {
             bw: 0.95
         },
        
+        
+        dadevstvennik: {
+            slova: ["да","девственник","дественник"],
+            sound: ['sounds/ты со скольки затвор.mp3'],
+            text: ['Ты со скольки затвор передергиваешь?'],
+            chain: ['zatvornedrochu','zatvorvozrast','zatvorcho'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+         
+        zatvornedrochu: {
+            slova: ["не","дрочу"],
+            sound: ['sounds/ну по тебе не скаж.mp3'],
+            text: ['Ну по тебе не скажешь.'],
+            chain: ['yatebyahochu'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+         
+        zatvorvozrast: {
+            slova: ["с","1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21" ],
+            sound: ['sounds/а как частоты это.mp3'],
+            text: ['А как часто ты это делаешь?.'],
+            chain: ['yabiposmotrela'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+           
         estdevushka: {
             slova: ["да","есть"],
             sound: ['sounds/ну так я она и есть.mp3','sounds/а что тебе во мне нра.mp3'],
@@ -267,7 +298,28 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-          
+        
+        
+        negey: {
+            slova: ["нет","не"],
+            sound: ['sounds/ну а почему нет то.mp3'],
+            text: ['Ну а почему нет то?.'],
+            chain: ['nublinzhal'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
+        nublinzhal: {
+            slova: ["любое слово"],
+            sound: ['sounds/ну блин жаль.mp3','sounds/а чем ты докажешь.mp3'],
+            text: ['Ну блин жаль. А чем ты докажешь?'],
+            chain: ['priezhayposmotri'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
         netinrav: {
             slova: ["не","ты","явно"],
             sound: ['sounds/почему.mp3','sounds/я нормальная.mp3'],
