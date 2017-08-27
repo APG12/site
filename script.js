@@ -424,7 +424,6 @@ window.onload = function() {
             bw: 0.95
         },
         
-        
         kotik: {
             slova: ["любое слово"],
             sound: ['sounds/котик.mp3'],
@@ -798,6 +797,10 @@ window.onload = function() {
 
             fraz[maxflag].bw = 0.95;
             fraz[maxflag].w = 0.95;
+                
+            max = 1;
+            maxflag = pickRandomProperty(frz);
+
 
             if (fraz[maxflag].hasOwnProperty("chain")) {
                 console.log("чейн не пустой");
@@ -824,9 +827,6 @@ window.onload = function() {
                     }
                 }
             }
-
-            max = 1;
-            maxflag = pickRandomProperty(fraz);
             audio = zaglushki[Math.floor(Math.random() * zaglushki.length)];
         }
     });
