@@ -590,7 +590,6 @@ window.onload = function() {
             fraz[maxflag].bw = 0.95;
             fraz[maxflag].w = 0.95;
 
-            max = 1;
 
 
             if (fraz[maxflag].hasOwnProperty("chain")) {
@@ -619,6 +618,8 @@ window.onload = function() {
                 }
             }
             maxflag = pickRandomProperty(fraz);
+            max = fraz[maxflag].w;
+
             console.log("mainflag " + mainflag);
             audio = zaglushki[Math.floor(Math.random() * zaglushki.length)];
         }
