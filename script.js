@@ -542,6 +542,7 @@ window.onload = function() {
                 audio = new Audio(fraz[maxflag].sound[sonu][0]);
                 
                 audio.addEventListener("ended", function() {
+                    console.log("FAFOPaiOFPOAFWQPOFKPOQEKWFPOQKWFKQWFOKQWOKFopQK ААААААААААААААААААААААААА БЛЯЯЯЯЯЯДЬ");
                     audio.currentTime = 0;
                     ai++;
                     audio = new Audio(fraz[maxflagb].sound[sonu][ai]);
