@@ -543,7 +543,7 @@ window.onload = function() {
                     audio.currentTime = 0;
                     audio = new Audio(fraz[maxflagb].sound[sonu][1]);
                     audio.play();
-                    console.log("ended as massiv");
+                    console.log("ended as massiv " + fraz[maxflagb].sound[sonu][1]);
                 });
             } else {
                 console.log("признал строкой");
