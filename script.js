@@ -540,17 +540,16 @@ window.onload = function() {
             if (Array.isArray(fraz[maxflag].sound[sonu])) {
                 console.log("признал массивом звук");
                 audio = new Audio(fraz[maxflag].sound[sonu][0]);
-                audio.play();
+                
                 audio.addEventListener("ended", function() {
                     audio.currentTime = 0;
                     ai++;
                     audio = new Audio(fraz[maxflagb].sound[sonu][ai]);
-                    audio.play();
                     audio.addEventListener("ended", function() {
                         mainflag = 0;
                         console.log("mainflag " + mainflag);
 
-                        console.log("ended");});
+                        console.log("ended");
              console.log("ВЫБИРАЕТ ВОПРОС");
                 if (fraz[maxflagb].hasOwnProperty("question")) {
                     console.log("ВОПРОС КАСТОМНЫЙ");
@@ -560,7 +559,10 @@ window.onload = function() {
                     
                     WhenMaslenokIsSilent(1, 1);
                 }
-                });
+                    audio.play();
+                    });
+                     
+                }); audio.play();
             } else {
                 
                 console.log("признал строкой звук");
