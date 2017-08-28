@@ -536,11 +536,11 @@ window.onload = function() {
             console.log(maxflag);
             var maxflagb = maxflag;
             var sonu = Math.floor(Math.random() * fraz[maxflag].sound.length);
-              if (Array.isArray(fraz[maxflag].sound[sonu])) {
-                   audio = new Audio(fraz[maxflag].sound[sonu][0]);
+              if (Array.isArray(fraz[maxflagb].sound[sonu])) {
+                   audio = new Audio(fraz[maxflagb].sound[sonu][0]);
                    audio.addEventListener("ended", function() {
 
-                    console.log("эта сука выводит вторую букву - " + fraz[maxflag].sound[sonu]);
+                    console.log("эта сука выводит вторую букву - " + fraz[maxflagb].sound[sonu]);
                     audio = new Audio(fraz[maxflagb].sound[sonu][1]);
                     audio.addEventListener("ended", function() {
                         mainflag = 0;
