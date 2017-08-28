@@ -539,7 +539,7 @@ window.onload = function() {
             audio = new Audio(fraz[maxflag].sound[sonu][0]);
             audio.addEventListener("ended", function() {
                 if (fraz[maxflag].sound[sonu][1]) {
-
+                    console.log("эта сука выводит вторую букву - " + fraz[maxflag].sound[sonu][1]);
                     audio = new Audio(fraz[maxflagb].sound[sonu][1]);
                     audio.addEventListener("ended", function() {
                         mainflag = 0;
