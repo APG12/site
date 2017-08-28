@@ -536,44 +536,41 @@ window.onload = function() {
             console.log(maxflag);
             var maxflagb = maxflag;
             var sonu = Math.floor(Math.random() * fraz[maxflag].sound.length);
-              if (Array.isArray(fraz[maxflagb].sound[sonu])) {
-                   audio = new Audio(fraz[maxflagb].sound[sonu][0]);
-                   audio.addEventListener("ended", function() {
-
-                    console.log("эта сука выводит вторую букву - " + fraz[maxflagb].sound[sonu]);
-                    audio = new Audio(fraz[maxflagb].sound[sonu][1]);
-                    audio.addEventListener("ended", function() {
-                        mainflag = 0;
-                        console.log("ended");
-                        console.log("ВЫБИРАЕТ ВОПРОС");
-                        if (fraz[maxflagb].hasOwnProperty("question")) {
-                            console.log("ВОПРОС КАСТОМНЫЙ");
-                            WhenMaslenokIsSilent(1, fraz[maxflagb].question);
-                        } else {
-                            console.log("ВОПРОС ЗАГЛУШКА");
-                            WhenMaslenokIsSilent(1, 1);
-                        }
-                        audio.play();
-                    });
-                   });
-                } else {
-                   audio = new Audio(fraz[maxflagb].sound[sonu]);
-                   audio.addEventListener("ended", function() {
-                    
-                    mainflag = 0;
+            if (Array.isArray(fraz[maxflag].sound[sonu])) {
+                console.log("признал массивом");
+                audio = new Audio(fraz[maxflag].sound[sonu][0]);
+                audio.addEventListener("ended", function() {
+                    audio.currentTime = 0;
+                    ai++;
+                    audio = new Audio(fraz[maxflagb].sound[sonu][ai]);
+                    audio.play();
                     console.log("ended");
-                    console.log("ВЫБИРАЕТ ВОПРОС");
-                    if (fraz[maxflagb].hasOwnProperty("question")) {
-                        console.log("ВОПРОС КАСТОМНЫЙ");
-                        WhenMaslenokIsSilent(1, fraz[maxflagb].question);
-                    } else {
-                        console.log("ВОПРОС ЗАГЛУШКА");
-                        WhenMaslenokIsSilent(1, 1);
-                    }
-                   });
-                }
-           
+                });
+            } else {
+                console.log("признал строкой");
+
+                audio = new Audio(fraz[maxflag].sound[ai]);
+                audio.addEventListener("ended", function() {
+                    audio.currentTime = 0;
+                    ai++;
+                    audio = new Audio(fraz[maxflagb].sound[ai]);
+                    audio.play();
+                    console.log("ended");
+                });
+            }
             audio.play();
+            audio.addEventListener("ended", function() {
+                console.log("ВЫБИРАЕТ ВОПРОС");
+                mainflag = 0;
+                if (fraz[maxflagb].hasOwnProperty("question")) {
+                    console.log("ВОПРОС КАСТОМНЫЙ");
+                    WhenMaslenokIsSilent(1, fraz[maxflagb].question);
+                } else {
+                    console.log("ВОПРОС ЗАГЛУШКА");
+                    
+                    WhenMaslenokIsSilent(1, 1);
+                }
+            });
 
             var bufmsg = maxflag;
             var leftData = "<div class='message left' style='display:none;'><div class='message-text'>" + phrases[0] +
