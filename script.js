@@ -481,129 +481,6 @@ window.onload = function() {
         },
      
 
-439
-      
-440
-       yatepozvonutogda: {
-441
-            slova: ["любое слово"],
-442
-            sound: ['sounds/я те позвоню тогда.mp3'],
-443
-            text: ['Я тебе позвоню тогда.'],
-444
-            chain: ['kotik'],
-445
-            w: 0.95,
-446
-            bw: 0.95
-447
-        },
-448
-        
-449
-        kotik: {
-450
-            slova: ["любое слово"],
-451
-            sound: ['sounds/котик.mp3'],
-452
-            text: ['Котик <3'],
-453
-            question: ['sounds/да пошел тым мудак обьеб.mp3'],
-454
-            w: 0.95,
-455
-            bw: 0.95
-456
-        },
-457
-        
-458
-        
-459
-        poshelnahuy: {
-460
-            slova: ["любое слово"],
-461
-            sound: ['sounds/да пошел ты мудак обьеб.mp3'],
-462
-            text: ['Да пошел ты нахуй, мудак объебаный.'],
-463
-            w: 0.95,
-464
-            bw: 0.95
-465
-        },
-466
-        
-467
-        
-468
-        
-469
-        atvoikak: {
-470
-            slova: ["нормально","ниче","так","хорошо","пойдет"],
-471
-            sound: [
-472
-                ['sounds/что делаеш.mp3'],
-473
-               ],
-474
-            text: ['Что делаешь?'],
-475
-            chain: [
-476
-                ['atvoikak'],
-477
-                ['atikomuzvonish']
-478
-            ],
-479
-            w: 0.95,
-480
-            bw: 0.95
-481
-        },
-482
-     
-483
-​
-484
-     
-485
-    };
-486
-​
-487
-​
-488
-    var max = 1;
-489
-    var maxflag = "aleo";
-490
-​
-491
-    var mainflag = 0;
-492
-    annyang.debug();
-493
-    annyang.setLanguage("ru");
-494
-    annyang.start({
-495
-        continuous: false
-496
-    });
-497
-    annyang.addCallback('soundstart', function() {
-498
-        console.log('sound detected!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-499
-        flagpiz = 1;
-
      
     };
 
@@ -655,7 +532,7 @@ window.onload = function() {
                 }
 
 
-            
+            }
             console.log(maxflag);
             var ai = 0;
             var maxflagb = maxflag;
@@ -763,7 +640,6 @@ window.onload = function() {
             maxflag = pickRandomProperty(fraz);
 console.log("mainflag " + mainflag);
             audio = zaglushki[Math.floor(Math.random() * zaglushki.length)];
-        }
         }
     });
 
