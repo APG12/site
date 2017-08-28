@@ -285,7 +285,6 @@ window.onload = function() {
             bw: 0.95
         },
 
-
         zatvorvozrast: {
             slova: ["с", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"],
             sound: ['sounds/а как часто ты это.mp3'],
@@ -587,8 +586,8 @@ window.onload = function() {
             }
 
 
-            fraz[maxflag].bw = 0.95;
-            fraz[maxflag].w = 0.95;
+            fraz[maxflag].bw -= 0.15;
+            fraz[maxflag].w = fraz[maxflag].bw;
 
 
 
