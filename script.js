@@ -541,10 +541,9 @@ window.onload = function() {
                 audio = new Audio(fraz[maxflag].sound[sonu][0]);
                 audio.addEventListener("ended", function() {
                     audio.currentTime = 0;
-                    ai++;
                     audio = new Audio(fraz[maxflagb].sound[sonu][1]);
                     audio.play();
-                    console.log("ended");
+                    console.log("ended as massiv");
                 });
             } else {
                 console.log("признал строкой");
@@ -552,10 +551,9 @@ window.onload = function() {
                 audio = new Audio(fraz[maxflag].sound[0]);
                 audio.addEventListener("ended", function() {
                     audio.currentTime = 0;
-                    ai++;
                     audio = new Audio(fraz[maxflagb].sound[1]);
                     audio.play();
-                    console.log("ended");
+                    console.log("ended as string");
                 });
             }
             audio.play();
