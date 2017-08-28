@@ -537,7 +537,7 @@ window.onload = function() {
             var maxflagb = maxflag;
             var sonu = Math.floor(Math.random() * fraz[maxflag].sound.length);
             if (Array.isArray(fraz[maxflag].sound[sonu])) {
-                console.log("признал массивом"  + fraz[maxflag].sound[sonu]));
+                console.log("признал массивом"  + fraz[maxflag].sound[sonu]);
                 audio = new Audio(fraz[maxflag].sound[sonu][0]);
                 audio.addEventListener("ended", function() {
                     audio.currentTime = 0;
