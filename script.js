@@ -240,12 +240,42 @@ window.onload = function() {
             slova: ["да","девственник","дественник"],
             sound: ['sounds/ты со скольки затвор.mp3'],
             text: ['Ты со скольки затвор передергиваешь?'],
-            chain: ['zatvornedrochu','zatvorvozrast'],
+            chain: ['zatvormolchit','zatvornedrochu','zatvorvozrast'],
             w: 0.95,
             bw: 0.95
         },
         
+              
+        
+        zatvormolchit: {
+            slova: ["скажу","дело","важно","кого","чего","что"],
+            sound: ['sounds/занимаешься рукодел.mp3'],
+            text: ['Занимаешься рукоделием.'],
+            chain: ['zatvormolchit2','zatvorvozrast'],
+            w: 0.95,
+            bw: 0.95
+        },
          
+        
+        zatvormolchit2: {
+            slova: ["скажу","дело","важно","кого","чего","что"],
+            sound: ['sounds/ну работ над собой.mp3','sounds/если ты понимаешь о чем.mp3'],
+            text: ['Ну работаешь над собой. Если ты понимаешь о чем я.'],
+            chain: ['zatvormolchit3','zatvorvozrast'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        zatvormolchit3: {
+            slova: ["скажу","дело","важно","кого","чего","что"],
+            sound: ['sounds/душишь одноглаз.mp3','sounds/ну теребоньк2.mp3'],
+            text: ['Занимаешься рукоделием.'],
+            chain: ['zatvorvozrast'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
         zatvornedrochu: {
             slova: ["не","дрочу"],
             sound: ['sounds/ну по тебе не скаж.mp3'],
@@ -273,7 +303,7 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-        
+         
         yatebyanevidel: {
             slova: ["не","знаю","видел","никогда","незнакомы"],
             sound: ['sounds/увидишь меня при встрече.mp3','sounds/давай куда нить сходим.mp3'],
@@ -282,6 +312,9 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
+        
+        
+        
         
         yatebyanevidel: {
             slova: ["не","знаю","видел","никогда","незнакомы"],
