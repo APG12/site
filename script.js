@@ -537,10 +537,10 @@ window.onload = function() {
             var maxflagb = maxflag;
             var sonu = Math.floor(Math.random() * fraz[maxflag].sound.length);
               if (Array.isArray(fraz[maxflag].sound[sonu])) {
-                    audio = new Audio(fraz[maxflag].sound[sonu][0]);
+                   audio = new Audio(fraz[maxflag].sound[sonu][0]);
                    audio.addEventListener("ended", function() {
 
-                    console.log("эта сука выводит вторую букву - " + fraz[maxflag].sound[sonu][1]);
+                    console.log("эта сука выводит вторую букву - " + fraz[maxflag].sound[sonu]);
                     audio = new Audio(fraz[maxflagb].sound[sonu][1]);
                     audio.addEventListener("ended", function() {
                         mainflag = 0;
@@ -557,7 +557,7 @@ window.onload = function() {
                     });
                    });
                 } else {
-                   audio = new Audio(fraz[maxflag].sound[sonu]);
+                   audio = new Audio(fraz[maxflagb].sound[sonu]);
                    audio.addEventListener("ended", function() {
                     
                     mainflag = 0;
