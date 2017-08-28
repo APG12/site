@@ -98,8 +98,8 @@ window.onload = function() {
             sound: ['sounds/мальчик как зовут.mp3'],
             text: ['Мальчик как тебя зовут?'],
             chain: ['amenyazovut'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.96,
+            bw: 0.96
         },
 
         amenyazovut: {
@@ -119,8 +119,8 @@ window.onload = function() {
             sound: ['sounds/а скока тебе лет.mp3'],
             text: ['А скока тебе лет?'],
             chain: ['molodoyeshe'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.96,
+            bw: 0.96
         },
 
         molodoyeshe: {
@@ -222,8 +222,8 @@ window.onload = function() {
                 ['eldakcho', 'eldakzachem'],
                 ['dadevstvennik', 'netdevstvennik', 'devstvennikcho']
             ],
-            w: 0.95,
-            bw: 0.95
+            w: 0.96,
+            bw: 0.96
         },
 
 
@@ -325,11 +325,11 @@ window.onload = function() {
                 ['netinrav', 'otakyatakaya'],
                 ['negey']
             ],
-            w: 0.95,
-            bw: 0.95
+            w: 0.96,
+            bw: 0.96
         },
 
-
+        
         negey: {
             slova: ["нет", "не"],
             sound: ['sounds/ну а почему нет то.mp3'],
