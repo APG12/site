@@ -313,18 +313,7 @@ window.onload = function() {
             bw: 0.95
         },
         
-        
-        
-        
-        yatebyanevidel: {
-            slova: ["не","знаю","видел","никогда","незнакомы"],
-            sound: ['sounds/увидишь меня при встрече.mp3','sounds/давай куда нить сходим.mp3'],
-            text: ['Увидишь меня при встрече. Давай куда нить сходим.'],
-            chain: ['kudanitshodim'],
-            w: 0.95,
-            bw: 0.95
-        },
-        
+       
        netdevushki: {
             slova: ["нет","нету","неважно"],
             sound: [
