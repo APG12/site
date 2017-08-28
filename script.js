@@ -548,6 +548,8 @@ window.onload = function() {
                     audio.play();
                     audio.addEventListener("ended", function() {
                         mainflag = 0;
+                        console.log("mainflag " + mainflag);
+
                         console.log("ended");});
              console.log("ВЫБИРАЕТ ВОПРОС");
                 if (fraz[maxflagb].hasOwnProperty("question")) {
@@ -566,6 +568,8 @@ window.onload = function() {
                 audio = new Audio(fraz[maxflag].sound[ai]);
                 audio.addEventListener("ended", function() {
                     mainflag = 0;
+                    console.log("mainflag " + mainflag);
+
                     audio.currentTime = 0;
                     ai++;
                     audio = new Audio(fraz[maxflagb].sound[ai]);
