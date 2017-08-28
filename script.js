@@ -542,18 +542,18 @@ window.onload = function() {
                 audio.addEventListener("ended", function() {
                     audio.currentTime = 0;
                     ai++;
-                    audio = new Audio(fraz[maxflagb].sound[sonu][ai]);
+                    audio = new Audio(fraz[maxflagb].sound[sonu][1]);
                     audio.play();
                     console.log("ended");
                 });
             } else {
                 console.log("признал строкой");
 
-                audio = new Audio(fraz[maxflag].sound[ai]);
+                audio = new Audio(fraz[maxflag].sound[0]);
                 audio.addEventListener("ended", function() {
                     audio.currentTime = 0;
                     ai++;
-                    audio = new Audio(fraz[maxflagb].sound[ai]);
+                    audio = new Audio(fraz[maxflagb].sound[1]);
                     audio.play();
                     console.log("ended");
                 });
