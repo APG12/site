@@ -536,9 +536,10 @@ window.onload = function() {
             console.log(maxflag);
             var maxflagb = maxflag;
             var sonu = Math.floor(Math.random() * fraz[maxflag].sound.length);
-            audio = new Audio(fraz[maxflag].sound[sonu][0]);
-            audio.addEventListener("ended", function() {
-                if (Array.isArray(fraz[maxflag].sound[sonu])) {
+              if (Array.isArray(fraz[maxflag].sound[sonu])) {
+                    audio = new Audio(fraz[maxflag].sound[sonu][0]);
+                   audio.addEventListener("ended", function() {
+
                     console.log("эта сука выводит вторую букву - " + fraz[maxflag].sound[sonu][1]);
                     audio = new Audio(fraz[maxflagb].sound[sonu][1]);
                     audio.addEventListener("ended", function() {
@@ -554,7 +555,11 @@ window.onload = function() {
                         }
                         audio.play();
                     });
+                   });
                 } else {
+                   audio = new Audio(fraz[maxflag].sound[sonu]);
+                   audio.addEventListener("ended", function() {
+                    
                     mainflag = 0;
                     console.log("ended");
                     console.log("ВЫБИРАЕТ ВОПРОС");
@@ -565,8 +570,9 @@ window.onload = function() {
                         console.log("ВОПРОС ЗАГЛУШКА");
                         WhenMaslenokIsSilent(1, 1);
                     }
+                   });
                 }
-            });
+           
             audio.play();
 
             var bufmsg = maxflag;
