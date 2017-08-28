@@ -32,109 +32,109 @@ window.onload = function() {
 
 
     var fraz = {
-        
+
         aleo: {
-            slova: ["ало", "алео", "алло","да","слушаю"],
+            slova: ["ало", "алео", "алло", "да", "слушаю"],
             sound: [
                 ['sounds/добрый день.mp3'],
                 ['sounds/привет.mp3']
             ],
             text: ['Привет!'],
-            chain: ['privet','atikomuzvonish'],
+            chain: ['privet', 'atikomuzvonish'],
             w: 1.1,
             bw: 1.1
         },
-        
-        
+
+
         privet: {
             slova: ["привет"],
             sound: ['sounds/как дела.mp3'],
             text: ['Как дела?'],
-            chain: ['atvoikak','aetokto','atikomuzvonish'],
+            chain: ['atvoikak', 'aetokto', 'atikomuzvonish'],
             w: 0.95,
             bw: 0.95
         },
-        
-        
+
+
         atikomuzvonish: {
-            slova: ["кому","звонишь"],
+            slova: ["кому", "звонишь"],
             sound: ['sounds/тебе звоню.mp3'],
             text: ['Тебе звоню.'],
             chain: ['komutebe'],
             w: 0.95,
             bw: 0.95
         },
-        
-        
+
+
         komutebe: {
-            slova: ["кому","звонишь"],
+            slova: ["кому", "звонишь"],
             sound: [
                 ['sounds/ну тебе.mp3'],
                 ['sounds/да мне нужен ты.mp3'],
-              ],
+            ],
             text: ['Ну тебе.'],
             chain: ['ktoya'],
             w: 0.95,
             bw: 0.95
         },
-        
+
         ktoya: {
-            slova: ["кто","я"],
+            slova: ["кто", "я"],
             sound: [
-                ['sounds/я хочу с тобой познакомиться.mp3','sounds/ты что не понял.mp3'],
+                ['sounds/я хочу с тобой познакомиться.mp3', 'sounds/ты что не понял.mp3'],
                 ['sounds/я тебя видела в вк'],
-              ],
+            ],
             text: ['Я хочу с тобой познакомиться, ты что не понял?.'],
             chain: [
-                ['davaiznakomitsa','nehochetznakomitsa'],
+                ['davaiznakomitsa', 'nehochetznakomitsa'],
                 ['vk']
             ],
             w: 0.95,
             bw: 0.95
         },
-        
+
         davaiznakomitsa: {
-            slova: ["давай","познакомимся"],
+            slova: ["давай", "познакомимся"],
             sound: ['sounds/мальчик как зовут.mp3'],
-            text:  ['Мальчик как тебя зовут?'],
+            text: ['Мальчик как тебя зовут?'],
             chain: ['amenyazovut'],
             w: 0.95,
             bw: 0.95
         },
-        
+
         amenyazovut: {
             slova: ["любое слово"],
             sound: [
                 ['sounds/а меня зовут марина.mp3', 'sounds/очень приятно.mp3'],
                 ['sounds/я кристи.mp3', 'sounds/очень приятно.mp3'],
-              ],
+            ],
             text: ['А меня зовут Марина, очень приятно.'],
-            chain: ['skokatebelet','molodoyeshe'],
+            chain: ['skokatebelet', 'molodoyeshe'],
             w: 0.95,
             bw: 0.95
         },
-        
+
         skokatebelet: {
             slova: ["любое слово"],
             sound: ['sounds/а скока тебе лет.mp3'],
             text: ['А скока тебе лет?'],
-            chain:['molodoyeshe'],
+            chain: ['molodoyeshe'],
             w: 0.95,
             bw: 0.95
         },
-        
+
         molodoyeshe: {
             slova: ["любое слово"],
             sound: ['sounds/ну ты молодой.mp3'],
             text: ['Ну ты молодой еще.'],
-            chain: ['atebeskolkolet','uchus','rabotayu'],
+            chain: ['atebeskolkolet', 'uchus', 'rabotayu'],
             question: ['sounds/ты учишьяс или работ.mp3'],
             w: 0.95,
             bw: 0.95
         },
-            
+
         atebeskolko: {
-            slova: ["тебе","сколько","лет"],
+            slova: ["тебе", "сколько", "лет"],
             sound: ['sounds/не прилично возраст.mp3'],
             text: ['Не прилично возраст спрашивать у девушки.'],
             chain: ['nuskoka'],
@@ -142,16 +142,16 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-    
+
         nuskoka: {
-            slova: ["ну","сколько","скажи"],
-            sound: ['sounds/мне 22.mp3','sounds/ты учишьяс или работ.mp3'],
+            slova: ["ну", "сколько", "скажи"],
+            sound: ['sounds/мне 22.mp3', 'sounds/ты учишьяс или работ.mp3'],
             text: ['Мне 22. Ты учишься или работаешь?'],
-            chain: ['uchus','rabotayu'],
+            chain: ['uchus', 'rabotayu'],
             w: 0.95,
             bw: 0.95
         },
-        
+
         uchus: {
             slova: ["учусь"],
             sound: ['sounds/а скока стипуха.mp3'],
@@ -160,7 +160,7 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-        
+
         rabotayu: {
             slova: ["работаю"],
             sound: ['sounds/а кем ты робиш.mp3'],
@@ -169,7 +169,7 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-        
+
         kakayazp: {
             slova: ["любое слово"],
             sound: ['sounds/и какая зарплата.mp3'],
@@ -178,188 +178,188 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-        
+
         kakayamashina: {
             slova: ["любое слово"],
-            sound: ['sounds/аа понятно.mp3','sounds/какая у тя машина.mp3'],
+            sound: ['sounds/аа понятно.mp3', 'sounds/какая у тя машина.mp3'],
             text: ['А понятно, а какая у тебя машина?'],
             chain: ['funeudachnik'],
             w: 0.95,
             bw: 0.95
         },
-        
+
 
         funeudachnik: {
             slova: ["любое слово"],
-            sound: ['sounds/фу неудачник.mp3','sounds/а можно нескромный вопрос.mp3'],
+            sound: ['sounds/фу неудачник.mp3', 'sounds/а можно нескромный вопрос.mp3'],
             text: ['Фу неудачник, а можно нескромный вопрос?'],
-            chain: ['davopros','netvopros'],
+            chain: ['davopros', 'netvopros'],
             w: 0.95,
             bw: 0.95
         },
-        
-        
+
+
         netvopros: {
-            slova: ["нет","нельзя"],
+            slova: ["нет", "нельзя"],
             sound: ['sounds/ну а почему нет то.mp3'],
             text: ['Ну а почему нет то?'],
             chain: ['poshelnahuy'],
             w: 0.95,
             bw: 0.95
         },
-        
+
         davopros: {
-            slova: ["да","давай","хорошо","задавай"],
+            slova: ["да", "давай", "хорошо", "задавай"],
             sound: [
-                    ['sounds/у тебя есть девушка.mp3','sounds/тока не врать.mp3'],
-                    ['sounds/слушай а какой размер.mp3']
-                    ['sounds/а ты девственик.mp3']
-                   
+                ['sounds/у тебя есть девушка.mp3', 'sounds/тока не врать.mp3'],
+                ['sounds/слушай а какой размер.mp3']
+                ['sounds/а ты девственик.mp3']
+
             ],
             text: ['Спрашивает какую-то хуйню ;)'],
             chain: [
-                    ['estdevushka','netdevushki'],
-                    ['eldakcho','eldakzachem'],
-                    ['dadevstvennik','netdevstvennik', 'devstvennikcho']
+                ['estdevushka', 'netdevushki'],
+                ['eldakcho', 'eldakzachem'],
+                ['dadevstvennik', 'netdevstvennik', 'devstvennikcho']
             ],
             w: 0.95,
             bw: 0.95
         },
-       
-        
+
+
         devstvennikcho: {
-            slova: ["че","чего","вопрос","вопросы"],
-            sound: ['sounds/что так испугался то.mp3','sounds/ты со скольки затвор.mp3'],
+            slova: ["че", "чего", "вопрос", "вопросы"],
+            sound: ['sounds/что так испугался то.mp3', 'sounds/ты со скольки затвор.mp3'],
             text: ['Ты со скольки затвор передергиваешь?'],
-            chain: ['zatvornedrochu','zatvorvozrast'],
+            chain: ['zatvornedrochu', 'zatvorvozrast'],
             w: 0.95,
             bw: 0.95
         },
-        
+
         dadevstvennik: {
-            slova: ["да","девственник","дественник"],
+            slova: ["да", "девственник", "дественник"],
             sound: ['sounds/ты со скольки затвор.mp3'],
             text: ['Ты со скольки затвор передергиваешь?'],
-            chain: ['zatvormolchit','zatvornedrochu','zatvorvozrast'],
+            chain: ['zatvormolchit', 'zatvornedrochu', 'zatvorvozrast'],
             w: 0.95,
             bw: 0.95
         },
-        
-              
-        
+
+
+
         zatvormolchit: {
-            slova: ["скажу","дело","важно","кого","чего","что"],
+            slova: ["скажу", "дело", "важно", "кого", "чего", "что"],
             sound: ['sounds/занимаешься рукодел.mp3'],
             text: ['Занимаешься рукоделием.'],
-            chain: ['zatvormolchit2','zatvorvozrast'],
+            chain: ['zatvormolchit2', 'zatvorvozrast'],
             w: 0.95,
             bw: 0.95
         },
-         
-        
+
+
         zatvormolchit2: {
-            slova: ["скажу","дело","важно","кого","чего","что"],
-            sound: ['sounds/ну работ над собой.mp3','sounds/если ты понимаешь о чем.mp3'],
+            slova: ["скажу", "дело", "важно", "кого", "чего", "что"],
+            sound: ['sounds/ну работ над собой.mp3', 'sounds/если ты понимаешь о чем.mp3'],
             text: ['Ну работаешь над собой. Если ты понимаешь о чем я.'],
-            chain: ['zatvormolchit3','zatvorvozrast'],
+            chain: ['zatvormolchit3', 'zatvorvozrast'],
             w: 0.95,
             bw: 0.95
         },
-        
+
         zatvormolchit3: {
-            slova: ["скажу","дело","важно","кого","чего","что"],
-            sound: ['sounds/душишь одноглаз.mp3','sounds/ну теребоньк2.mp3'],
+            slova: ["скажу", "дело", "важно", "кого", "чего", "что"],
+            sound: ['sounds/душишь одноглаз.mp3', 'sounds/ну теребоньк2.mp3'],
             text: ['Занимаешься рукоделием.'],
             chain: ['zatvorvozrast'],
             w: 0.95,
             bw: 0.95
         },
-        
-        
+
+
         zatvornedrochu: {
-            slova: ["не","дрочу"],
+            slova: ["не", "дрочу"],
             sound: ['sounds/ну по тебе не скаж.mp3'],
             text: ['Ну по тебе не скажешь.'],
             chain: ['yatebyahochu'],
             w: 0.95,
             bw: 0.95
         },
-        
-         
+
+
         zatvorvozrast: {
-            slova: ["с","1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21" ],
+            slova: ["с", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"],
             sound: ['sounds/а как частоты это.mp3'],
             text: ['А как часто ты это делаешь?.'],
             chain: ['yabiposmotrela'],
             w: 0.95,
             bw: 0.95
         },
-        
+
         estdevushka: {
-            slova: ["да","есть"],
-            sound: ['sounds/ну так я она и есть.mp3','sounds/а что тебе во мне нра.mp3'],
+            slova: ["да", "есть"],
+            sound: ['sounds/ну так я она и есть.mp3', 'sounds/а что тебе во мне нра.mp3'],
             text: ['Ну так я она и есть. А что тебе во мне нравится?'],
             chain: ['yatebyanevidel'],
             w: 0.95,
             bw: 0.95
         },
-         
+
         yatebyanevidel: {
-            slova: ["не","знаю","видел","никогда","незнакомы"],
-            sound: ['sounds/увидишь меня при встрече.mp3','sounds/давай куда нить сходим.mp3'],
+            slova: ["не", "знаю", "видел", "никогда", "незнакомы"],
+            sound: ['sounds/увидишь меня при встрече.mp3', 'sounds/давай куда нить сходим.mp3'],
             text: ['Увидишь меня при встрече. Давай куда нить сходим.'],
             chain: ['kudanitshodim'],
             w: 0.95,
             bw: 0.95
         },
-        
-       
-       netdevushki: {
-            slova: ["нет","нету","неважно"],
+
+
+        netdevushki: {
+            slova: ["нет", "нету", "неважно"],
             sound: [
                 ['sounds/а какие тебе девушки нра.mp3'],
                 ['sounds/ты голубой.mp3']
             ],
             text: ['А какие тебе девушки нравятся?.'],
             chain: [
-                ['netinrav','otakyatakaya'],
+                ['netinrav', 'otakyatakaya'],
                 ['negey']
             ],
             w: 0.95,
             bw: 0.95
         },
-        
-        
+
+
         negey: {
-            slova: ["нет","не"],
+            slova: ["нет", "не"],
             sound: ['sounds/ну а почему нет то.mp3'],
             text: ['Ну а почему нет то?.'],
             chain: ['nublinzhal'],
             w: 0.95,
             bw: 0.95
         },
-        
-        
+
+
         nublinzhal: {
             slova: ["любое слово"],
-            sound: ['sounds/ну блин жаль.mp3','sounds/а чем ты докажеш.mp3'],
+            sound: ['sounds/ну блин жаль.mp3', 'sounds/а чем ты докажеш.mp3'],
             text: ['Ну блин жаль. А чем ты докажешь?'],
             chain: ['priezhayposmotri'],
             w: 0.95,
             bw: 0.95
         },
-        
-        
+
+
         netinrav: {
-            slova: ["не","ты","явно"],
-            sound: ['sounds/почему.mp3','sounds/я нормальная.mp3'],
+            slova: ["не", "ты", "явно"],
+            sound: ['sounds/почему.mp3', 'sounds/я нормальная.mp3'],
             text: ['Почему? Я нормальная.'],
             chain: ['yatebyanevidel'],
             question: ['sounds/я красивая молодая.mp3'],
             w: 0.95,
             bw: 0.95
         },
-        
+
         otakyatakaya: {
             slova: ["любое слово"],
             sound: ['sounds/о так я такая.mp3'],
@@ -369,14 +369,14 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-         
-        
+
+
         kudanitshodim: {
             slova: ["любое слово"],
             sound: [
                 ['sounds/можно в кафе.mp3'],
                 ['sounds/можно в центре.mp3']
-                ],
+            ],
             text: ['Можно там-то.'],
             chain: [
                 ['vcafe'],
@@ -385,7 +385,7 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-        
+
         vcafe: {
             slova: ["любое слово"],
             sound: ['sounds/ну предложи ты я не оч.mp3'],
@@ -394,8 +394,8 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-        
-        
+
+
         vcentre: {
             slova: ["любое слово"],
             sound: ['sounds/ну предложи ты мужчина глав.mp3'],
@@ -404,8 +404,8 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-        
-        
+
+
         etov20m: {
             slova: ["любое слово"],
             sound: ['sounds/аа это в 20 минутах.mp3'],
@@ -414,8 +414,8 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-        
-        
+
+
         mogucherez30: {
             slova: ["любое слово"],
             sound: ['sounds/могу через 30 мин.mp3'],
@@ -424,9 +424,9 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-        
-        
-        
+
+
+
         dogovorilis: {
             slova: ["любое слово"],
             sound: ['sounds/договорились.mp3'],
@@ -435,9 +435,9 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-        
-      
-       yatepozvonutogda: {
+
+
+        yatepozvonutogda: {
             slova: ["любое слово"],
             sound: ['sounds/я те позвоню тогда.mp3'],
             text: ['Я тебе позвоню тогда.'],
@@ -445,7 +445,7 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-        
+
         kotik: {
             slova: ["любое слово"],
             sound: ['sounds/котик.mp3'],
@@ -454,8 +454,8 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-        
-        
+
+
         poshelnahuy: {
             slova: ["любое слово"],
             sound: ['sounds/да пошел ты мудак обьеб.mp3'],
@@ -463,14 +463,14 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-        
-        
-        
+
+
+
         atvoikak: {
-            slova: ["нормально","ниче","так","хорошо","пойдет"],
+            slova: ["нормально", "ниче", "так", "хорошо", "пойдет"],
             sound: [
                 ['sounds/что делаеш.mp3'],
-               ],
+            ],
             text: ['Что делаешь?'],
             chain: [
                 ['atvoikak'],
@@ -479,9 +479,9 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-     
 
-     
+
+
     };
 
 
@@ -518,13 +518,13 @@ window.onload = function() {
                                     max = fraz[key].w
                                     maxflag = key;
                                 }
-                                
+
                             }
-                            
-                                if (fraz[key].w > max && slova[0]==='любое слово') {
-                                    max = fraz[key].w
-                                    maxflag = key;
-                                }
+
+                            if (fraz[key].w > max && slova[0] === 'любое слово') {
+                                max = fraz[key].w
+                                maxflag = key;
+                            }
                         }
 
                     }
@@ -538,36 +538,37 @@ window.onload = function() {
             var sonu = Math.floor(Math.random() * fraz[maxflag].sound.length);
             audio = new Audio(fraz[maxflag].sound[sonu][0]);
             audio.addEventListener("ended", function() {
-                            if (fraz[maxflag].sound[sonu][1]) {
+                if (fraz[maxflag].sound[sonu][1]) {
 
-            audio = new Audio(fraz[maxflagb].sound[sonu][1]);
-                  audio.addEventListener("ended", function() {
+                    audio = new Audio(fraz[maxflagb].sound[sonu][1]);
+                    audio.addEventListener("ended", function() {
                         mainflag = 0;
                         console.log("ended");
                         console.log("ВЫБИРАЕТ ВОПРОС");
-                       if (fraz[maxflagb].hasOwnProperty("question")) {
+                        if (fraz[maxflagb].hasOwnProperty("question")) {
+                            console.log("ВОПРОС КАСТОМНЫЙ");
+                            WhenMaslenokIsSilent(1, fraz[maxflagb].question);
+                        } else {
+                            console.log("ВОПРОС ЗАГЛУШКА");
+                            WhenMaslenokIsSilent(1, 1);
+                        }
+                        audio.play();
+                    });
+                } else {
+                    mainflag = 0;
+                    console.log("ended");
+                    console.log("ВЫБИРАЕТ ВОПРОС");
+                    if (fraz[maxflagb].hasOwnProperty("question")) {
                         console.log("ВОПРОС КАСТОМНЫЙ");
                         WhenMaslenokIsSilent(1, fraz[maxflagb].question);
-                       } else {
+                    } else {
                         console.log("ВОПРОС ЗАГЛУШКА");
                         WhenMaslenokIsSilent(1, 1);
-                       }
-                    audio.play();
-                  }
-                                         else{mainflag = 0;
-                        console.log("ended");
-                        console.log("ВЫБИРАЕТ ВОПРОС");
-                       if (fraz[maxflagb].hasOwnProperty("question")) {
-                        console.log("ВОПРОС КАСТОМНЫЙ");
-                        WhenMaslenokIsSilent(1, fraz[maxflagb].question);
-                       } else {
-                        console.log("ВОПРОС ЗАГЛУШКА");
-                        WhenMaslenokIsSilent(1, 1);
-                       }}
-                                         });
-                     
-                }); audio.play();
-            
+                    }
+                }
+            });
+            audio.play();
+
             var bufmsg = maxflag;
             var leftData = "<div class='message left' style='display:none;'><div class='message-text'>" + phrases[0] +
                 "</div></div>";
@@ -587,7 +588,7 @@ window.onload = function() {
 
             fraz[maxflag].bw = 0.95;
             fraz[maxflag].w = 0.95;
-                
+
             max = 1;
 
 
@@ -617,7 +618,7 @@ window.onload = function() {
                 }
             }
             maxflag = pickRandomProperty(fraz);
-console.log("mainflag " + mainflag);
+            console.log("mainflag " + mainflag);
             audio = zaglushki[Math.floor(Math.random() * zaglushki.length)];
         }
     });
