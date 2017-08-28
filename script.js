@@ -634,7 +634,7 @@ window.onload = function() {
                 }
             }
             maxflag = pickRandomProperty(fraz);
-
+console.log("mainflag " + mainflag);
             audio = zaglushki[Math.floor(Math.random() * zaglushki.length)];
         }
     });
