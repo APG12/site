@@ -342,7 +342,7 @@ window.onload = function() {
         
         nublinzhal: {
             slova: ["любое слово"],
-            sound: ['sounds/ну блин жаль.mp3','sounds/а чем ты докажешь.mp3'],
+            sound: ['sounds/ну блин жаль.mp3','sounds/а чем ты докажеш.mp3'],
             text: ['Ну блин жаль. А чем ты докажешь?'],
             chain: ['priezhayposmotri'],
             w: 0.95,
@@ -595,7 +595,6 @@ window.onload = function() {
             fraz[maxflag].w = 0.95;
                 
             max = 1;
-            maxflag = pickRandomProperty(fraz);
 
 
             if (fraz[maxflag].hasOwnProperty("chain")) {
@@ -622,7 +621,9 @@ window.onload = function() {
                         }
                     }
                 }
-            }
+
+            maxflag = pickRandomProperty(fraz);
+
             audio = zaglushki[Math.floor(Math.random() * zaglushki.length)];
         }
     });
