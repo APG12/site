@@ -486,7 +486,7 @@ window.onload = function() {
 
 
     var max = 1;
-    var maxflag = "nachalo";
+    var maxflag = "aleo";
 
     var mainflag = 0;
     annyang.debug();
