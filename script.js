@@ -540,29 +540,16 @@ window.onload = function() {
             if (Array.isArray(fraz[maxflag].sound[sonu])) {
                 console.log("признал массивом");
                 audio = new Audio(fraz[maxflag].sound[sonu][0]);
+                audio.play();
                 audio.addEventListener("ended", function() {
                     audio.currentTime = 0;
                     ai++;
                     audio = new Audio(fraz[maxflagb].sound[sonu][ai]);
                     audio.play();
-                    console.log("ended");
-                });
-            } else {
-                console.log("признал строкой");
-
-                audio = new Audio(fraz[maxflag].sound[ai]);
-                audio.addEventListener("ended", function() {
-                    audio.currentTime = 0;
-                    ai++;
-                    audio = new Audio(fraz[maxflagb].sound[ai]);
-                    audio.play();
-                    console.log("ended");
-                });
-            }
-            audio.play();
-            audio.addEventListener("ended", function() {
-                console.log("ВЫБИРАЕТ ВОПРОС");
-                mainflag = 0;
+                    audio.addEventListener("ended", function() {
+                        mainflag = 0;
+                        console.log("ended");});
+             console.log("ВЫБИРАЕТ ВОПРОС");
                 if (fraz[maxflagb].hasOwnProperty("question")) {
                     console.log("ВОПРОС КАСТОМНЫЙ");
                     WhenMaslenokIsSilent(1, fraz[maxflagb].question);
@@ -571,9 +558,33 @@ window.onload = function() {
                     
                     WhenMaslenokIsSilent(1, 1);
                 }
-            });
+                });
+            } else {
+                
+                console.log("признал строкой");
 
-
+                audio = new Audio(fraz[maxflag].sound[ai]);
+                audio.addEventListener("ended", function() {
+                    mainflag = 0;
+                    audio.currentTime = 0;
+                    ai++;
+                    audio = new Audio(fraz[maxflagb].sound[ai]);
+                    audio.play();
+                    console.log("ended");
+                    console.log("ВЫБИРАЕТ ВОПРОС");
+                if (fraz[maxflagb].hasOwnProperty("question")) {
+                    console.log("ВОПРОС КАСТОМНЫЙ");
+                    WhenMaslenokIsSilent(1, fraz[maxflagb].question);
+                } else {
+                    console.log("ВОПРОС ЗАГЛУШКА");
+                   
+                    WhenMaslenokIsSilent(1, 1);
+                }
+               
+                
+                
+                });
+            }
             var bufmsg = maxflag;
             var leftData = "<div class='message left' style='display:none;'><div class='message-text'>" + phrases[0] +
                 "</div></div>";
