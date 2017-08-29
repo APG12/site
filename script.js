@@ -263,7 +263,7 @@ window.onload = function() {
             bw: 0.95
         },
       
-        eldakbezcifr: {
+        eldakbolshoy: {
             slova: ["влезет", "огромный",  "большой"],
             sound: ['sounds/ну по тебе не скаж.mp3'],
             text: ['Ну по тебе не скажешь.'],
