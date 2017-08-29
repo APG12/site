@@ -219,14 +219,115 @@ window.onload = function() {
             text: ['Спрашивает какую-то хуйню ;)'],
             chain: [
                 ['estdevushka', 'netdevushki'],
-                ['eldakcho', 'eldakzachem'],
+                ['eldakcho', 'zachemtebe','eldakrazmer','eldakbezcifr'],
                 ['dadevstvennik', 'netdevstvennik', 'devstvennikcho']
             ],
             w: 0.96,
             bw: 0.96
         },
+        
+        eldakcho: {
+            slova: ["че", "чего", "вопрос", "вопросы"],
+            sound: ['sounds/ну ванька встанька.mp3'],
+            text: ['Ну ванька-встанька.'],
+            chain: ['eldakcho2', 'eldakrazmer','eldakbezcifr','zachemtebe','eldakbolshoy'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        eldakcho2: {
+            slova: ["че", "чего", "вопрос", "вопросы"],
+            sound: ['sounds/ну болт.mp3'],
+            text: ['Ну болт.'],
+            chain: ['eldakrazmer','eldakbezcifr','zachemtebe','eldakbolshoy'],
+            w: 0.95,
+            bw: 0.95
+        },
 
+        eldakbezcifr: {
+            slova: ["нормальный", "хватит",  "маленький"],
+            sound: ['sounds/сколько.mp3','sounds/ну подробней.mp3'],
+            text: ['Ну ванька-встанька.'],
+            chain: [ 'eldakrazmer','zachemtebe','eldakbolshoy'],
+            w: 0.95,
+            bw: 0.95
+        },
 
+        
+        eldakrazmer: {
+            slova: ["сантиметров", "100", "1000", "1000000", "90", "80", "70", "60", "50", "40", "30", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"],
+            sound: ['sounds/ну это маленький.mp3'],
+            text: ['Ну ванька-встанька.'],
+            chain: [ 'eldakkakoyest'],
+            w: 0.95,
+            bw: 0.95
+        },
+      
+        eldakbezcifr: {
+            slova: ["влезет", "огромный",  "большой"],
+            sound: ['sounds/ну по тебе не скаж.mp3'],
+            text: ['Ну по тебе не скажешь.'],
+            chain: ['yatebyahochu'],
+            w: 0.95,
+            bw: 0.95
+        },
+     
+        eldakkakoyest: {
+            slova: ["любое слово"],
+            sound: [
+                ['sounds/ну блин жаль.mp3','sounds/а чем ты докажешь.mp3'],
+                ['sounds/откудаты знаешь.mp3']
+            ],
+            text: ['Ну блин жаль. А чем ты докажешь?'],
+            chain: [
+                ['yabiposmotrela'],
+                ['zachemtebe']
+                   ],
+            w: 0.95,
+            bw: 0.95
+        },
+
+        
+        zachemtebe: {
+            slova: ["любое слово"],
+            sound: ['sounds/а что лучше дл или толщ.mp3'],
+            text: ['А что лучше, длинна или толщина?'],
+            chain: ['yatebyahochu'],
+            w: 0.95,
+            bw: 0.95
+        },
+
+        
+        yatebyahochu: {
+            slova: ["любое слово"],
+            sound: ['sounds/я тебя хочу.mp3','sounds/котик.mp3'],
+            text: ['Я тебя хочу. Котик.'],
+            question: ['sounds/если ты понимаешь о чем2.mp3'],
+            chain: ['nehochetsuka', 'hochettoje'],
+            w: 0.95,
+            bw: 0.95
+        },
+
+        
+        nehochetsuka: {
+            slova: ["че", "чего", "вопрос", "вопросы"],
+            sound: ['sounds/что так испугался то.mp3', 'sounds/ты со скольки затвор.mp3'],
+            text: ['Ты со скольки затвор передергиваешь?'],
+            chain: ['zatvornedrochu', 'zatvorvozrast'],
+            w: 0.95,
+            bw: 0.95
+        },
+
+        yabiposmotrela: {
+            slova: ["любое слово"],
+            sound: ['sounds/я бы посмотрела.mp3'],
+            text: ['Я бы посмотрела на это.'],
+            chain: ['nupriedposmotri'],
+            w: 0.95,
+            bw: 0.95
+        },
+
+        
         devstvennikcho: {
             slova: ["че", "чего", "вопрос", "вопросы"],
             sound: ['sounds/что так испугался то.mp3', 'sounds/ты со скольки затвор.mp3'],
