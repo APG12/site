@@ -790,7 +790,7 @@ window.onload = function() {
                     audio.play();
                     console.log("ended as massiv " + fraz[maxflagb].sound[sonu][1]);
                                     
-                    if (Array.isArray(fraz[maxflag].sound[sonu]))
+                    if (Array.isArray(fraz[maxflagb].sound[sonu]))
                     {mainflag = 0;}
 
                 });
@@ -803,7 +803,7 @@ window.onload = function() {
                     audio = new Audio(fraz[maxflagb].sound[1]);
                     audio.play();
                     console.log("ended as string");
-                    if (!Array.isArray(fraz[maxflag].sound[sonu])){               
+                    if (!Array.isArray(fraz[maxflagb].sound[sonu])){               
                     mainflag = 0;}
 
                 });
