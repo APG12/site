@@ -813,12 +813,13 @@ window.onload = function() {
                         mainflag = 0;
 
                     });
+                                       audio1.play();
+
                    }
                     else{
                           if (!Array.isArray(fraz[maxflagb].sound[sonu])){               
                     mainflag = 0;}
 }
-                    audio1.play();
                     console.log("ended as string");
                     
               
