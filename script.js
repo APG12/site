@@ -792,10 +792,12 @@ window.onload = function() {
                         console.log("ended as massiv " + fraz[maxflagb].sound[sonu][1]);
                         mainflag = 0;
 
-                    });} else {
+                    });
+                   audio1.play();
+                   } else {
                         mainflag =0;
                     }
-                    audio1.play();
+                    
                     
                 });
             } else {
