@@ -730,6 +730,7 @@ window.onload = function() {
     };
 
 for (var key in fraz) {
+    console.log("FFFFFFFFFFFFFFFFFFFF");
     for(var i; i<fraz[key].sound.length; i++){
       if (Array.isArray(fraz[key].sound[i])) {
             audio3 = new Audio();
