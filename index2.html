@@ -12,6 +12,8 @@ body {
 
 }
 .wrapper {
+	  overflow: auto;
+
   background:white;
   width: 340px;
   height: 600px;
@@ -26,7 +28,6 @@ body {
 
 }
 .phone {
-  overflow: auto;
   height: 100%;
   border: 1px solid #dcdcdc;
 	
@@ -156,9 +157,9 @@ body {
         <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
 </head>
 <body>
-<div class="wrapper">
+<div class="wrapper"  data-simplebar>
   <div class="phone-containter">
-    <div id="phone" class="phone"  data-simplebar>
+    <div id="phone" class="phone">
       <div class="message left"></div><div class="message right">
    </div>
 </div>
