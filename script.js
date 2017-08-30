@@ -738,6 +738,7 @@ for (var key in fraz) {
             audio3.src= fraz[key].sound[i][0];  
           if(fraz[key].sound[i][1]){
              audio2 = new Audio();
+              console.log("HUY");
              audio2.addEventListener('canplaythrough', function(){console.log(audio2.src + "загружен");});
              audio2.src=fraz[key].sound[i][1]; 
           }
