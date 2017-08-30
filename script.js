@@ -502,8 +502,7 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-
-
+        
         zatvormolchit2: {
             slova: ["скажу", "дело", "важно", "кого", "чего", "что"],
             sound: ['sounds/ну работ над собой.mp3', 'sounds/если ты понимаешь о чем.mp3'],
@@ -790,7 +789,9 @@ window.onload = function() {
                     audio = new Audio(fraz[maxflagb].sound[sonu][1]);
                     audio.play();
                     console.log("ended as massiv " + fraz[maxflagb].sound[sonu][1]);
-                                    mainflag = 0;
+                                    
+                    if (Array.isArray(fraz[maxflag].sound[sonu]))
+                    {mainflag = 0;}
 
                 });
             } else {
@@ -802,7 +803,8 @@ window.onload = function() {
                     audio = new Audio(fraz[maxflagb].sound[1]);
                     audio.play();
                     console.log("ended as string");
-                                    mainflag = 0;
+                    if (!Array.isArray(fraz[maxflag].sound[sonu])){               
+                    mainflag = 0;}
 
                 });
             }
