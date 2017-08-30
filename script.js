@@ -790,6 +790,8 @@ window.onload = function() {
                     audio = new Audio(fraz[maxflagb].sound[sonu][1]);
                     audio.play();
                     console.log("ended as massiv " + fraz[maxflagb].sound[sonu][1]);
+                                    mainflag = 0;
+
                 });
             } else {
                 console.log("признал строкой " + fraz[maxflag].sound[sonu]);
@@ -800,12 +802,13 @@ window.onload = function() {
                     audio = new Audio(fraz[maxflagb].sound[1]);
                     audio.play();
                     console.log("ended as string");
+                                    mainflag = 0;
+
                 });
             }
             audio.play();
             audio.addEventListener("ended", function() {
                 console.log("ВЫБИРАЕТ ВОПРОС");
-                mainflag = 0;
                 if (fraz[maxflagb].hasOwnProperty("question")) {
                     console.log("ВОПРОС КАСТОМНЫЙ");
                     WhenMaslenokIsSilent(1, fraz[maxflagb].question);
