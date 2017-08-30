@@ -786,12 +786,13 @@ window.onload = function() {
                 audio = new Audio(fraz[maxflag].sound[sonu][0]);
                 audio.addEventListener("ended", function() {
                     audio.currentTime = 0;
+                   if(fraz[maxflagb].sound[sonu][1].length>1){
                     audio1 = new Audio(fraz[maxflagb].sound[sonu][1]);
                     audio1.addEventListener("ended", function() {
                         console.log("ended as massiv " + fraz[maxflagb].sound[sonu][1]);
                         mainflag = 0;
 
-                    });
+                    });}
                     audio1.play();
                     
                 });
