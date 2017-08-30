@@ -275,7 +275,7 @@ window.onload = function() {
         eldakkakoyest: {
             slova: ["любое слово"],
             sound: [
-                ['sounds/ну блин жаль.mp3','sounds/а чем ты докажешь.mp3'],
+                ['sounds/ну блин жаль.mp3','sounds/а чем ты докажеш.mp3'],
                 ['sounds/откуда ты знаешь.mp3']
             ],
             text: ['Ну блин жаль. А чем ты докажешь?'],
@@ -311,7 +311,7 @@ window.onload = function() {
         
         nehochetsuka: {
             slova: ["че", "чего", "вопрос", "вопросы"],
-            sound: ['sounds/что так испугался то.mp3', 'sounds/ты со скольки затвор.mp3'],
+            sound: ['sounds/что так испугаелся то.mp3', 'sounds/ты со скольки затвор.mp3'],
             text: ['Ты со скольки затвор передергиваешь?'],
             chain: ['zatvornedrochu', 'zatvorvozrast'],
             w: 0.95,
@@ -440,7 +440,7 @@ window.onload = function() {
         
         tamvnizunet: {
             slova: ["нет","неа", "не", "скажу"],
-            sound: ['sounds/чо ты под дибила косиш.mp3','sounds/ты скрытый гомо.mp3'],
+            sound: ['sounds/чо ты под дебила косиш.mp3','sounds/ты скрытый гомо.mp3'],
             text: ['Чо ты под дебила косишь? Ты скрытый гомосексуалист?'],
             chain: ['ktebepodhoditdevushka'],
             w: 0.95,
@@ -449,7 +449,7 @@ window.onload = function() {
         
         podmishkinet: {
             slova: ["нет","неа", "не", "скажу"],
-            sound: ['sounds/чо ты под дибила косиш.mp3','sounds/ты скрытый гомо.mp3'],
+            sound: ['sounds/чо ты под дебила косиш.mp3','sounds/ты скрытый гомо.mp3'],
             text: ['Чо ты под дебила косишь? Ты скрытый гомосексуалист?'],
             chain: ['ktebepodhoditdevushka'],
             w: 0.95,
@@ -476,7 +476,7 @@ window.onload = function() {
         
         devstvennikcho: {
             slova: ["че", "чего", "вопрос", "вопросы"],
-            sound: ['sounds/что так испугался то.mp3', 'sounds/ты со скольки затвор.mp3'],
+            sound: ['sounds/что так испугаелся то.mp3', 'sounds/ты со скольки затвор.mp3'],
             text: ['Ты со скольки затвор передергиваешь?'],
             chain: ['zatvornedrochu', 'zatvorvozrast'],
             w: 0.95,
