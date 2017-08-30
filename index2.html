@@ -21,7 +21,6 @@ body {
 }
 
 .phone-containter {
-  overflow:scroll;
   width: 340px;
   height: 600px;
 
@@ -153,11 +152,13 @@ body {
 	<script src="https://yandex.st/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
 	<script src="annyang.min.js"></script>
 	<script src="script.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+        <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
 </head>
 <body>
 <div class="wrapper">
   <div class="phone-containter">
-    <div id="phone" class="phone">
+    <div id="phone" class="phone" ss-container>
       <div class="message left"></div><div class="message right">
    </div>
 </div>
