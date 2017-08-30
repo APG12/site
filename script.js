@@ -732,18 +732,22 @@ window.onload = function() {
 for (var key in fraz) {
     for(var i; i<fraz[key].sound.length; i++){
       if (Array.isArray(fraz[key].sound[i])) {
-            audio3 = new Audio(fraz[key].sound[i][0]);
+            audio3 = new Audio();
             audio3.addEventListener('canplaythrough', function(){console.log(audio3.src + "загружен");});
-            if(fraz[key].sound[i][1]){
-             audio2 = new Audio(fraz[key].sound[i][1]);
+            audio3.src= fraz[key].sound[i][0];  
+          if(fraz[key].sound[i][1]){
+             audio2 = new Audio();
              audio2.addEventListener('canplaythrough', function(){console.log(audio2.src + "загружен");});
-           }
+             audio2.src=fraz[key].sound[i][1]; 
+          }
     } else {
-      audio3 = new Audio(fraz[key].sound[0]);
+      audio3 = new Audio();
       audio3.addEventListener('canplaythrough', function(){console.log(audio3.src + "загружен");});
+      audio3.src=fraz[key].sound[0];
      if(fraz[key].sound[1]){
-       audio2 = new Audio(fraz[key].sound[1]);
+       audio2 = new Audio();
        audio2.addEventListener('canplaythrough', function(){console.log(audio2.src + "загружен");});
+       audio2.src=fraz[key].sound[1];
      }
 
     }
