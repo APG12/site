@@ -806,12 +806,22 @@ window.onload = function() {
                 audio = new Audio(fraz[maxflag].sound[0]);
                 audio.addEventListener("ended", function() {
                     audio.currentTime = 0;
-                    audio = new Audio(fraz[maxflagb].sound[1]);
-                    audio.play();
-                    console.log("ended as string");
-                    if (!Array.isArray(fraz[maxflagb].sound[sonu])){               
-                    mainflag = 0;}
+                   if(fraz[maxflagb].sound[1]){
+                    audio1 = new Audio(fraz[maxflagb].sound[1]);
+                    audio1.addEventListener("ended", function() {
+                        console.log("ended as stroka " + fraz[maxflagb].sound[1]);
+                        mainflag = 0;
 
+                    });
+                   }
+                    else{
+                          if (!Array.isArray(fraz[maxflagb].sound[sonu])){               
+                    mainflag = 0;}
+}
+                    audio1.play();
+                    console.log("ended as string");
+                    
+              
                 });
             }
             audio.play();
