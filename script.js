@@ -327,6 +327,152 @@ window.onload = function() {
             bw: 0.95
         },
 
+        netdevstvennik: {
+            slova: ["нет", "не", "неа"],
+            sound: ['sounds/а у тя скока девушек было.mp3'],
+            text: ['А у тебя сколько девушек было?'],
+            chain: ['devushekskolko'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        devushekskolko: {
+            slova: ["любое слово"],
+            sound: ['sounds/сколько.mp3'],
+            text: ['Сколько?'],
+            chain: ['devushkailidruzya'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        devushkailidruzya: {
+            slova: ["любое слово"],
+            sound: ['sounds/ты сможешь отказ от друз.mp3'],
+            text: ['Ты сможешь отказаться от друзей ради девушки?'],
+            chain: ['devushkakotenok'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        devushkakotenok: {
+            slova: ["любое слово"],
+            sound: ['sounds/катёнок.mp3'],
+            text: ['Котенок.'],
+            chain: ['devushkakotenok2'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        devushkakotenok2: {
+            slova: ["любое слово"],
+            sound: ['sounds/мохнатенький котеноч.mp3'],
+            text: ['Мохнатенький котеночек.'],
+            chain: ['podmishki'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        podmishki: {
+            slova: ["любое слово"],
+            sound: ['sounds/а ты бреешь подмышк.mp3'],
+            text: ['А ты бреешь подмышки?.'],
+            chain: ['podmishkida','podmishkinet'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        podmishkida: {
+            slova: ["да","брею", "конечно"],
+            sound: ['sounds/а там внизу тоже брееш.mp3'],
+            text: ['А там внизу тоже бреешь?.'],
+            chain: ['tamvnizuda','tamvnnizunet'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        tamvnizuda: {
+            slova: ["да","конечно", "тоже"],
+            sound: ['sounds/какой молодец.mp3'],
+            text: ['Какой молодец.'],
+            chain: ['ktebepodhoditdevushka', 'yaponyalachtonravishsa'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
+        yaponyalachtonravishsa: {
+            slova: ["любое слово"],
+            sound: ['sounds/я поняла что ты мне нра.mp3'],
+            text: ['Я поняла что ты мне нравишься.'],
+            chain: ['videlavvk', 'ayatebenrav'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        ayatebenrav: {
+            slova: ["любое слово"],
+            sound: ['sounds/а я те нравлюсь.mp3'],
+            text: ['А я тебе нравлюсь?'],
+            chain: ['tichtoblue', 'nravlusda'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        tichtoblue: {
+            slova: ["нет","не"],
+            sound: ['sounds/ты голубой.mp3'],
+            text: ['Ты голубой?'],
+            chain: ['negey', 'poshelnahuy'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
+        nravlusda: {
+            slova: ["да","нравишься"],
+            sound: ['sounds/а что тебе во мне нра.mp3'],
+            text: ['А что тебе во мне нравится?'],
+            chain: ['yatebyanevidel'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
+        tamvnizunet: {
+            slova: ["нет","неа", "не", "скажу"],
+            sound: ['sounds/чо ты под дибила косиш.mp3','sounds/ты скрытый гомо.mp3'],
+            text: ['Чо ты под дебила косишь? Ты скрытый гомосексуалист?'],
+            chain: ['ktebepodhoditdevushka'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        podmishkinet: {
+            slova: ["нет","неа", "не", "скажу"],
+            sound: ['sounds/чо ты под дибила косиш.mp3','sounds/ты скрытый гомо.mp3'],
+            text: ['Чо ты под дебила косишь? Ты скрытый гомосексуалист?'],
+            chain: ['ktebepodhoditdevushka'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        ktebepodhoditdevushka: {
+            slova: ["нет","неа", "не", "скажу"],
+            sound: ['sounds/к тебе подходит девушка.mp3'],
+            text: ['К тебе подходит девушка и предлагает пойти с ней. Твои действия?'],
+            chain: ['poydusney'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        poydusney: {
+            slova: ["пойду", "с", "ней"],
+            sound: ['sounds/ну можно попроб.mp3','sounds/я могу к тебе прийти.mp3'],
+            text: ['Ну можно попробовать. Я могу к тебе прийти.'],
+            chain: ['prihodikomne'],
+            w: 0.95,
+            bw: 0.95
+        },
         
         devstvennikcho: {
             slova: ["че", "чего", "вопрос", "вопросы"],
