@@ -87,31 +87,138 @@ window.onload = function() {
             sound: [
                 ['sounds/а угадай.mp3'],
                 ['sounds/так я твоя новая девушка.mp3'],
-                ['sounds/это кристина не узнал.mp3']
+                ['sounds/это кристина не узнал.mp3','sounds/я помню мы хорошо провел.mp3']
              ],
-            text: ['Ты че не узнал чтоли?'],
+            text: ['А угадай.'],
             chain: [
-                ['augaday'],
+                ['ugadalname','nehochetugadat'],
                 ['taktoyatvoya'],
                 ['etokristina']
                    ],
             w: 0.95,
             bw: 0.95
         },
-
-        etokristina: {
-            slova: ["твои","как","тебя"],
-            sound: [
-                ['sounds/та ничо так.mp3','sounds/что делаеш.mp3'],
-                ['sounds/нормально.mp3','sounds/что делаеш.mp3']
-            ],
-            text: ['Да ниче так. Что делаешь?'],
-            chain: ['chtodel-igral', 'chtodel-ostalnoe',],
+        
+        ugadalname: {
+            slova: ["алёна", "алён", "алиса", "алина", "настя", "аня", "вика", "даша", "лиза", "ира",  "надя", "полина", "таня", "галя", "юля", "яна", "маша","кристина", "марина", "оля", "света", "катя", "саша", "лена", "люда", "люба", "машка", "дашка", "даша", "наташка", "наташа" ],
+            sound:[
+                ['sounds/угадал.mp3'],
+                ['sounds/угадал2.mp3']
+                  ],
+            text: ['Угадал блин.'],
+            chain: ['ichtohochesh'],
+            w: 0.95,
+            bw: 0.95
+        },
+         
+        nehochetugadat: {
+            slova: ["не", "хочу","гадать","угадывать"],
+            sound:['sounds/ну догадайся кто ето.mp3'],
+            text: ['Ну догадайся кто ето?'],
+            chain: ['dogadaysadevishka', 'dogadaysaneznayu','ugadalname', 'amenyazovut1'],
+            w: 0.95,
+            bw: 0.95
+        },
+         
+           dogadaysaneznayu: {
+            slova: ["не", "знаю"],
+            sound:['sounds/ну подумай.mp3'],
+            text: ['Ну подумай.'],
+            chain: ['dogadaysauchilis','ugadalname', 'amenyazovut1'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+           dogadaysauchilis: {
+            slova: ["думать","говори","ну"],
+            sound:['sounds/мы учились вместе.mp3'],
+            text: ['Мы учились вместе.'],
+            chain: ['ichtohochesh'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        dogadaysadevishka: {
+            slova: ["девушка"],
+            sound:['sounds/ну так то я твоя девушк.mp3'],
+            text: ['Ну так то я твоя девушка.'],
+            chain: ['vproshliyraz','ugadalname' ,'amenyazovut1'],
             w: 0.95,
             bw: 0.95
         },
         
         
+        taktoyatvoya: {
+            slova: ["любое слово"],
+            sound:['sounds/ну так то я твоя девушк.mp3'],
+            text: ['Ну так то я твоя девушка.'],
+            chain: ['vproshliyraz'],
+            w: 0.95,
+            bw: 0.95
+        },
+         amenyazovut1: {
+            slova: ["имя","зовут"],
+            sound: [
+                ['sounds/а меня зовут марина.mp3', 'sounds/очень приятно.mp3'],
+                ['sounds/я кристи.mp3', 'sounds/очень приятно.mp3'],
+            ],
+            text: ['А меня зовут Марина, очень приятно.'],
+            chain: ['skokatebelet', 'molodoyeshe'],
+            w: 0.94,
+            bw: 0.94
+        },
+        
+         vproshliyraz: {
+            slova: ["любое слово"],
+            sound:['sounds/всымсле в прошлый раз.mp3'],
+            text: ['Всмысле, в прошлый раз ты себя иначе вел.'],
+            chain: ['tambivshayaryadom'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        tambivshayaryadom: {
+            slova: ["любое слово"],
+            sound:['sounds/там бывшая рядом чтоль.mp3'],
+            text: ['Там бывшая рядом что-ли?'],
+            chain: ['umenyaestdevushka', 'ichtohochesh'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        etokristina: {
+            slova: ["любое слово"],
+            sound:['sounds/ну так то я твоя девушк.mp3'],
+            text: ['Ну так то я твоя девушка.'],
+            question: ['sounds/там бывшая рядом чтоль.mp3'],
+            chain: ['umenyaestdevushka', 'ichtohochesh'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        umenyaestdevushka: {
+            slova: ["есть","девушка"],
+            sound:['sounds/ну так я она и есть.mp3'],
+            text: ['Ну так я она и есть.'],
+            chain: ['ichtohochesh',],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        ichtohochesh: {
+            slova: ["любое слово"],
+            sound:[
+                ['sounds/я хочу с тобой познакомиться.mp3', 'sounds/ты что не понял.mp3'],
+                ['sounds/предлагаю заняца.mp3','sounds/хочешь попроб.mp3']    
+            ],
+            text: ['Я хочу с тобой познакомиться. Ты что не понял?'],
+            chain:   [
+                ['davaiznakomitsa', 'nehochetznakomitsa'],
+                ['davaisekas','nehochetznakomitsa']
+            ],
+            w: 0.95,
+            bw: 0.95
+        },
         
         atvoikak: {
             slova: ["твои","как","тебя"],
@@ -508,10 +615,10 @@ window.onload = function() {
 
         
         nehochetsuka: {
-            slova: ["че", "чего", "вопрос", "вопросы"],
-            sound: ['sounds/что так испугаелся то.mp3', 'sounds/ты со скольки затвор.mp3'],
-            text: ['Ты со скольки затвор передергиваешь?'],
-            chain: ['zatvornedrochu', 'zatvorvozrast'],
+            slova: ["нет", "не","а"],
+            sound: ['sounds/ты голубой.mp3'],
+            text: ['Ты голубой?'],
+            chain: ['negey', 'poshelnahuy'],
             w: 0.95,
             bw: 0.95
         },
