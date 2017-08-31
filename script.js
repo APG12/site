@@ -55,6 +55,21 @@ window.onload = function() {
             bw: 0.95
         },
 
+        
+
+        aetokto: {
+            slova: ["твои","как","тебя"],
+            sound: [
+                ['sounds/та ничо так.mp3','sounds/что делаеш.mp3'],
+                ['sounds/нормально.mp3','sounds/что делаеш.mp3']
+            ],
+            text: ['Да ниче так. Что делаешь?'],
+            chain: ['chtodel-igral', 'chtodel-ostalnoe',],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
         atvoikak: {
             slova: ["твои","как","тебя"],
             sound: [
@@ -101,9 +116,15 @@ window.onload = function() {
         
         davayobshatsa: {
             slova: ["давай","нет","пообщаемся"],
-            sound: ['sounds/а о чем ты думаеш.mp3'],
+            sound: [
+                ['sounds/а о чем ты думаеш.mp3'],
+                ['sounds/давай познакомимся.mp3']
+            ],
             text: ['А о чем ты думаешь сейчас?'],
-            chain: ['nichegonehoshrask'],
+            chain: [
+                ['nichegonehoshrask'],
+                ['davaiznakomitsa']
+            ],
             w: 0.95,
             bw: 0.95
         },
@@ -156,14 +177,40 @@ window.onload = function() {
               
          anekdot: {
             slova: ["любое слово"],
-            sound: ['хихи.mp3'],
+            sound: ['sounds/хихи.mp3'],
             text: ['*ржет аки конь*'],
             chain: ['kakayamishca'],
             w: 0.95,
             bw: 0.95
         },
               
+        kakayamishca: {
+            slova: ["любое слово"],
+            sound: ['sounds/какая мышца самая сильн.mp3'],
+            text: ['А какая мышца в оргаизме человека самая сильная?'],
+            chain: ['ikramishc'],
+            w: 0.95,
+            bw: 0.95
+        },
         
+        ikramishc: {
+            slova: ["любое слово"],
+            sound: ['sounds/ха икроножная мышц.mp3'],
+            text: ['Ха! Икроножная мышца!'],
+            chain: ['obvilavokrug'],
+            w: 0.95,
+            bw: 0.95
+        },
+              
+        obvilavokrug: {
+            slova: ["любое слово"],
+            sound: ['sounds/я тебя обвила вокруг носа.mp3', 'sounds/а можно нескромный вопрос.mp3'],
+            text: ['Я тебя обвила вокруг носа. А можно тебе задать нескромный вопрос?'],
+            chain: ['davopros','netvopros'],
+            w: 0.95,
+            bw: 0.95
+        },
+              
         atikomuzvonish: {
             slova: ["кому", "звонишь"],
             sound: ['sounds/тебе звоню.mp3'],
@@ -816,25 +863,7 @@ window.onload = function() {
             w: 0.95,
             bw: 0.95
         },
-
-
-
-        atvoikak: {
-            slova: ["нормально", "ниче", "так", "хорошо", "пойдет"],
-            sound: [
-                ['sounds/что делаеш.mp3'],
-            ],
-            text: ['Что делаешь?'],
-            chain: [
-                ['atvoikak'],
-                ['atikomuzvonish']
-            ],
-            w: 0.95,
-            bw: 0.95
-        },
-
-
-
+     
     };
 
 for (var key in fraz) {
