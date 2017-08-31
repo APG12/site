@@ -40,7 +40,7 @@ window.onload = function() {
                 ['sounds/привет.mp3']
             ],
             text: ['Привет!'],
-            chain: ['privet', 'atikomuzvonish'],
+            chain: ['privet', 'atikomuzvonish', 'aetokto'],
             w: 1.1,
             bw: 1.1
         },
@@ -50,12 +50,120 @@ window.onload = function() {
             slova: ["привет"],
             sound: ['sounds/как дела.mp3'],
             text: ['Как дела?'],
-            chain: ['atvoikak', 'aetokto', 'atikomuzvonish'],
+            chain: ['atvoikak', 'aetokto', 'atikomuzvonish','delatakto'],
+            w: 0.95,
+            bw: 0.95
+        },
+
+        atvoikak: {
+            slova: ["твои","как","тебя"],
+            sound: [
+                ['sounds/та ничо так.mp3','sounds/что делаеш.mp3'],
+                ['sounds/нормально.mp3','sounds/что делаеш.mp3']
+            ],
+            text: ['Да ниче так. Что делаешь?'],
+            chain: ['chtodel-igral', 'chtodel-ostalnoe',],
             w: 0.95,
             bw: 0.95
         },
 
 
+        delatakto: {
+            slova: ["нормально","хорошо","пойдет","так"],
+            sound: ['sounds/что делаеш.mp3'],
+            text: ['Как дела?'],
+            chain: ['chtodeligral', 'chtodelostalnoe', 'aetokto', 'atikomuzvonish'],
+            w: 0.95,
+            bw: 0.95
+        },
+
+        chtodeligral: {
+            slova: ["танки","дота","играл","играю"],
+            sound: [
+                ['sounds/что играть не умееш.mp3'],
+                ['sounds/играть не умеет.mp3']
+            ],
+            text: ['Что играть не умеещь? Пукан бомбанул?'],
+            chain: ['chtodelostalnoe'],
+            w: 0.95,
+            bw: 0.95
+        },
+            
+        
+         chtodelostalnoe: {
+            slova: ["любое слово"],
+            sound: ['sounds/я тебя не отвлек.mp3','sounds/мож пообщаемся.mp3'],
+            text: ['Я тебя не отвлекаю? Может пообщаемся?'],
+            chain: ['davayobshatsa', 'netobshatsa'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        davayobshatsa: {
+            slova: ["давай","нет","пообщаемся"],
+            sound: ['sounds/а о чем ты думаеш.mp3'],
+            text: ['А о чем ты думаешь сейчас?'],
+            chain: ['nichegonehoshrask'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+         nichegonehoshrask: {
+            slova: ["любое слово"],
+            sound: ['sounds/аа понятно.mp3','sounds/ты ничего не хочешь раск.mp3'],
+            text: ['А, понятно. Ты ничего не хочешь рассказать?'],
+            chain: ['rasskajichtodelalvesden'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        
+         rasskajichtodelalvesden: {
+            slova: ["любое слово"],
+            sound: ['sounds/расскажи что делал2.mp3'],
+            text: ['Расскажи что делал весь день.'],
+            chain: ['rasskajiveseloe'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+         rasskajiveseloe: {
+            slova: ["любое слово"],
+            sound: ['sounds/расскажи веселое.mp3'],
+            text: ['Расскажи что-нибудь веселое.'],
+            chain: ['rasskajianekdot'],
+            w: 0.95,
+            bw: 0.95
+        },
+                
+         rasskajianekdot: {
+            slova: ["любое слово"],
+            sound: ['sounds/расскажи анекд.mp3'],
+            text: ['Расскажи анекдот.'],
+            chain: ['anekdot'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+         netobshatsa: {
+            slova: ["отвлекаешь"],
+            sound: ['sounds/а ну лан не буду отвлека.mp3','sounds/расскажи анекд.mp3'],
+            text: ['А ну ладно, не буду отвлекать. Расскажи анекдот? ;)'],
+            chain: ['anekdot'],
+            w: 0.95,
+            bw: 0.95
+        },
+              
+         anekdot: {
+            slova: ["любое слово"],
+            sound: ['хихи.mp3'],
+            text: ['*ржет аки конь*'],
+            chain: ['kakayamishca'],
+            w: 0.95,
+            bw: 0.95
+        },
+              
+        
         atikomuzvonish: {
             slova: ["кому", "звонишь"],
             sound: ['sounds/тебе звоню.mp3'],
