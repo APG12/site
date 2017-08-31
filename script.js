@@ -212,10 +212,84 @@ window.onload = function() {
                 ['sounds/предлагаю заняца.mp3','sounds/хочешь попроб.mp3']    
             ],
             text: ['Я хочу с тобой познакомиться. Ты что не понял?'],
+            question: ['sounds/я не шучу серьезно.mp3'],
             chain:   [
                 ['davaiznakomitsa', 'nehochetznakomitsa'],
                 ['davaisekas','nehochetznakomitsa']
             ],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+          davaisekas: {
+            slova: ["да","давай","попробуем"],
+            sound:['sounds/какие ты позы.mp3'],
+            text: ['А какие ты позы предпочитаешь?'],
+            chain: ['sekaspozi',],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        nehochetznakomitsa: {
+            slova: ["нет","не","хочу"],
+            sound:['sounds/почему не хочеш знаком.mp3','sounds/ты чо гомик.mp3'],
+            text: ['Почему ты не хочешь знакомиться, ты что гомик?.'],
+            chain: ['dagomikepte','netnegomikepte'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        dagomikepte: {
+            slova: ["да"],
+            sound:['sounds/фу неудачник.mp3'],
+            text: ['Фу, неудачник.'],
+            chain: ['gomikparni'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+        gomikparni: {
+            slova: ["любой ответ"],
+            sound:['sounds/а какие парни те нравяца.mp3'],
+            text: ['А какие парни тебе нравятся?'],
+            chain: ['poshelnahuy'],
+            w: 0.94,
+            bw: 0.94
+        },
+        
+        
+        netnegomikepte: {
+            slova: ["нет","не"],
+            sound:['sounds/ну по тебе не скаж.mp3','sounds/а ты бы сходил на свидан.mp3'],
+            text: ['Ну по тебе не скажешь, а ты бы сходил на свидание?'],
+            chain: ['svidanieda','svidanienet'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+          svidanienet: {
+            slova: ["нет","не"],
+            sound:['sounds/ты скрытый гомо.mp3'],
+            text: ['Ты скрытый гомосексуалист?'],
+            chain: ['neskritiygomo'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+          neskritygomo: {
+            slova: ["нет","не"],
+            sound:['sounds/давай куда нить сходим.mp3'],
+            text: ['Давай куда нить сходим.'],
+            chain: ['kudanitshodim'],
+            w: 0.95,
+            bw: 0.95
+        },
+        
+          svidanieda: {
+            slova: ["да","можно","давай","куда"],
+            sound:['sounds/ну по тебе не скаж.mp3','sounds/а ты бы сходил на свидан.mp3'],
+            text: ['Ну по тебе не скажешь, а ты бы сходил на свидание?'],
+            chain: ['svidanieda','svidanienet'],
             w: 0.95,
             bw: 0.95
         },
@@ -925,11 +999,13 @@ window.onload = function() {
             slova: ["любое слово"],
             sound: [
                 ['sounds/можно в кафе.mp3'],
-                ['sounds/можно в центре.mp3']
+                ['sounds/можно в центре.mp3'],
+                ['sounds/давай в тц каком нить.mp3'],
             ],
             text: ['Можно там-то.'],
             chain: [
                 ['vcafe'],
+                ['vcentre'],
                 ['vcentre']
             ],
             w: 0.94,
@@ -945,8 +1021,7 @@ window.onload = function() {
             bw: 0.94
         },
 
-
-        vcentre: {
+         vcentre: {
             slova: ["любое слово"],
             sound: ['sounds/ну предложи ты мужчина глав.mp3'],
             text: ['Ну предложи ты, мужчина должен быть главным.'],
