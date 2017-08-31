@@ -1105,8 +1105,8 @@ window.onload = function() {
                    ],
             text: ['ПЕРДЕЖНО-КАРАТЕЛЬНЫЙ РЕЖИМ АКТИВИРОВАН'],
             chain: ['fartmode'],
-            w: 0.94,
-            bw: 0.94
+            w: 0,
+            bw: 0
         },
         
      
@@ -1266,8 +1266,12 @@ for (var key in fraz) {
             fraz[maxflag].bw -= 0.15;
             fraz[maxflag].w = fraz[maxflag].bw;
 
+          if (fraz[maxflag].chain[0]=="fart")
+          {
+             fraz[fraz[maxflag].chain[0]].w = 1000;
+             fraz[fraz[maxflag].chain[0]].bw = 1000;
 
-
+          }
             if (fraz[maxflag].hasOwnProperty("chain")) {
                 console.log("чейн не пустой");
                 if (Array.isArray(fraz[maxflag].chain[sonu])) {
@@ -1276,6 +1280,7 @@ for (var key in fraz) {
                         console.log("перебирает чейны");
                         if (fraz[fraz[maxflag].chain[sonu][i]]) {
                             console.log("нашел потомка чейна");
+                         
                             fraz[fraz[maxflag].chain[sonu][i]].w += 0.2;
                             console.log(fraz[maxflag].chain[sonu] + " " + fraz[fraz[maxflag].chain[sonu][i]].w);
                         }
