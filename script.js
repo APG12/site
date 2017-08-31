@@ -58,16 +58,48 @@ window.onload = function() {
         
 
         aetokto: {
-            slova: ["твои","как","тебя"],
+            slova: ["это","кто","ты","такая"],
             sound: [
-                ['sounds/та ничо так.mp3','sounds/что делаеш.mp3'],
-                ['sounds/нормально.mp3','sounds/что делаеш.mp3']
+                ['sounds/ну это я.mp3'],
+                ['sounds/узнаешь кто я.mp3']
             ],
-            text: ['Да ниче так. Что делаешь?'],
-            chain: ['chtodel-igral', 'chtodel-ostalnoe',],
+            text: ['Ну это я'],
+            chain: [
+                ['ktoya'], 
+                ['neuznauyu','ugadalblin']
+            ],
             w: 0.95,
             bw: 0.95
         },
+        
+        
+        neuznauyu: {
+            slova: ["нет","узнаю","не"],
+            sound: ['sounds/ты чо не узнал чтоль.mp3','sounds/ну это я.mp3'],
+            text: ['Ты че не узнал чтоли?'],
+            chain: ['ktoya'],
+            w: 0.95,
+            bw: 0.95
+        },
+
+        ktoya: {
+            slova: ["кто","я","ты"],
+            sound: [
+                ['sounds/а угадай.mp3'],
+                ['sounds/так я твоя новая девушка.mp3'],
+                ['sounds/это кристина не узнал.mp3']
+             ],
+            text: ['Ты че не узнал чтоли?'],
+            chain: [
+                ['augaday'],
+                ['taktoyatvoya'],
+                ['etokristina']
+                   ],
+            w: 0.95,
+            bw: 0.95
+        },
+
+        
         
         
         atvoikak: {
