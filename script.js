@@ -65,7 +65,7 @@ window.onload = function() {
             ],
             text: ['Ну это я'],
             chain: [
-                ['ktoya'], 
+                ['ktoya1'], 
                 ['neuznauyu','ugadalblin']
             ],
             w: 0.95,
@@ -77,12 +77,12 @@ window.onload = function() {
             slova: ["нет","узнаю","не"],
             sound: ['sounds/ты чо не узнал чтоль.mp3','sounds/ну это я.mp3'],
             text: ['Ты че не узнал чтоли?'],
-            chain: ['ktoya'],
+            chain: ['ktoya1'],
             w: 0.95,
             bw: 0.95
         },
 
-        ktoya: {
+        ktoya1: {
             slova: ["кто","я","ты"],
             sound: [
                 ['sounds/а угадай.mp3'],
