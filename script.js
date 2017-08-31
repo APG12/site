@@ -1293,7 +1293,7 @@ for (var key in fraz) {
                         }
                     }
                 }
-                      if (fraz[maxflag].chain[0]=="fart")
+                      if (fraz[maxflag].chain[0]=="fartmode")
           {
              fraz[fraz[maxflag].chain[0]].w = 1000;
              fraz[fraz[maxflag].chain[0]].bw = 1000;
