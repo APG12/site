@@ -223,8 +223,8 @@ window.onload = function() {
             sound: ['sounds/хихи.mp3'],
             text: ['*ржет аки конь*'],
             chain: ['kakayamishca'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
               
         kakayamishca: {
@@ -232,8 +232,8 @@ window.onload = function() {
             sound: ['sounds/какая мышца самая сильн.mp3'],
             text: ['А какая мышца в оргаизме человека самая сильная?'],
             chain: ['ikramishc'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
         
         ikramishc: {
@@ -241,8 +241,8 @@ window.onload = function() {
             sound: ['sounds/ха икроножная мышц.mp3'],
             text: ['Ха! Икроножная мышца!'],
             chain: ['obvilavokrug'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
               
         obvilavokrug: {
@@ -250,8 +250,8 @@ window.onload = function() {
             sound: ['sounds/я тебя обвила вокруг носа.mp3', 'sounds/а можно нескромный вопрос.mp3'],
             text: ['Я тебя обвила вокруг носа. А можно тебе задать нескромный вопрос?'],
             chain: ['davopros','netvopros'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
               
         atikomuzvonish: {
@@ -308,8 +308,8 @@ window.onload = function() {
             ],
             text: ['А меня зовут Марина, очень приятно.'],
             chain: ['skokatebelet', 'molodoyeshe'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
         skokatebelet: {
@@ -317,8 +317,8 @@ window.onload = function() {
             sound: ['sounds/а скока тебе лет.mp3'],
             text: ['А скока тебе лет?'],
             chain: ['molodoyeshe'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
         molodoyeshe: {
@@ -327,8 +327,8 @@ window.onload = function() {
             text: ['Ну ты молодой еще.'],
             chain: ['atebeskolkolet', 'uchus', 'rabotayu'],
             question: ['sounds/ты учишьяс или работ.mp3'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
         atebeskolko: {
@@ -355,8 +355,8 @@ window.onload = function() {
             sound: ['sounds/а скока стипуха.mp3'],
             text: ['А сколько у тебя стипендия?'],
             chain: ['funeudachnik'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
         rabotayu: {
@@ -373,8 +373,8 @@ window.onload = function() {
             sound: ['sounds/и какая зарплата.mp3'],
             text: ['И какая зарплата?'],
             chain: ['kakayamashina'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
         kakayamashina: {
@@ -382,8 +382,8 @@ window.onload = function() {
             sound: ['sounds/аа понятно.mp3', 'sounds/какая у тя машина.mp3'],
             text: ['А понятно, а какая у тебя машина?'],
             chain: ['funeudachnik'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
 
@@ -392,8 +392,8 @@ window.onload = function() {
             sound: ['sounds/фу неудачник.mp3', 'sounds/а можно нескромный вопрос.mp3'],
             text: ['Фу неудачник, а можно нескромный вопрос?'],
             chain: ['davopros', 'netvopros'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
 
@@ -402,8 +402,8 @@ window.onload = function() {
             sound: ['sounds/ну а почему нет то.mp3'],
             text: ['Ну а почему нет то?'],
             chain: ['poshelnahuy'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
         davopros: {
@@ -429,8 +429,8 @@ window.onload = function() {
             sound: ['sounds/ну ванька встанька.mp3'],
             text: ['Ну ванька-встанька.'],
             chain: ['eldakcho2', 'eldakrazmer','eldakbezcifr','zachemtebe','eldakbolshoy'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
         
         eldakcho2: {
@@ -438,8 +438,8 @@ window.onload = function() {
             sound: ['sounds/ну болт.mp3'],
             text: ['Ну болт.'],
             chain: ['eldakrazmer','eldakbezcifr','zachemtebe','eldakbolshoy'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
         eldakbezcifr: {
@@ -447,13 +447,13 @@ window.onload = function() {
             sound: ['sounds/сколько.mp3','sounds/ну подробней.mp3'],
             text: ['Ну ванька-встанька.'],
             chain: [ 'eldakrazmer','zachemtebe','eldakbolshoy'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
         
         eldakrazmer: {
-            slova: ["сантиметров", "100", "1000", "1000000", "90", "80", "70", "60", "50", "40", "30", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21"],
+            slova: ["сантиметров", "100", "1000", "1000000", "90", "80", "70", "60", "50", "40", "30", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40"],
             sound: ['sounds/ну это маленький.mp3'],
             text: ['Ну это маленький.'],
             chain: [ 'eldakkakoyest'],
@@ -481,8 +481,8 @@ window.onload = function() {
                 ['yabiposmotrela'],
                 ['zachemtebe']
                    ],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
         
@@ -491,8 +491,8 @@ window.onload = function() {
             sound: ['sounds/а что лучше дл или толщ.mp3'],
             text: ['А что лучше, длинна или толщина?'],
             chain: ['yatebyahochu'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
         
@@ -502,8 +502,8 @@ window.onload = function() {
             text: ['Я тебя хочу. Котик.'],
             question: ['sounds/если ты понимаешь о чем2.mp3'],
             chain: ['nehochetsuka', 'hochettoje'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
         
@@ -521,8 +521,8 @@ window.onload = function() {
             sound: ['sounds/я бы посмотрела.mp3'],
             text: ['Я бы посмотрела на это.'],
             chain: ['nupriedposmotri'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
         netdevstvennik: {
@@ -539,8 +539,8 @@ window.onload = function() {
             sound: ['sounds/сколько.mp3'],
             text: ['Сколько?'],
             chain: ['devushkailidruzya'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
         
         devushkailidruzya: {
@@ -548,8 +548,8 @@ window.onload = function() {
             sound: ['sounds/ты сможешь отказ от друз.mp3'],
             text: ['Ты сможешь отказаться от друзей ради девушки?'],
             chain: ['devushkakotenok'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
         
         devushkakotenok: {
@@ -557,8 +557,8 @@ window.onload = function() {
             sound: ['sounds/катёнок.mp3'],
             text: ['Котенок.'],
             chain: ['devushkakotenok2'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
         
         devushkakotenok2: {
@@ -566,8 +566,8 @@ window.onload = function() {
             sound: ['sounds/мохнатенький котеноч.mp3'],
             text: ['Мохнатенький котеночек.'],
             chain: ['podmishki'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
         
         podmishki: {
@@ -575,8 +575,8 @@ window.onload = function() {
             sound: ['sounds/а ты бреешь подмышк.mp3'],
             text: ['А ты бреешь подмышки?.'],
             chain: ['podmishkida','podmishkinet'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
         
         podmishkida: {
@@ -603,8 +603,8 @@ window.onload = function() {
             sound: ['sounds/я поняла что ты мне нра.mp3'],
             text: ['Я поняла что ты мне нравишься.'],
             chain: ['videlavvk', 'ayatebenrav'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
         
         ayatebenrav: {
@@ -612,8 +612,8 @@ window.onload = function() {
             sound: ['sounds/а я те нравлюсь.mp3'],
             text: ['А я тебе нравлюсь?'],
             chain: ['tichtoblue', 'nravlusda'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
         
         tichtoblue: {
@@ -686,8 +686,8 @@ window.onload = function() {
             sound: ['sounds/ты со скольки затвор.mp3'],
             text: ['Ты со скольки затвор передергиваешь?'],
             chain: ['zatvormolchit', 'zatvornedrochu', 'zatvorvozrast'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
 
@@ -725,8 +725,8 @@ window.onload = function() {
             sound: ['sounds/ну по тебе не скаж.mp3'],
             text: ['Ну по тебе не скажешь.'],
             chain: ['yatebyahochu'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
         zatvorvozrast: {
@@ -743,8 +743,8 @@ window.onload = function() {
             sound: ['sounds/ну так я она и есть.mp3', 'sounds/а что тебе во мне нра.mp3'],
             text: ['Ну так я она и есть. А что тебе во мне нравится?'],
             chain: ['yatebyanevidel'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
         yatebyanevidel: {
@@ -752,8 +752,8 @@ window.onload = function() {
             sound: ['sounds/увидишь меня при встрече.mp3', 'sounds/давай куда нить сходим.mp3'],
             text: ['Увидишь меня при встрече. Давай куда нить сходим.'],
             chain: ['kudanitshodim'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.955,
+            bw: 0.955
         },
 
 
@@ -768,8 +768,8 @@ window.onload = function() {
                 ['netinrav', 'otakyatakaya'],
                 ['negey']
             ],
-            w: 0.96,
-            bw: 0.96
+            w: 0.95,
+            bw: 0.95
         },
 
         
@@ -778,8 +778,8 @@ window.onload = function() {
             sound: ['sounds/ну а почему нет то.mp3'],
             text: ['Ну а почему нет то?.'],
             chain: ['nublinzhal'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
 
@@ -788,8 +788,8 @@ window.onload = function() {
             sound: ['sounds/ну блин жаль.mp3', 'sounds/а чем ты докажеш.mp3'],
             text: ['Ну блин жаль. А чем ты докажешь?'],
             chain: ['priezhayposmotri'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
 
@@ -809,8 +809,8 @@ window.onload = function() {
             text: ['О так я именно такая.'],
             chain: ['yatebyanevidel'],
             question: ['sounds/я красивая молодая.mp3'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
 
@@ -825,8 +825,8 @@ window.onload = function() {
                 ['vcafe'],
                 ['vcentre']
             ],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
         vcafe: {
@@ -834,8 +834,8 @@ window.onload = function() {
             sound: ['sounds/ну предложи ты я не оч.mp3'],
             text: ['Ну предложи ты, я не очень разбираюсь.'],
             chain: ['etov20m'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
 
@@ -844,8 +844,8 @@ window.onload = function() {
             sound: ['sounds/ну предложи ты мужчина глав.mp3'],
             text: ['Ну предложи ты, мужчина должен быть главным.'],
             chain: ['etov20m'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
 
@@ -854,8 +854,8 @@ window.onload = function() {
             sound: ['sounds/аа это в 20 минутах.mp3'],
             text: ['А это в 20 минутах от меня.'],
             chain: ['mogucherez30'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
 
@@ -864,8 +864,8 @@ window.onload = function() {
             sound: ['sounds/могу через 30 мин.mp3'],
             text: ['Могу через 30 минут.'],
             chain: ['dogovorilis'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
 
@@ -875,8 +875,8 @@ window.onload = function() {
             sound: ['sounds/договорились.mp3'],
             text: ['Договорились.'],
             chain: ['yatepozvonutogda'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
 
@@ -885,8 +885,8 @@ window.onload = function() {
             sound: ['sounds/я те позвоню тогда.mp3'],
             text: ['Я тебе позвоню тогда.'],
             chain: ['kotik'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
         kotik: {
@@ -894,8 +894,8 @@ window.onload = function() {
             sound: ['sounds/котик.mp3'],
             text: ['Котик <3'],
             question: ['sounds/да пошел тым мудак обьеб.mp3'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
 
 
@@ -903,8 +903,8 @@ window.onload = function() {
             slova: ["любое слово"],
             sound: ['sounds/да пошел ты мудак обьеб.mp3'],
             text: ['Да пошел ты нахуй, мудак объебаный.'],
-            w: 0.95,
-            bw: 0.95
+            w: 0.94,
+            bw: 0.94
         },
      
     };
