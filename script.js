@@ -99,6 +99,17 @@ window.onload = function() {
             bw: 0.95
         },
 
+        etokristina: {
+            slova: ["твои","как","тебя"],
+            sound: [
+                ['sounds/та ничо так.mp3','sounds/что делаеш.mp3'],
+                ['sounds/нормально.mp3','sounds/что делаеш.mp3']
+            ],
+            text: ['Да ниче так. Что делаешь?'],
+            chain: ['chtodel-igral', 'chtodel-ostalnoe',],
+            w: 0.95,
+            bw: 0.95
+        },
         
         
         
@@ -306,8 +317,8 @@ window.onload = function() {
             sound: ['sounds/а скока тебе лет.mp3'],
             text: ['А скока тебе лет?'],
             chain: ['molodoyeshe'],
-            w: 0.96,
-            bw: 0.96
+            w: 0.95,
+            bw: 0.95
         },
 
         molodoyeshe: {
