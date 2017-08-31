@@ -1266,13 +1266,14 @@ for (var key in fraz) {
             fraz[maxflag].bw -= 0.15;
             fraz[maxflag].w = fraz[maxflag].bw;
 
-          if (fraz[maxflag].chain[0]=="fart")
+         
+            if (fraz[maxflag].hasOwnProperty("chain")) {
+                 if (fraz[maxflag].chain[0]=="fart")
           {
              fraz[fraz[maxflag].chain[0]].w = 1000;
              fraz[fraz[maxflag].chain[0]].bw = 1000;
 
           }
-            if (fraz[maxflag].hasOwnProperty("chain")) {
                 console.log("чейн не пустой");
                 if (Array.isArray(fraz[maxflag].chain[sonu])) {
                     console.log(fraz[maxflag].chain[sonu] + " чейн конкретный под звук - " + fraz[maxflag].sound[sonu]);
