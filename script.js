@@ -1121,7 +1121,24 @@ window.onload = function() {
             bw: 0.9
         },
         
-        
+         fartmode: {
+            slova: ["любое слово"],
+            sound: [
+                ['sounds/fart-01.mp3'],
+                ['sounds/fart-02.mp3'],
+                ['sounds/fart-03.mp3'],
+                ['sounds/fart-04.mp3'],
+                ['sounds/fart-05.mp3'],
+                ['sounds/fart-06.mp3'],
+                ['sounds/fart-07.mp3'],
+                ['sounds/fart-08.mp3'],
+                
+                   ],
+            text: ['ПЕРДЕЖНО-КАРАТЕЛЬНЫЙ РЕЖИМ АКТИВИРОВАН'],
+            chain: ['fartmode'],
+            w: 0,
+            bw: 0
+        },
         
  
      
@@ -1131,22 +1148,22 @@ for (var key in fraz) {
     for(var i=0; i<fraz[key].sound.length; i++){
 
       if (Array.isArray(fraz[key].sound[i])) {
-            audio3 = new Audio();
-            audio3.addEventListener('canplaythrough', function(){console.log(audio3.src + "загружен");});
-            audio3.src= fraz[key].sound[i][0];  
+            audio = new Audio();
+            audio.addEventListener('canplaythrough', function(){console.log(audio.src + "загружен");});
+            audio.src= fraz[key].sound[i][0];  
           if(fraz[key].sound[i][1]){
-             audio2 = new Audio();
-             audio2.addEventListener('canplaythrough', function(){console.log(audio2.src + "загружен");});
-             audio2.src=fraz[key].sound[i][1]; 
+             audio = new Audio();
+             audio.addEventListener('canplaythrough', function(){console.log(audio.src + "загружен");});
+             audio.src=fraz[key].sound[i][1]; 
           }
     } else {
-      audio3 = new Audio();
-      audio3.addEventListener('canplaythrough', function(){console.log(audio3.src + "загружен");});
-      audio3.src=fraz[key].sound[0];
+      audio = new Audio();
+      audio.addEventListener('canplaythrough', function(){console.log(audio3.src + "загружен");});
+      audio.src=fraz[key].sound[0];
      if(fraz[key].sound[1]){
-       audio2 = new Audio();
-       audio2.addEventListener('canplaythrough', function(){console.log(audio2.src + "загружен");});
-       audio2.src=fraz[key].sound[1];
+       audio = new Audio();
+       audio.addEventListener('canplaythrough', function(){console.log(audio.src + "загружен");});
+       audio.src=fraz[key].sound[1];
      }
 
     }
