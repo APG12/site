@@ -1097,8 +1097,8 @@ window.onload = function() {
             text: ['Я живу на строителей.'],
             copy: 1,
             chain: ['voprosadres1','voprosadres2','voprosadresgorod'],
-            w: 1.2,
-            bw: 1.2
+            w: 1.15,
+            bw: 1.15
         },
         
         voprosadres1: {
@@ -1295,11 +1295,13 @@ for (var key in fraz) {
                 fraz[key].w = fraz[key].bw;
             }
 
-
+    
             fraz[maxflag].bw -= 0.15;
             fraz[maxflag].w = fraz[maxflag].bw;
             
             if (fraz[maxflag].hasOwnProperty("copy")){
+              fraz[maxflag].bw -= 0.15;
+              fraz[maxflag].w = fraz[maxflag].bw;
               if (fraz[maxflag].copy==1){
                  for (var i = 0; i < chainbuf.length; i++){
                    fraz[chainbuf[i]].w += 0.2;
