@@ -1158,7 +1158,7 @@ for (var key in fraz) {
           }
     } else {
       audio = new Audio();
-      audio.addEventListener('canplaythrough', function(){console.log(audio3.src + "загружен");});
+      audio.addEventListener('canplaythrough', function(){console.log(audio.src + "загружен");});
       audio.src=fraz[key].sound[0];
      if(fraz[key].sound[1]){
        audio = new Audio();
