@@ -289,7 +289,7 @@ window.onload = function() {
             slova: ["да","можно","давай","куда"],
             sound:['sounds/ну по тебе не скаж.mp3','sounds/а ты бы сходил на свидан.mp3'],
             text: ['Ну по тебе не скажешь, а ты бы сходил на свидание?'],
-            chain: ['svidanieda','svidanienet'],
+            
             w: 0.95,
             bw: 0.95
         },
@@ -1090,6 +1090,39 @@ window.onload = function() {
             bw: 0.94
         },
         
+        
+        voprosadres: {
+            slova: ["адрес"],
+            sound: ['sounds/я живу на строителей.mp3'],
+            text: ['Я живу на строителей.'],
+            copy: 1,
+            chain: ['voprosadres1','voprosadres2','voprosadresgorod'],
+            w: 1.2,
+            bw: 1.2
+        },
+        
+        voprosadres1: {
+            slova: ["точнее","квартира","номер"],
+            sound: ['sounds/строителей 25.mp3','sounds/кв 70.mp3'],
+            text: ['Строителей 25, квартира 70.'],
+            copy: 1,
+            chain: ['voprosadres2','voprosadresgorod'],
+            w: 0.9,
+            bw: 0.9
+        },
+        
+        voprosadres2: {
+            slova: ["это","строителей","где","каких","незнаю"],
+            sound: ['sounds/это в центре.mp3'],
+            text: ['Это в цетре.'],
+            copy: 1,
+            chain: ['voprosadres1','voprosadresgorod'],
+            w: 0.9,
+            bw: 0.9
+        },
+        
+        
+        
         fartmode: {
             slova: ["любое слово"],
             sound: [
@@ -1138,6 +1171,7 @@ for (var key in fraz) {
         
    }
 }
+    var chainbuf = [];
     var max = 1;
     var maxflag = "aleo";
 
@@ -1265,8 +1299,18 @@ for (var key in fraz) {
 
             fraz[maxflag].bw -= 0.15;
             fraz[maxflag].w = fraz[maxflag].bw;
-
-         
+            
+            console.log("буфер чейнов - " + chainbuf);
+            if (fraz[maxflag].hasOwnProperty("copy")){
+              if (fraz[maxflag].copy==1){
+                 for (var i = 0; i < chainbuf.length; i++){
+                   fraz[chainbuf[i]].w += 0.2;
+                 }
+              }
+            }else{
+              chainbuf=[];
+            }
+          
             if (fraz[maxflag].hasOwnProperty("chain")) {
            
                 console.log("чейн не пустой");
@@ -1276,7 +1320,7 @@ for (var key in fraz) {
                         console.log("перебирает чейны");
                         if (fraz[fraz[maxflag].chain[sonu][i]]) {
                             console.log("нашел потомка чейна");
-                         
+                            chainbuf = chainbuf.push(fraz[maxflag].chain[sonu][i]);
                             fraz[fraz[maxflag].chain[sonu][i]].w += 0.2;
                             console.log(fraz[maxflag].chain[sonu] + " " + fraz[fraz[maxflag].chain[sonu][i]].w);
                         }
@@ -1287,6 +1331,7 @@ for (var key in fraz) {
                         console.log("перебирает чейны");
                         if (fraz[fraz[maxflag].chain[i]]) {
                             console.log("нашел потомка чейна");
+                            chainbuf = chainbuf.push(fraz[maxflag].chain[i]);
                             fraz[fraz[maxflag].chain[i]].w += 0.2;
                             console.log(fraz[maxflag].chain + " " + fraz[fraz[maxflag].chain[i]].w);
 
