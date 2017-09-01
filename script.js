@@ -249,7 +249,7 @@ window.onload = function() {
         },
         
         gomikparni: {
-            slova: ["любой ответ"],
+            slova: ["любое слово"],
             sound:['sounds/а какие парни те нравяца.mp3'],
             text: ['А какие парни тебе нравятся?'],
             chain: ['poshelnahuy'],
@@ -1170,6 +1170,13 @@ for (var key in fraz) {
         
    }
 }
+    
+    
+    var txtFile = "log.txt";
+    var file = new File(txtFile);
+    file.open("w"); // open file with write access
+    file.writeln("Сессия " + Date());
+
     var chainbuf = [];
     var max = 1;
     var maxflag = "aleo";
@@ -1280,6 +1287,9 @@ for (var key in fraz) {
             });
 
             var bufmsg = maxflag;
+           file.writeln("Собеседник: " + phrases[0]);
+           file.writeln("Робо-Марина: " + fraz[bufmsg].text[0]);
+
             var leftData = "<div class='message left' style='display:none;'><div class='message-text'>" + phrases[0] +
                 "</div></div>";
             $(leftData).prependTo('#phone').fadeIn('slow', function() {
