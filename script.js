@@ -13,7 +13,7 @@ window.onload = function() {
                         var audiosil = new Audio(soun);
                         console.log(soun);
                     } else {
-                        var audiosil = new Audio(zaglushki[Math.floor(Math.random() * zaglushki.length)]);
+                        var audiosil = new Audio("https://apg12.github.io/site/" + zaglushki[Math.floor(Math.random() * zaglushki.length)]);
                     }
                     audiosil.play();
                 }, 5000);
@@ -1150,30 +1150,34 @@ for (var key in fraz) {
       if (Array.isArray(fraz[key].sound[i])) {
             audio = new Audio();
             audio.addEventListener('canplaythrough', function(){console.log(decodeURIComponent(this.src) + " загружен");});
-            audio.src= fraz[key].sound[i][0];  
+            audio.src= "https://apg12.github.io/site/"+fraz[key].sound[i][0];  
           if(fraz[key].sound[i][1]){
              audio = new Audio();
              audio.addEventListener('canplaythrough', function(){console.log(decodeURIComponent(this.src) + " загружен");});
-             audio.src=fraz[key].sound[i][1]; 
+             audio.src="https://apg12.github.io/site/"+fraz[key].sound[i][1]; 
           }
     } else {
       audio = new Audio();
       audio.addEventListener('canplaythrough', function(){console.log(decodeURIComponent(this.src) + " загружен");});
-      audio.src=fraz[key].sound[0];
+      audio.src="https://apg12.github.io/site/"+fraz[key].sound[0];
      if(fraz[key].sound[1]){
        audio = new Audio();
        audio.addEventListener('canplaythrough', function(){console.log(decodeURIComponent(this.src) + " загружен");});
-       audio.src=fraz[key].sound[1];
+       audio.src="https://apg12.github.io/site/"+fraz[key].sound[1];
      }
 
     }
         
    }
 }
+  var date1 = new Date();
+
+    $.ajax({
+      type:"POST",
+      data:"\r\n"+ "Сессия: " + date1.getHours(), 
+      url: "server.php"
+    }); // END Ajax 
     
-    var fso = new ActiveXObject("Scripting.FileSystemObject");
-    var fh = fso.OpenTextFile("log.txt", 8, false, 0);
-    fh.WriteLine("Сессия " + Date());
 
     var chainbuf = [];
     var max = 1;
@@ -1229,11 +1233,11 @@ for (var key in fraz) {
             var sonu = Math.floor(Math.random() * fraz[maxflag].sound.length);
             if (Array.isArray(fraz[maxflag].sound[sonu])) {
                 console.log("признал массивом"  + fraz[maxflag].sound[sonu]);
-                audio = new Audio(fraz[maxflag].sound[sonu][0]);
+                audio = new Audio("https://apg12.github.io/site/"+fraz[maxflag].sound[sonu][0]);
                 audio.addEventListener("ended", function() {
                     audio.currentTime = 0;
                    if(fraz[maxflagb].sound[sonu][1]){
-                    audio1 = new Audio(fraz[maxflagb].sound[sonu][1]);
+                    audio1 = new Audio("https://apg12.github.io/site/"+fraz[maxflagb].sound[sonu][1]);
                     audio1.addEventListener("ended", function() {
                         console.log("ended as massiv " + fraz[maxflagb].sound[sonu][1]);
                         mainflag = 0;
@@ -1249,11 +1253,11 @@ for (var key in fraz) {
             } else {
                 console.log("признал строкой " + fraz[maxflag].sound[sonu]);
 
-                audio = new Audio(fraz[maxflag].sound[0]);
+                audio = new Audio("https://apg12.github.io/site/"+fraz[maxflag].sound[0]);
                 audio.addEventListener("ended", function() {
                     audio.currentTime = 0;
                    if(fraz[maxflagb].sound[1]){
-                    audio1 = new Audio(fraz[maxflagb].sound[1]);
+                    audio1 = new Audio("https://apg12.github.io/site/"+fraz[maxflagb].sound[1]);
                     audio1.addEventListener("ended", function() {
                         console.log("ended as stroka " + fraz[maxflagb].sound[1]);
                         mainflag = 0;
@@ -1285,8 +1289,17 @@ for (var key in fraz) {
             });
 
             var bufmsg = maxflag;
-            fh.WriteLine("Собеседник: " + phrases[0]);
-            fh.WriteLine("Робо-Марина: " + fraz[bufmsg].text[0]);
+
+
+    
+
+    var buttnName=$(this).attr('name');
+    $.ajax({
+      type:"POST",
+      data:"\r\n"+ "Собеседник: "+ phrases[0] + "\r\n" + "Робо-Марина: " + fraz[bufmsg].text[0], 
+      url: "server.php"
+    }); // END Ajax 
+    
 
             var leftData = "<div class='message left' style='display:none;'><div class='message-text'>" + phrases[0] +
                 "</div></div>";
