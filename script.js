@@ -1320,7 +1320,7 @@ for (var key in fraz) {
                         console.log("перебирает чейны");
                         if (fraz[fraz[maxflag].chain[sonu][i]]) {
                             console.log("нашел потомка чейна");
-                            chainbuf = chainbuf.push(fraz[maxflag].chain[sonu][i]);
+                            chainbuf.push(fraz[maxflag].chain[sonu][i]);
                             fraz[fraz[maxflag].chain[sonu][i]].w += 0.2;
                             console.log(fraz[maxflag].chain[sonu] + " " + fraz[fraz[maxflag].chain[sonu][i]].w);
                         }
@@ -1331,7 +1331,7 @@ for (var key in fraz) {
                         console.log("перебирает чейны");
                         if (fraz[fraz[maxflag].chain[i]]) {
                             console.log("нашел потомка чейна");
-                            chainbuf = chainbuf.push(fraz[maxflag].chain[i]);
+                            chainbuf.push(fraz[maxflag].chain[i]);
                             fraz[fraz[maxflag].chain[i]].w += 0.2;
                             console.log(fraz[maxflag].chain + " " + fraz[fraz[maxflag].chain[i]].w);
 
