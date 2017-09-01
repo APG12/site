@@ -1300,14 +1300,16 @@ for (var key in fraz) {
             fraz[maxflag].bw -= 0.15;
             fraz[maxflag].w = fraz[maxflag].bw;
             
-            console.log("буфер чейнов - " + chainbuf);
             if (fraz[maxflag].hasOwnProperty("copy")){
               if (fraz[maxflag].copy==1){
                  for (var i = 0; i < chainbuf.length; i++){
                    fraz[chainbuf[i]].w += 0.2;
                  }
+                 console.log("буфер чейнов - " + chainbuf);
+
               }
             }else{
+              console.log("буфер чейнов - " + chainbuf);
               chainbuf=[];
             }
           
