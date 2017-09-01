@@ -1149,20 +1149,20 @@ for (var key in fraz) {
 
       if (Array.isArray(fraz[key].sound[i])) {
             audio = new Audio();
-            audio.addEventListener('canplaythrough', function(){console.log(decodeURIComponent(this.src) + "загружен");});
+            audio.addEventListener('canplaythrough', function(){console.log(decodeURIComponent(this.src) + " загружен");});
             audio.src= fraz[key].sound[i][0];  
           if(fraz[key].sound[i][1]){
              audio = new Audio();
-             audio.addEventListener('canplaythrough', function(){console.log(decodeURIComponent(this.src) + "загружен");});
+             audio.addEventListener('canplaythrough', function(){console.log(decodeURIComponent(this.src) + " загружен");});
              audio.src=fraz[key].sound[i][1]; 
           }
     } else {
       audio = new Audio();
-      audio.addEventListener('canplaythrough', function(){console.log(decodeURIComponent(this.src) + "загружен");});
+      audio.addEventListener('canplaythrough', function(){console.log(decodeURIComponent(this.src) + " загружен");});
       audio.src=fraz[key].sound[0];
      if(fraz[key].sound[1]){
        audio = new Audio();
-       audio.addEventListener('canplaythrough', function(){console.log(decodeURIComponent(this.src) + "загружен");});
+       audio.addEventListener('canplaythrough', function(){console.log(decodeURIComponent(this.src) + " загружен");});
        audio.src=fraz[key].sound[1];
      }
 
